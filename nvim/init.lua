@@ -1,8 +1,7 @@
 require("user/options")
-require("mappings")
 require("plugins")
-require("whichkey")
-require("wk-mappings")
+require("user/whichkey")
+require("user/mappings")
 
 vim.cmd([[
   augroup FileTypeOverrides
