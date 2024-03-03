@@ -19,7 +19,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.autopairs" },
 
-	{ import = "user.plugins.catppuccin" },
+	-- { import = "user.plugins.catppuccin" },
 
 	{ import = "user.plugins.completions" },
 
