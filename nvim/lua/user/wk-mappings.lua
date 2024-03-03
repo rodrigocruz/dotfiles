@@ -19,7 +19,7 @@ wk.register({
         z = { vim.lsp.buf.references, "References" },
 	},
 	d = {
-		name = "Debuggind",
+		name = "Debugging",
 		b = { dap.toggle_breakpoint, "Set Breakpoint" },
 		c = { dap.continue, "Continue" },
 		x = { dap.close, "Close" },
