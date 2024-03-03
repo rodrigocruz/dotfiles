@@ -64,7 +64,7 @@ require("lazy").setup({
 	{ "whatyouhide/vim-textobj-xmlattr", dependencies = "kana/vim-textobj-user" },
 
 	-- Add smooth scrolling to avoid jarring jumps
-	{ "karb94/neoscroll.nvim", config = true },
+	-- { "karb94/neoscroll.nvim", config = true },
 
 	-- Automatically fix indentation when pasting code.
 	{ import = "user.plugins.vim-pasta" },
