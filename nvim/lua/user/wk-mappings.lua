@@ -7,7 +7,7 @@ wk.register({
 	b = {
 		name = "Buffers",
 		b = { ":FzfLua buffers<CR>", "List buffers" },
-		C = { ":bufdo bdelete<CR>", "Close All Open Buffers" },
+		d = { ":Bdelete<CR>", "Close All Open Buffers" },
 	},
 	c = {
 		name = "Code",
@@ -32,6 +32,7 @@ wk.register({
 		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
 		t = { ":Neotree filesystem toggle right<CR>", "Open Neotree" },
 		f = { ":FzfLua files<CR>", "Find files" },
+        -- f = { function() require('telescope.builtin').find_files() end, "Find files" },
 	},
 	g = {
 		name = "Git",
@@ -41,12 +42,18 @@ wk.register({
 		name = "Help",
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
 	},
+    p = {
+        name = "PHP",
+            m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu"},
+    },
 	s = {
 		name = "Search",
 		c = { ":nohlsearch<CR>", "Clear Search Highlight" },
 		p = { ":FzfLua live_grep<CR>", "Search in project" },
 		l = { ":FzfLua resume<CR>", "Resume last search" },
 		s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
+        j = { function() require('telescope.builtin').lsp_document_symbols() end, "Find Symbols" },
+        j = { ":FzfLua lsp_document_symbols<CR>", "Find Symbols" },
 	},
     t = {
         name = "Test",
