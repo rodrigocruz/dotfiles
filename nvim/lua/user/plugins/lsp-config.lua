@@ -9,7 +9,17 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "intelephense" },
+				ensure_installed = {
+                    "lua_ls",
+                    "intelephense",
+                    "tailwindcss",
+                    "cssls",
+                    "emmet_ls",
+                    "html",
+                    "jsonls",
+                    "tsserver",
+                    "yamlls",
+                },
 			})
 		end,
 	},
@@ -42,6 +52,22 @@ return {
 					},
 				},
 			})
+            lspconfig.tailwindcss.setup({
+                capabilities = capabilities
+            })
+            lspconfig.cssls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.emmet_ls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.jsonls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.yamlls.setup({
+                capabilities = capabilities
+            })
+
 
 			lspconfig.lua_ls.setup({})
 
