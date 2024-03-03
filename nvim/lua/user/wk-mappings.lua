@@ -12,7 +12,11 @@ wk.register({
 	c = {
 		name = "Code",
 		a = { vim.lsp.buf.code_action, "Code Actions" },
+        d = { vim.lsp.buf.definition, "Goto Definition" },
 		f = { vim.lsp.buf.format, "Code Format" },
+        h = { vim.lsp.buf.hover, "Hover" },
+        r = { vim.lsp.buf.rename, "Rename" },
+        z = { vim.lsp.buf.references, "References" },
 	},
 	d = {
 		name = "Debuggind",
