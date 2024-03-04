@@ -103,6 +103,13 @@ require("lazy").setup({
 	{ import = "user.plugins.phpactor" },
 
     { import = "user.plugins.nvim-bqf" },
+
+    { import = "user.plugins.vim-ags" },
+
+    { import = "user.plugins.vim-dadbod" },
+
+    { import = "user.plugins.fine-cmdline" },
+
 }, {
 	checker = {
 		enabled = true,

@@ -52,6 +52,7 @@ wk.register({
     },
 	s = {
 		name = "Search",
+        a = { ":Ags<CR>", "Search word under cursor wirh Ags"},
 		c = { ":nohlsearch<CR>", "Clear Search Highlight" },
 		p = { ":FzfLua live_grep<CR>", "Search in project" },
 		l = { ":FzfLua resume<CR>", "Resume last search" },
