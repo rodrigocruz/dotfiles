@@ -56,7 +56,7 @@ wk.register({
 		p = { ":FzfLua live_grep<CR>", "Search in project" },
 		l = { ":FzfLua resume<CR>", "Resume last search" },
 		s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
-        j = { function() require('telescope.builtin').lsp_document_symbols() end, "Find Symbols" },
+        -- j = { function() require('telescope.builtin').lsp_document_symbols() end, "Find Symbols" },
         j = { ":FzfLua lsp_document_symbols<CR>", "Find Symbols" },
 	},
     t = {
