@@ -3,7 +3,7 @@ local dap = require("dap")
 
 wk.register({
 	["0"] = { ":Neotree filesystem focus right<CR>", "Focus Neotree" },
-	["<tab>"] = { ":bprevious<CR>", "Previous buffer" },
+	["<tab>"] = { ":b#<CR>", "Previous buffer" },
 	b = {
 		name = "Buffers",
 		b = { ":FzfLua buffers<CR>", "List buffers" },
