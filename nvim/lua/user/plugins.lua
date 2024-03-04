@@ -102,7 +102,7 @@ require("lazy").setup({
 	-- PHP Refactoring Tools
 	{ import = "user.plugins.phpactor" },
 
-    { "kevinhwang91/nvim-bqf" },
+    { import = "user.plugins.nvim-bqf" },
 }, {
 	checker = {
 		enabled = true,
