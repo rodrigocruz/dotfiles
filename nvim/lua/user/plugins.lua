@@ -15,11 +15,11 @@ require("lazy").setup({
 	-- Color scheme
 	{ import = "user.plugins.tokyonight" },
 
+    -- { import = "user.plugins.catppuccin" },
+
 	{ import = "user.plugins.alpha" },
 
 	{ import = "user.plugins.autopairs" },
-
-	-- { import = "user.plugins.catppuccin" },
 
 	{ import = "user.plugins.completions" },
 
