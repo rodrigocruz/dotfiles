@@ -76,7 +76,7 @@ require("lazy").setup({
 	{ import = "user.plugins.gitsigns" },
 
 	--- Floating terminal.
-	{ import = "user.plugins.floaterm" },
+	-- { import = "user.plugins.floaterm" },
 
 	-- Testing helper
 	{ import = "user.plugins.vim-test" },
@@ -108,9 +108,13 @@ require("lazy").setup({
 
     { import = "user.plugins.vim-dadbod" },
 
-    { import = "user.plugins.fine-cmdline" },
+    -- { import = "user.plugins.fine-cmdline" },
 
     { import = "user.plugins.ui" },
+
+    { import = "user.plugins.noice" },
+
+    { import = "user.plugins.searchbox" },
 
 }, {
 	checker = {

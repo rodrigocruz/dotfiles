@@ -2,7 +2,7 @@ local wk = require("which-key")
 local dap = require("dap")
 
 wk.register({
-	["0"] = { ":Neotree filesystem focus right<CR>", "Focus Neotree" },
+	["0"] = { ":Neotree filesystem focus left<CR>", "Focus Neotree" },
 	["<tab>"] = { ":b#<CR>", "Previous buffer" },
 	b = {
 		name = "Buffers",
@@ -36,7 +36,7 @@ wk.register({
 		name = "File",
 		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
         -- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
-		t = { ":Neotree filesystem toggle right<CR>", "Open Neotree" },
+		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
 		-- f = { ":FzfLua files<CR>", "Find files" },
         f = { function() require('telescope.builtin').find_files() end, "Find files" },
 	},
@@ -49,6 +49,10 @@ wk.register({
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
         -- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
 	},
+    n = {
+        name = "Notifications",
+        d = { ":NoiceDismiss<CR>", "Dismiss Notification"},
+    },
     p = {
         name = "PHP",
             m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu"},

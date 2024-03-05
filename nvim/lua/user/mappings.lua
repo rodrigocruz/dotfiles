@@ -31,9 +31,9 @@ vim.keymap.set("i", ";;", "<Esc>A;<Esc>")
 vim.keymap.set("i", ",,", "<Esc>A,<Esc>")
 
 -- Resize with arrows.
-vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
-vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
-vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
-vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
+-- vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
+-- vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
+-- vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
+-- vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+--vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
