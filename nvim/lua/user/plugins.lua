@@ -110,6 +110,8 @@ require("lazy").setup({
 
     { import = "user.plugins.fine-cmdline" },
 
+    { import = "user.plugins.ui" },
+
 }, {
 	checker = {
 		enabled = true,

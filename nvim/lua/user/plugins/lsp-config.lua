@@ -25,7 +25,7 @@ return {
 					"tsserver",
 					"yamlls",
 					"antlersls",
-					"vjlar",
+					"volar",
 				},
 			})
 		end,

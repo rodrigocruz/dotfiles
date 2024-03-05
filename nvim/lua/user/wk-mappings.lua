@@ -6,7 +6,8 @@ wk.register({
 	["<tab>"] = { ":b#<CR>", "Previous buffer" },
 	b = {
 		name = "Buffers",
-		b = { ":FzfLua buffers<CR>", "List buffers" },
+		-- b = { ":FzfLua buffers<CR>", "List buffers" },
+        b = { function() require('telescope.builtin').buffers() end, "List Buffers" },
 		d = { ":Bdelete<CR>", "Close All Open Buffers" },
 	},
 	c = {
@@ -34,9 +35,10 @@ wk.register({
 	f = {
 		name = "File",
 		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
+        -- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
 		t = { ":Neotree filesystem toggle right<CR>", "Open Neotree" },
-		f = { ":FzfLua files<CR>", "Find files" },
-        -- f = { function() require('telescope.builtin').find_files() end, "Find files" },
+		-- f = { ":FzfLua files<CR>", "Find files" },
+        f = { function() require('telescope.builtin').find_files() end, "Find files" },
 	},
 	g = {
 		name = "Git",
@@ -45,6 +47,7 @@ wk.register({
 	h = {
 		name = "Help",
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
+        -- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
 	},
     p = {
         name = "PHP",
@@ -54,9 +57,12 @@ wk.register({
 		name = "Search",
         a = { ":Ags<CR>", "Search word under cursor wirh Ags"},
 		c = { ":nohlsearch<CR>", "Clear Search Highlight" },
-		p = { ":FzfLua live_grep<CR>", "Search in project" },
-		l = { ":FzfLua resume<CR>", "Resume last search" },
-		s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
+		-- p = { ":FzfLua live_grep<CR>", "Search in project" },
+        p = { ":Telescope live_grep<CR>", "Search in project" },
+		-- l = { ":FzfLua resume<CR>", "Resume last search" },
+        l = { function() require('telescope.builtin').resume() end, "Resume Last Search" },
+		-- s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
+        s = { function() require('telescope.builtin').current_buffer_fuzzy_find() end, "Fuzzy Seach Current Buffer" },
         -- j = { function() require('telescope.builtin').lsp_document_symbols() end, "Find Symbols" },
         j = { ":FzfLua lsp_document_symbols<CR>", "Find Symbols" },
 	},
