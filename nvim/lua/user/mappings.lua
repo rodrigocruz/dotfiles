@@ -30,10 +30,5 @@ vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("i", ";;", "<Esc>A;<Esc>")
 vim.keymap.set("i", ",,", "<Esc>A,<Esc>")
 
--- Resize with arrows.
--- vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
--- vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
--- vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
--- vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
-
---vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+local default_opts = {noremap = true, silent = true}
+vim.api.nvim_set_keymap('v', '<C-s>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
