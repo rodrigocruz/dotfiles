@@ -116,6 +116,8 @@ require("lazy").setup({
 
     { import = "user.plugins.searchbox" },
 
+    { "kazhala/close-buffers.nvim" },
+
 }, {
 	checker = {
 		enabled = true,

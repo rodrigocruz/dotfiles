@@ -9,6 +9,7 @@ wk.register({
 		-- b = { ":FzfLua buffers<CR>", "List buffers" },
         b = { function() require('telescope.builtin').buffers() end, "List Buffers" },
 		d = { ":Bdelete<CR>", "Close All Open Buffers" },
+        o = { ":BWipeout other<CR>", "Close Other Buffers" },
 	},
 	c = {
 		name = "Code",
