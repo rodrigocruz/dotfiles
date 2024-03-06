@@ -40,10 +40,10 @@ return {
 						width = "30%",
 						height = "auto",
 					},
-                    border = {
-                        style = "rounded",
-                        padding = { 1, 2 },
-                    },
+					border = {
+						style = "rounded",
+						padding = { 1, 2 },
+					},
 				},
 				popupmenu = {
 					relative = "editor",
@@ -62,6 +62,9 @@ return {
 					win_options = {
 						winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
 					},
+				},
+				notify = {
+					window = {},
 				},
 			},
 		})

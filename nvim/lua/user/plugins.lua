@@ -118,6 +118,10 @@ require("lazy").setup({
 
     { "kazhala/close-buffers.nvim" },
 
+    { import = "user.plugins.oil" },
+
+    { import = "user.plugins.hop"},
+
 }, {
 	checker = {
 		enabled = true,

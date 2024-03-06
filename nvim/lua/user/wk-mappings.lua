@@ -50,6 +50,12 @@ wk.register({
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
         -- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
 	},
+    j = {
+        name = "Jump",
+        j = { ":HopChar2<CR>", "Jump 2-char" },
+        p = { ":HopPattern<CR>", "Jump to Pattern" },
+        w = { ":HopWord<CR>", "Jump Word"},
+    },
     n = {
         name = "Notifications",
         d = { ":NoiceDismiss<CR>", "Dismiss Notification"},
