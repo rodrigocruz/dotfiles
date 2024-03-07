@@ -122,6 +122,7 @@ local leaderv = {
     s = {
         name = "Search",
         v = { "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", "Seach Selection"},
+        w = { ":BrowserSearch<CR>", "Search Web" },
     }
 }
 
