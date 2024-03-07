@@ -120,6 +120,8 @@ require("lazy").setup({
 
     { import = "user.plugins.oil" },
 
+    { import = "user.plugins.lsp-saga"},
+
     { import = "user.plugins.hop"},
 
     { import = "user.plugins.browser-search"},

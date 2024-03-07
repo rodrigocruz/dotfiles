@@ -7,18 +7,26 @@ wk.register({
 	b = {
 		name = "Buffers",
 		-- b = { ":FzfLua buffers<CR>", "List buffers" },
-        b = { function() require('telescope.builtin').buffers() end, "List Buffers" },
+		b = {
+			function()
+				require("telescope.builtin").buffers()
+			end,
+			"List Buffers",
+		},
 		d = { ":Bdelete<CR>", "Close All Open Buffers" },
-        o = { ":BWipeout other<CR>", "Close Other Buffers" },
+		o = { ":BWipeout other<CR>", "Close Other Buffers" },
 	},
 	c = {
 		name = "Code",
-		a = { vim.lsp.buf.code_action, "Code Actions" },
-        d = { vim.lsp.buf.definition, "Goto Definition" },
+		-- a = { vim.lsp.buf.code_action, "Code Actions" },
+		a = { ":Lspsaga code_action<CR>", "Code Actions" },
+		d = { vim.lsp.buf.definition, "Goto Definition" },
 		f = { vim.lsp.buf.format, "Code Format" },
-        h = { vim.lsp.buf.hover, "Hover" },
-        r = { vim.lsp.buf.rename, "Rename" },
-        z = { vim.lsp.buf.references, "References" },
+		h = { vim.lsp.buf.hover, "Hover" },
+		p = { ":Lspsaga peek_definition<CR>", "Peek Definition" },
+		r = { vim.lsp.buf.rename, "Rename" },
+		s = { ":Lspsaga finder<CR>", "Find References" },
+		z = { vim.lsp.buf.references, "References" },
 	},
 	d = {
 		name = "Debugging",
