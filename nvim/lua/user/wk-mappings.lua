@@ -73,9 +73,24 @@ wk.register({
 		-- l = { ":FzfLua resume<CR>", "Resume last search" },
         l = { function() require('telescope.builtin').resume() end, "Resume Last Search" },
 		-- s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
-        s = { function() require('telescope.builtin').current_buffer_fuzzy_find() end, "Fuzzy Seach Current Buffer" },
-        -- j = { function() require('telescope.builtin').lsp_document_symbols() end, "Find Symbols" },
-        j = { ":FzfLua lsp_document_symbols<CR>", "Find Symbols" },
+		s = {
+			function()
+				require("telescope.builtin").current_buffer_fuzzy_find()
+			end,
+			"Fuzzy Seach Current Buffer",
+		},
+		-- j = { function() require('telescope.builtin').lsp_document_symbols() end, "Find Symbols" },
+		j = { ":FzfLua lsp_document_symbols<CR>", "Find Symbols" },
+		u = { ":Telescope grep_string<CR>", "Find Word Under Cursor" },
+		w = { ":BrowserSearch<CR>", "Search Web" },
+	},
+	t = {
+		name = "Test",
+		n = { ":TestNearest<CR>", "Test Nearest" },
+		f = { ":TestFile<CR>", "Test File" },
+		s = { ":TestSuite<CR>", "Test Suite" },
+		l = { ":TestLast<CR>", "Test Last" },
+		v = { ":TestVisit<CR>", "Test Visit" },
 	},
     t = {
         name = "Test",

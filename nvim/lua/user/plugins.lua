@@ -122,6 +122,8 @@ require("lazy").setup({
 
     { import = "user.plugins.hop"},
 
+    { import = "user.plugins.browser-search"},
+
 }, {
 	checker = {
 		enabled = true,
