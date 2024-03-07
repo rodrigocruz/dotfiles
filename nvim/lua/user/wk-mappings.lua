@@ -44,10 +44,15 @@ wk.register({
 	f = {
 		name = "File",
 		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
-        -- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
+		-- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
 		-- f = { ":FzfLua files<CR>", "Find files" },
-        f = { function() require('telescope.builtin').find_files() end, "Find files" },
+		f = {
+			function()
+				require("telescope.builtin").find_files()
+			end,
+			"Find files",
+		},
 	},
 	g = {
 		name = "Git",
@@ -56,30 +61,35 @@ wk.register({
 	h = {
 		name = "Help",
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
-        -- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
+		-- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
 	},
-    j = {
-        name = "Jump",
-        j = { ":HopChar2<CR>", "Jump 2-char" },
-        p = { ":HopPattern<CR>", "Jump to Pattern" },
-        w = { ":HopWord<CR>", "Jump Word"},
-    },
-    n = {
-        name = "Notifications",
-        d = { ":NoiceDismiss<CR>", "Dismiss Notification"},
-    },
-    p = {
-        name = "PHP",
-            m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu"},
-    },
+	j = {
+		name = "Jump",
+		j = { ":HopChar2<CR>", "Jump 2-char" },
+		p = { ":HopPattern<CR>", "Jump to Pattern" },
+		w = { ":HopWord<CR>", "Jump Word" },
+	},
+	n = {
+		name = "Notifications",
+		d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
+	},
+	p = {
+		name = "PHP",
+		m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
+	},
 	s = {
 		name = "Search",
-        a = { ":Ags<CR>", "Search word under cursor wirh Ags"},
+		a = { ":Ags<CR>", "Search word under cursor with Ags" },
 		c = { ":nohlsearch<CR>", "Clear Search Highlight" },
 		-- p = { ":FzfLua live_grep<CR>", "Search in project" },
-        p = { ":Telescope live_grep<CR>", "Search in project" },
+		p = { ":Telescope live_grep<CR>", "Search in project" },
 		-- l = { ":FzfLua resume<CR>", "Resume last search" },
-        l = { function() require('telescope.builtin').resume() end, "Resume Last Search" },
+		l = {
+			function()
+				require("telescope.builtin").resume()
+			end,
+			"Resume Last Search",
+		},
 		-- s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
 		s = {
 			function()
@@ -100,14 +110,6 @@ wk.register({
 		l = { ":TestLast<CR>", "Test Last" },
 		v = { ":TestVisit<CR>", "Test Visit" },
 	},
-    t = {
-        name = "Test",
-        n = { ":TestNearest<CR>", "Test Nearest"},
-        f = { ":TestFile<CR>", "Test File"},
-        s = { ":TestSuite<CR>", "Test Suite"},
-        l = { ":TestLast<CR>", "Test Last"},
-        v = { ":TestVisit<CR>", "Test Visit"},
-    },
 	w = {
 		name = "Windows",
 		v = { ":vsplit<CR>", "Split window vertically" },
@@ -115,3 +117,15 @@ wk.register({
 		o = { ":only<CR>", "Close other wndows" },
 	},
 }, { prefix = "<leader>" })
+
+local leaderv = {
+    s = {
+        name = "Search",
+        v = { "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", "Seach Selection"},
+    }
+}
+
+wk.register(leaderv, {
+	mode = "v",
+	prefix = "<leader>",
+})
