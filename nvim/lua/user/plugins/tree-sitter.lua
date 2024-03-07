@@ -70,6 +70,8 @@ return {
 							["af"] = "@function.outer",
 							["ia"] = "@parameter.inner",
 							["aa"] = "@parameter.outer",
+                            ["ac"] = "@class.outer",
+                            ["ic"] = "@class.inner",
 						},
 					},
 				},
