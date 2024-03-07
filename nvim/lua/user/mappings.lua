@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = ""
+vim.g.maplocalleader = " "
 vim.keymap.set("i", "jk", "<Esc>")
 
 require("user/wk-mappings")
@@ -31,6 +31,6 @@ vim.keymap.set("i", ";;", "<Esc>A;<Esc>")
 vim.keymap.set("i", ",,", "<Esc>A,<Esc>")
 
 local default_opts = {noremap = true, silent = true}
-vim.api.nvim_set_keymap('v', '<C-s>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
+-- vim.api.nvim_set_keymap('v', '<C-s>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

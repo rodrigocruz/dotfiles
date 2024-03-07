@@ -88,7 +88,7 @@ require("lazy").setup({
 	{ import = "user.plugins.treesj" },
 
 	-- Show file and LSP context in a bar at the top of the screen.
-	{ import = "user.plugins.barbecue" },
+	-- { import = "user.plugins.barbecue" },
 
 	-- Colorize Hex Codes
 	{ import = "user.plugins.colorizer" },
