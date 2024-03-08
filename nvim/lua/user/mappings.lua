@@ -34,3 +34,4 @@ local default_opts = {noremap = true, silent = true}
 -- vim.api.nvim_set_keymap('v', '<C-s>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.api.nvim_set_keymap('t', '<C-h>', '<Esc><C-\\><C-n>:FloatermHide<CR>', {noremap = true, silent = true})
