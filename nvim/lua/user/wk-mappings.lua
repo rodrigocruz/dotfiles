@@ -112,7 +112,13 @@ wk.register({
 	},
     u = {
         name = "Utils",
-        d = { ":DBUIToggle<CR>", "Toggle Dadbod UI" },
+        d = {
+            name = "DB",
+            {
+                o = { "<CMD>Neotre close<CR><CMD>tabnew<CR><bar><bar><CMD>DBUI<CR>", "Open Dadbod UI" },
+                c = { "<CMD>DBUIClose<CR><CMD>tabclose<CR>", "Close Dadbod UI" },
+            }
+        }
     },
 	w = {
 		name = "Windows",
