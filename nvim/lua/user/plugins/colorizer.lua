@@ -1,8 +1,15 @@
 return {
-  'NvChad/nvim-colorizer.lua',
-  opts = {
-    user_default_options = {
-      names = false,
-    }
-  },
+	"NvChad/nvim-colorizer.lua",
+    config = function ()
+        require("colorizer").setup({
+            user_default_options = {
+                tailwind = true,
+            }
+        })
+    end,
+	opts = {
+		user_default_options = {
+			names = false,
+		},
+	},
 }
