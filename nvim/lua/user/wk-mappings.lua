@@ -25,8 +25,8 @@ wk.register({
 		h = { vim.lsp.buf.hover, "Hover" },
 		p = { ":Lspsaga peek_definition<CR>", "Peek Definition" },
 		r = { vim.lsp.buf.rename, "Rename" },
-		s = { ":Lspsaga finder<CR>", "Find References" },
-		z = { vim.lsp.buf.references, "References" },
+		l = { ":Lspsaga finder<CR>", "Find References" },
+		s = { vim.lsp.buf.references, "References" },
 	},
 	d = {
 		name = "Debugging",
@@ -121,7 +121,7 @@ wk.register({
 local leaderv = {
     s = {
         name = "Search",
-        v = { "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", "Seach Selection"},
+        s = { "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", "Seach Selection"},
         w = { ":BrowserSearch<CR>", "Search Web" },
     }
 }
