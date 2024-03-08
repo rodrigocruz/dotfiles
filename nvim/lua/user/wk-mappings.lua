@@ -43,6 +43,7 @@ wk.register({
 	},
 	f = {
 		name = "File",
+        ["-"] = { "<CMD>Oil<CR>", "Open currrent folder" },
 		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
 		-- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
@@ -118,7 +119,9 @@ wk.register({
                 o = { "<CMD>Neotre close<CR><CMD>tabnew<CR><bar><bar><CMD>DBUI<CR>", "Open Dadbod UI" },
                 c = { "<CMD>DBUIClose<CR><CMD>tabclose<CR>", "Close Dadbod UI" },
             }
-        }
+        },
+        -- r = { "<Plug>RestNvim", "Rest Client" },
+        r = { ":call VrcQuery()<CR>", "Rest Client" },
     },
 	w = {
 		name = "Windows",

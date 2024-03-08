@@ -130,6 +130,8 @@ require("lazy").setup({
 
     { import = "user.plugins.maximize"},
 
+    { import = "user.plugins.rest"},
+
 }, {
 	checker = {
 		enabled = true,
