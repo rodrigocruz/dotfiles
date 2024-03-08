@@ -47,9 +47,9 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			lspconfig.tsserver.setup({
-				capabilities = capabilities,
-			})
+			-- lspconfig.tsserver.setup({
+			-- 	capabilities = capabilities,
+			-- })
 			lspconfig.volar.setup({
 				capabilities = capabilities,
 				on_attach = function(client, bufnr)
