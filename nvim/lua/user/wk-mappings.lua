@@ -110,6 +110,10 @@ wk.register({
 		l = { ":TestLast<CR>", "Test Last" },
 		v = { ":TestVisit<CR>", "Test Visit" },
 	},
+    u = {
+        name = "Utils",
+        d = { ":DBUIToggle<CR>", "Toggle Dadbod UI" },
+    },
 	w = {
 		name = "Windows",
 		d = { "<C-w>q", "Close window" },

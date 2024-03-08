@@ -137,6 +137,7 @@ return {
 				-- { name = 'copilot' },
 				{ name = "buffer" },
 				{ name = "path" },
+                { name = "vim-dadbod-completion" },
 			},
 			experimental = {
 				ghost_text = true,
