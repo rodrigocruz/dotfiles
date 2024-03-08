@@ -33,7 +33,7 @@ vim.keymap.set("i", ",,", "<Esc>A,<Esc>")
 local default_opts = {noremap = true, silent = true}
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.api.nvim_set_keymap('t', '<C-h>', '<Esc><C-\\><C-n>:FloatermHide<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('t', '<C-d>', '<Esc><C-\\><C-n>:FloatermHide<CR>', {noremap = true, silent = true})
 
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
 vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
