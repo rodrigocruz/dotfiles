@@ -112,8 +112,8 @@ wk.register({
 	},
 	w = {
 		name = "Windows",
-		v = { ":vsplit<CR>", "Split window vertically" },
 		d = { "<C-w>q", "Close window" },
+        m = { ":lua require('maximize').toggle()<CR>", "Maximize Window" },
 		o = { ":only<CR>", "Close other wndows" },
 	},
 }, { prefix = "<leader>" })

@@ -128,6 +128,8 @@ require("lazy").setup({
 
     { import = "user.plugins.browser-search"},
 
+    { import = "user.plugins.maximize"},
+
 }, {
 	checker = {
 		enabled = true,
