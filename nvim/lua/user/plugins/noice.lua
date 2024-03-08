@@ -65,6 +65,17 @@ return {
 				},
 				notify = {
 					window = {},
+                    render = "wrapped-compact",
+                    timeout = 5000,
+				},
+			},
+			routes = {
+				{
+					filter = {
+						event = "notify",
+						find = "No information available",
+					},
+					opts = { skip = true },
 				},
 			},
 		})
