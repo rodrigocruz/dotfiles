@@ -7,8 +7,8 @@ return {
       let test#php#pest#options = '--colors=always'
 
       function! FloatermStrategy(cmd)
-        execute 'silent FloatermSend q'
-        execute 'silent FloatermKill'
+        " execute 'silent FloatermSend q'
+        " execute 'silent FloatermKill'
         execute 'FloatermNew! '.a:cmd.' |less -X'
       endfunction
 
