@@ -1,0 +1,99 @@
+# Blade Snippets
+snippet head
+	<head>
+		<meta charset="utf-8">
+
+		<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+		${0}
+	</head>
+snippet html5
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width">
+			<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+		</head>
+		<body>
+			$0
+		</body>
+	</html>
+snippet script
+	<script>
+		${0}
+	</script>
+snippet scripts
+	<script src="${0}.js"></script>
+snippet scriptt
+	<script type="${1}" id="${2}">
+		${0}
+	</script>
+snippet scriptsrc
+	<script src="${0}.js" charset="utf-8"></script>
+snippet select
+	<select name="${1}" id="${2:$1}">
+		${0}
+	</select>
+snippet select.
+	<select name="${1}" id="${2:$1}" class="${3}>
+		${0}
+	</select>
+snippet select+
+	<select name="${1}" id="${2:$1}">
+		<option value="${3}">${4:$3}</option>
+		opt+${0}
+	</select>
+snippet yl
+	@yield('${1:content}')
+snippet yld
+	@yield('${1:content}', '${2:default}')
+snippet ext
+	@extends('${1:layouts.master'})
+
+	@section('${2:content}')
+		${3://}
+	@stop
+snippet sec
+	@section('${1:content}')
+		${2://}
+	@stop
+snippet foreach
+	@foreach(${1:$data} as ${2:$value})
+		${3://}
+	@endforeach
+snippet if
+	@if(${1})
+		${2}
+	@endif
+snippet while
+	@while(${1})
+		${2}
+	@endwhile
+snippet unless
+	@unless(${1})
+		${2}
+	@endunless
+snippet for
+	@for(${1})
+		${2}
+	@endfor
+snippet echo
+	<?php echo ${1:$data}; ?>
+snippet var
+	<?php $${1:var} = ${2:""}; ?>${3}
+snippet {{
+	{{ ${1} }}${2}
+snippet {{{
+	{{{ ${1} }}}${2}
+snippet textfield
+	<div class="form-group">
+		{{ Form::label('${1:name}', '${2:title}:') }}
+		{{ Form::${3:text}('$1', ${4:null, }['class' => 'form-control']) }}
+	</div>
+	${5}
+snippet btnfield
+	<div class="form-group">
+		{{ Form::${1:submit}('${2:Submit}', ['class' => 'btn btn-primary']) }}
+	</div>
+	${3}
+
