@@ -132,6 +132,8 @@ require("lazy").setup({
 
     { import = "user.plugins.rest"},
 
+    { import = "user.plugins.dash" },
+
 }, {
 	checker = {
 		enabled = true,

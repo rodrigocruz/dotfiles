@@ -18,15 +18,15 @@ wk.register({
 	},
 	c = {
 		name = "Code",
-		-- a = { vim.lsp.buf.code_action, "Code Actions" },
 		a = { ":Lspsaga code_action<CR>", "Code Actions" },
 		d = { vim.lsp.buf.definition, "Goto Definition" },
 		f = { vim.lsp.buf.format, "Code Format" },
 		h = { vim.lsp.buf.hover, "Hover" },
+        i = { ":DashWord<CR>", "Look Word in Dash" },
+        l = { ":Lspsaga finder<CR>", "Find References" },
 		p = { ":Lspsaga peek_definition<CR>", "Peek Definition" },
 		r = { vim.lsp.buf.rename, "Rename" },
-		l = { ":Lspsaga finder<CR>", "Find References" },
-		s = { vim.lsp.buf.references, "References" },
+        s = { vim.lsp.buf.references, "References" },
 	},
 	d = {
 		name = "Debugging",

@@ -79,6 +79,9 @@ return {
                 file_ignore_patterns = { ".git/" },
             },
             extensions = {
+                dash = {
+
+                },
                 live_grep_args = {
                     mappings = {
                         i = {
