@@ -47,9 +47,22 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			-- lspconfig.tsserver.setup({
-			-- 	capabilities = capabilities,
-			-- })
+			lspconfig.tsserver.setup({
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+							languages = { "javascript", "typescript", "vue" },
+						},
+					},
+				},
+				filetypes = {
+					"javascript",
+					"typescript",
+					"vue",
+				},
+			})
 			lspconfig.volar.setup({
 				capabilities = capabilities,
 				on_attach = function(client, bufnr)
@@ -61,7 +74,7 @@ return {
 				end,
 				-- Enable "Take Over Mode" where volar will provide all JS/TS LSP services
 				-- This drastically improves the responsiveness of diagnostic updates on change
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+				-- filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
@@ -158,7 +171,7 @@ return {
 				},
 			})
 
-                -- vim.keymap.set('n', '<space>z', vim.diagnostic.open_float)
+			-- vim.keymap.set('n', '<space>z', vim.diagnostic.open_float)
 			--vim.keymap.set('n', '<space>en', vim.diagnostic.goto_next)
 			--vim.keymap.set('n', '<space>ep', vim.diagnostic.goto_prev)
 			--vim.keymap.set('n', '<space>el', vim.diagnostic.setloclist)
