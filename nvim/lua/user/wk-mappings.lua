@@ -23,10 +23,10 @@ wk.register({
 		f = { vim.lsp.buf.format, "Code Format" },
 		h = { vim.lsp.buf.hover, "Hover" },
         i = { ":DashWord<CR>", "Look Word in Dash" },
-        l = { ":Lspsaga finder<CR>", "Find References" },
+        s = { ":Lspsaga finder<CR>", "Find References" },
 		p = { ":Lspsaga peek_definition<CR>", "Peek Definition" },
 		r = { vim.lsp.buf.rename, "Rename" },
-        s = { vim.lsp.buf.references, "References" },
+        q = { vim.lsp.buf.references, "References" },
 	},
 	d = {
 		name = "Debugging",
