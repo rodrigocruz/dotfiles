@@ -136,6 +136,10 @@ require("lazy").setup({
 
     -- Automatically set the working directory to the project root.
     { import = "user.plugins.vim-rooter" },
+
+    { import = "user.plugins.ts-error-translator" },
+
+    { import = "user.plugins.dir-telescope" },
 }, {
     checker = {
         enabled = true,

@@ -82,6 +82,7 @@ wk.register({
 		name = "Search",
 		a = { ":Ags<CR>", "Search word under cursor with Ags" },
 		c = { ":nohlsearch<CR>", "Clear Search Highlight" },
+        d = { ":Telescope dir live_grep<CR>", "Search in Current Folder" },
 		-- p = { ":FzfLua live_grep<CR>", "Search in project" },
 		p = { ":Telescope live_grep<CR>", "Search in project" },
 		-- l = { ":FzfLua resume<CR>", "Resume last search" },
