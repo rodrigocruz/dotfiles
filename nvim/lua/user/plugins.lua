@@ -63,7 +63,7 @@ require("lazy").setup({
     { "nelstrom/vim-visual-star-search" },
 
     -- Text objects for HTML attributes.
-    { "whatyouhide/vim-textobj-xmlattr",       dependencies = "kana/vim-textobj-user" },
+    { "whatyouhide/vim-textobj-xmlattr",          dependencies = "kana/vim-textobj-user" },
 
     -- Add smooth scrolling to avoid jarring jumps
     -- { "karb94/neoscroll.nvim", config = true },
@@ -140,6 +140,9 @@ require("lazy").setup({
     { import = "user.plugins.ts-error-translator" },
 
     { import = "user.plugins.dir-telescope" },
+
+    "sindrets/diffview.nvim",
+
 }, {
     checker = {
         enabled = true,
