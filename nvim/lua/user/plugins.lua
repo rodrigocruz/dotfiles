@@ -147,6 +147,8 @@ require("lazy").setup({
 
     { import = "user.plugins.bookmarks" },
 
+    { import = "user.plugins.scratch" },
+
 }, {
     checker = {
         enabled = true,

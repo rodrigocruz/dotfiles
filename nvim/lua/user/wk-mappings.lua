@@ -15,6 +15,7 @@ wk.register({
 		},
 		d = { ":Bdelete<CR>", "Close All Open Buffers" },
 		o = { ":BWipeout other<CR>", "Close Other Buffers" },
+        s = { ":Scratch<CR>", "Open Scratch Buffer in a Split" },
 	},
 	c = {
 		name = "Code",
