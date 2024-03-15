@@ -143,6 +143,10 @@ require("lazy").setup({
 
     "sindrets/diffview.nvim",
 
+    { import = "user.plugins.lazygit" },
+
+    { import = "user.plugins.bookmarks" },
+
 }, {
     checker = {
         enabled = true,

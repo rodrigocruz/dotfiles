@@ -43,7 +43,7 @@ wk.register({
 	},
 	f = {
 		name = "File",
-        ["-"] = { "<CMD>Oil<CR>", "Open currrent folder" },
+        ["-"] = { "<CMD>Oil --float<CR>", "Open currrent folder" },
 		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
 		-- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
@@ -57,6 +57,7 @@ wk.register({
 	},
 	g = {
 		name = "Git",
+        l = { ":LazyGit<CR>", "Open Lazy Git"},
 		s = { ":Neogit<CR>", "Git Status" },
 	},
 	h = {
@@ -70,6 +71,13 @@ wk.register({
 		p = { ":HopPattern<CR>", "Jump to Pattern" },
 		w = { ":HopWord<CR>", "Jump Word" },
 	},
+    m = {
+        name = "Bookmarks",
+        a = { ":BookmarksMark<CR>", "Add Bookmark" },
+        c = { ":BookmarksCommands<CR>", "Bookmar Commands"},
+        l = { ":BookmarksGoto<CR>" , "Goto Bookmark"},
+        r = { ":BookmarksGotoRecent<CR>", "Goto Recent Bookmark"},
+    },
 	n = {
 		name = "Notifications",
 		d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
@@ -121,6 +129,8 @@ wk.register({
                 c = { "<CMD>DBUIClose<CR><CMD>tabclose<CR>", "Close Dadbod UI" },
             }
         },
+        l = { ":Lazy<CR>", "Open Lazy" },
+        m = { ":Mason<CR>", "Open Mason" },
         -- r = { "<Plug>RestNvim", "Rest Client" },
         r = { ":call VrcQuery()<CR>", "Rest Client" },
     },
