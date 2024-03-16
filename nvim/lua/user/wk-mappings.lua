@@ -58,6 +58,7 @@ wk.register({
 	},
 	g = {
 		name = "Git",
+        b = { ":Gitsigns blame_line<CR>", "Git Blame Line"},
         l = { ":LazyGit<CR>", "Open Lazy Git"},
 		s = { ":Neogit<CR>", "Git Status" },
 	},
