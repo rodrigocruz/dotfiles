@@ -62,6 +62,7 @@ wk.register({
 		name = "Git",
         b = { ":Gitsigns blame_line<CR>", "Git Blame Line"},
         l = { ":LazyGit<CR>", "Open Lazy Git"},
+        p = { ":Gitsigns preview_hunk<CR>", "Preview Change" },
 		s = { ":Neogit<CR>", "Git Status" },
 	},
 	h = {
@@ -69,6 +70,7 @@ wk.register({
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
 		-- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
 	},
+    i = { ":bp<CR>", "Prev Buffer" },
 	j = {
 		name = "Jump",
 		j = { ":HopChar2<CR>", "Jump 2-char" },
@@ -86,12 +88,13 @@ wk.register({
 		name = "Notifications",
 		d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
 	},
-    o = { ":bp<CR>", "Next Buffer" },
+    o = { ":bn<CR>", "Next Buffer" },
+    p = { "<CMD>_dP"},
 	-- p = {
 	-- 	name = "PHP",
 	-- 	m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
 	-- },
-    p = { ":bn<CR>", "Next Buffer" },
+    -- p = { ":bn<CR>", "Next Buffer" },
 	s = {
 		name = "Search",
 		a = { ":Ags<CR>", "Search word under cursor with Ags" },
