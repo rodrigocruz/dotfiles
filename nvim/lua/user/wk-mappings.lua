@@ -14,6 +14,8 @@ wk.register({
 			"List Buffers",
 		},
 		d = { ":Bdelete<CR>", "Close All Open Buffers" },
+        n = { ":bn<CR>", "Next Buffer" },
+        p = { ":bp<CR>", "Prev Buffer" },
 		o = { ":BWipeout other<CR>", "Close Other Buffers" },
         s = { ":Scratch<CR>", "Open Scratch Buffer in a Split" },
 	},
@@ -84,10 +86,12 @@ wk.register({
 		name = "Notifications",
 		d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
 	},
-	p = {
-		name = "PHP",
-		m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
-	},
+    o = { ":bp<CR>", "Next Buffer" },
+	-- p = {
+	-- 	name = "PHP",
+	-- 	m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
+	-- },
+    p = { ":bn<CR>", "Next Buffer" },
 	s = {
 		name = "Search",
 		a = { ":Ags<CR>", "Search word under cursor with Ags" },
