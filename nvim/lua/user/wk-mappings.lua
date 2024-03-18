@@ -79,7 +79,7 @@ wk.register({
 	},
     m = {
         name = "Bookmarks",
-        a = { ":BookmarksMark<CR>", "Add Bookmark" },
+        a = { ":BookmarksMark<CR>", "Toggle Bookmark" },
         c = { ":BookmarksCommands<CR>", "Bookmar Commands"},
         l = { ":BookmarksGoto<CR>" , "Goto Bookmark"},
         r = { ":BookmarksGotoRecent<CR>", "Goto Recent Bookmark"},
@@ -89,7 +89,7 @@ wk.register({
 		d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
 	},
     o = { ":bn<CR>", "Next Buffer" },
-    p = { "<CMD>_dP"},
+    p = { "<CMD>_dP", "Paste Without Copy" },
 	-- p = {
 	-- 	name = "PHP",
 	-- 	m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
