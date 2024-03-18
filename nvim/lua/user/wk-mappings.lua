@@ -17,7 +17,7 @@ wk.register({
         n = { ":bn<CR>", "Next Buffer" },
         p = { ":bp<CR>", "Prev Buffer" },
 		o = { ":BWipeout other<CR>", "Close Other Buffers" },
-        s = { ":Scratch<CR>", "Open Scratch Buffer in a Split" },
+        s = { ":Scratch<CR>", "Open Scratch Buffer" },
 	},
 	c = {
 		name = "Code",
