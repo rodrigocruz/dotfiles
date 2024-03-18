@@ -149,6 +149,8 @@ require("lazy").setup({
 
     { import = "user.plugins.scratch" },
 
+    { "pteroctopus/faster.nvim" },
+
 }, {
     checker = {
         enabled = true,
