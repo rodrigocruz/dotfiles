@@ -151,6 +151,8 @@ require("lazy").setup({
 
     { "pteroctopus/faster.nvim" },
 
+    { "nvim-neotest/nvim-nio" },
+
 }, {
     checker = {
         enabled = true,
