@@ -42,3 +42,4 @@ vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window s
 
 vim.keymap.set("i", "..", "->")
 vim.keymap.set("i", "//", "=>")
+
