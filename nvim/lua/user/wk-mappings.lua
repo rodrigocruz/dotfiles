@@ -30,6 +30,7 @@ wk.register({
 		p = { ":Lspsaga peek_definition<CR>", "Peek Definition" },
 		r = { vim.lsp.buf.rename, "Rename" },
         q = { vim.lsp.buf.references, "References" },
+        z = { ":LspRestart<CR>", "Restart Lsp" },
 	},
 	d = {
 		name = "Debugging",
@@ -61,6 +62,7 @@ wk.register({
 	g = {
 		name = "Git",
         b = { ":Gitsigns blame_line<CR>", "Git Blame Line"},
+        h = { ":DiffviewFileHistory %<CR>", "Git File History" },
         l = { ":LazyGit<CR>", "Open Lazy Git"},
         p = { ":Gitsigns preview_hunk<CR>", "Preview Change" },
 		s = { ":Neogit<CR>", "Git Status" },
@@ -149,6 +151,7 @@ wk.register({
         m = { ":lua require('maximize').toggle()<CR>", "Maximize Window" },
 		o = { ":only<CR>", "Close other wndows" },
         s = { ":split<CR>", "Split window vertically" },
+        t = { ":tabclose<CR>", "Close Tab" },
         v = { ":vsplit<CR>", "Split window vertically" },
 	},
 }, { prefix = "<leader>" })
