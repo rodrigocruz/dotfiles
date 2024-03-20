@@ -153,6 +153,8 @@ require("lazy").setup({
 
     { "nvim-neotest/nvim-nio" },
 
+    { import = "user.plugins.nvim-recorder" },
+
 }, {
     checker = {
         enabled = true,
