@@ -7,16 +7,17 @@ wk.register({
 	b = {
 		name = "Buffers",
 		-- b = { ":FzfLua buffers<CR>", "List buffers" },
+        A = { ":%bd<CR>", "Close All Buffers" },
 		b = {
 			function()
 				require("telescope.builtin").buffers()
 			end,
 			"List Buffers",
 		},
-		d = { ":Bdelete<CR>", "Close All Open Buffers" },
+		d = { ":Bdelete<CR>", "Close Buffer" },
         n = { ":bn<CR>", "Next Buffer" },
         p = { ":bp<CR>", "Prev Buffer" },
-		o = { ":BWipeout other<CR>", "Close Other Buffers" },
+		o = { ":w <bar> %bd <bar> e# <bar> bd# <CR>", "Close Other Buffers" },
         s = { ":Scratch<CR>", "Open Scratch Buffer" },
 	},
 	c = {
@@ -26,10 +27,16 @@ wk.register({
 		f = { vim.lsp.buf.format, "Code Format" },
 		h = { vim.lsp.buf.hover, "Hover" },
         i = { ":DashWord<CR>", "Look Word in Dash" },
-        s = { ":Lspsaga finder<CR>", "Find References" },
+        l = {
+            name = "Php/Laravel",
+            i = { ":PhpactorImportClass<CR>", "Import Missing Class" },
+            I = { ":PhpactorImportMissingClasses<CR>", "Import Missing Classes" },
+        },
+        m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
 		p = { ":Lspsaga peek_definition<CR>", "Peek Definition" },
-		r = { vim.lsp.buf.rename, "Rename" },
         q = { vim.lsp.buf.references, "References" },
+        r = { vim.lsp.buf.rename, "Rename" },
+        s = { ":Lspsaga finder<CR>", "Find References" },
         z = { ":LspRestart<CR>", "Restart Lsp" },
 	},
 	d = {
@@ -157,9 +164,16 @@ wk.register({
 }, { prefix = "<leader>" })
 
 local leaderv = {
+    c = {
+        name = "code",
+        l = {
+            name = "Php/Laravel",
+            m = { ":PhpactorExtractMethod<CR>", "Extract Method" },
+        },
+    },
     s = {
         name = "Search",
-        s = { "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", "Seach Selection"},
+        s = { "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", "Search Selection"},
         w = { ":BrowserSearch<CR>", "Search Web" },
     }
 }
