@@ -157,6 +157,8 @@ require("lazy").setup({
 
     { import = "user.plugins.laravel" },
 
+    { import = "user.plugins.tailwind-tools" },
+
 }, {
     checker = {
         enabled = true,
