@@ -118,7 +118,7 @@ require("lazy").setup({
 
     { import = "user.plugins.searchbox" },
 
-    { "kazhala/close-buffers.nvim" },
+    -- { "kazhala/close-buffers.nvim" },
 
     { import = "user.plugins.oil" },
 
