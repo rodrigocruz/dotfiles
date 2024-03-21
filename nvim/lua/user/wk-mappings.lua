@@ -29,8 +29,11 @@ wk.register({
         i = { ":DashWord<CR>", "Look Word in Dash" },
         l = {
             name = "Php/Laravel",
+            a = { ":Laravel artisan<CR>", "Run Artisan Command" },
             i = { ":PhpactorImportClass<CR>", "Import Missing Class" },
             I = { ":PhpactorImportMissingClasses<CR>", "Import Missing Classes" },
+            r = { ":Laravel routes<CR>", "List Routes" },
+            v = { ":Laravel view-finder<CR>", "Goto Related View" },
         },
         m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
 		p = { ":Lspsaga peek_definition<CR>", "Peek Definition" },
@@ -150,7 +153,9 @@ wk.register({
         l = { ":Lazy<CR>", "Open Lazy" },
         m = { ":Mason<CR>", "Open Mason" },
         -- r = { "<Plug>RestNvim", "Rest Client" },
+        q = { ":qa<CR>", "Quit" },
         r = { ":call VrcQuery()<CR>", "Rest Client" },
+        w = { ":w<CR>", "Save" },
     },
 	w = {
 		name = "Windows",
