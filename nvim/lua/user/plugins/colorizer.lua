@@ -3,7 +3,7 @@ return {
     config = function ()
         require("colorizer").setup({
             user_default_options = {
-                tailwind = false,
+                tailwind = true,
             }
         })
     end,
