@@ -155,6 +155,8 @@ require("lazy").setup({
 
     { import = "user.plugins.nvim-recorder" },
 
+    { import = "user.plugins.laravel" },
+
 }, {
     checker = {
         enabled = true,
