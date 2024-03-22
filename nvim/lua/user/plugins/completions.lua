@@ -147,7 +147,7 @@ return {
 					{ name = "vim-dadbod-completion" },
 				},
 				experimental = {
-					ghost_text = true,
+					ghost_text = false,
 				},
 			})
 		end,
