@@ -16,9 +16,9 @@ return {
       " execute 'silent FloatermSend q'
       " execute 'silent FloatermKill'
       execute 'FloatermToggle'
-      execute 'FloatermSend!'
+      execute 'FloatermSend! '
       execute 'FloatermSend! clear'
-      execute 'FloatermSend! '.a:cmd.
+      execute 'FloatermSend! '. a:cmd . ' |less -X'
     endfunction
 
       let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
