@@ -47,22 +47,22 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			lspconfig.tsserver.setup({
-				init_options = {
-					plugins = {
-						{
-							name = "@vue/typescript-plugin",
-							location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-							languages = { "javascript", "typescript", "vue" },
-						},
-					},
-				},
-				filetypes = {
-					"javascript",
-					"typescript",
-					"vue",
-				},
-			})
+			-- lspconfig.tsserver.setup({
+			-- 	init_options = {
+			-- 		plugins = {
+			-- 			{
+			-- 				name = "@vue/typescript-plugin",
+			-- 				location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+			-- 				languages = { "javascript", "typescript", "vue" },
+			-- 			},
+			-- 		},
+			-- 	},
+			-- 	filetypes = {
+			-- 		"javascript",
+			-- 		-- "typescript",
+			-- 		"vue",
+			-- 	},
+			-- })
 			lspconfig.volar.setup({
 				capabilities = capabilities,
 				on_attach = function(client, bufnr)
@@ -128,7 +128,7 @@ return {
 					"scss",
 					"svelte",
 					"pug",
-					"typescriptreact",
+					-- "typescriptreact",
 					"vue",
 					"blade",
 				},
