@@ -8,12 +8,13 @@ wk.register({
 		name = "Buffers",
 		-- b = { ":FzfLua buffers<CR>", "List buffers" },
 		A = { ":%bd<CR>", "Close All Buffers" },
-		b = {
-			function()
-				require("telescope.builtin").buffers()
-			end,
-			"List Buffers",
-		},
+		-- b = {
+		-- 	function()
+		-- 		require("telescope.builtin").buffers()
+		-- 	end,
+		-- 	"List Buffers",
+		-- },
+        b = { ":FzfLua buffers<CR>", "List Buffers" },
 		d = { ":Bdelete<CR>", "Close Buffer" },
 		n = { ":bn<CR>", "Next Buffer" },
 		p = { ":bp<CR>", "Prev Buffer" },
@@ -87,6 +88,7 @@ wk.register({
 	j = {
 		name = "Jump",
 		j = { ":HopChar2<CR>", "Jump 2-char" },
+        m = { ":FzfLua marks<CR>", "Jump to mark" },
 		p = { ":HopPattern<CR>", "Jump to Pattern" },
 		w = { ":HopWord<CR>", "Jump Word" },
 	},
@@ -95,6 +97,7 @@ wk.register({
 		a = { ":BookmarksMark<CR>", "Toggle Bookmark" },
 		c = { ":BookmarksCommands<CR>", "Bookmar Commands" },
 		l = { ":BookmarksGoto<CR>", "Goto Bookmark" },
+        m = { ":FzfLua marks<CR>", "List Marks" },
 		r = { ":BookmarksGotoRecent<CR>", "Goto Recent Bookmark" },
 	},
 	n = {
@@ -151,6 +154,7 @@ wk.register({
 				c = { "<CMD>DBUIClose<CR><CMD>tabclose<CR>", "Close Dadbod UI" },
 			},
 		},
+        h = { ":FzfLua command_history<CR>" , "Command History" },
 		l = { ":Lazy<CR>", "Open Lazy" },
 		m = { ":Mason<CR>", "Open Mason" },
 		-- r = { "<Plug>RestNvim", "Rest Client" },
