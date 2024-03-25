@@ -70,12 +70,15 @@ wk.register({
 			end,
 			"Find files",
 		},
+        g = { ":FzfLua git_status<CR>", "Git Files" },
 	},
 	g = {
 		name = "Git",
 		b = { ":Gitsigns blame_line<CR>", "Git Blame Line" },
+        f = { ":FzfLua git_status<CR>", "Gir Files" },
 		h = { ":DiffviewFileHistory %<CR>", "Git File History" },
 		l = { ":LazyGit<CR>", "Open Lazy Git" },
+        n = { ":Gitsigns next_hunk<CR>", "Next Modification"},
 		p = { ":Gitsigns preview_hunk<CR>", "Preview Change" },
 		s = { ":Neogit<CR>", "Git Status" },
 	},
@@ -125,6 +128,7 @@ wk.register({
 			end,
 			"Resume Last Search",
 		},
+        r = { ":Spectre<CR>", "Open Spectre" },
 		-- s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
 		s = {
 			function()

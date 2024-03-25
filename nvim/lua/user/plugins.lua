@@ -160,6 +160,12 @@ require("lazy").setup({
 	{ import = "user.plugins.tailwind-fold" },
 
 	{ import = "user.plugins.typescript-tools" },
+
+    { import = "user.plugins.spectre" },
+
+    { "dyng/ctrlsf.vim" },
+
+    { "mg979/vim-visual-multi" },
 }, {
 	checker = {
 		enabled = true,
