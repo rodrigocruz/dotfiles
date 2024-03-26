@@ -108,7 +108,6 @@ wk.register({
 		d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
 	},
 	o = { ":bn<CR>", "Next Buffer" },
-	p = { "<CMD>_dP", "Paste Without Copy" },
 	-- p = {
 	-- 	name = "PHP",
 	-- 	m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
@@ -186,6 +185,7 @@ local leaderv = {
 			m = { ":PhpactorExtractMethod<CR>", "Extract Method" },
 		},
 	},
+    p = { '"_dP', "Paste Without Copy" },
 	s = {
 		name = "Search",
 		s = { "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", "Search Selection" },
