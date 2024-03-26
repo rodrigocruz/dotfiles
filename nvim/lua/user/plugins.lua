@@ -163,7 +163,7 @@ require("lazy").setup({
 
     { import = "user.plugins.spectre" },
 
-    { "dyng/ctrlsf.vim" },
+    -- { "dyng/ctrlsf.vim" },
 
     { "mg979/vim-visual-multi" },
 }, {
