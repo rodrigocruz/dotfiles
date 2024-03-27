@@ -163,9 +163,9 @@ require("lazy").setup({
 
     { import = "user.plugins.spectre" },
 
-    -- { "dyng/ctrlsf.vim" },
-
     { "mg979/vim-visual-multi" },
+
+    { import = "user.plugins.garbage-day" },
 }, {
 	checker = {
 		enabled = true,
