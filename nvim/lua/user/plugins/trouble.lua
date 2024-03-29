@@ -1,9 +1,26 @@
 return {
-  "folke/trouble.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  },
+    "folke/trouble.nvim",
+    branch = "dev",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+        focus = true,
+        win = {
+            size = { height = 0.3 },
+        },
+        modes = {
+            preview_float = {
+                mode = "diagnostics",
+                preview = {
+                    type = "float",
+                    relative = "editor",
+                    border = "rounded",
+                    title = "Preview",
+                    title_pos = "center",
+                    position = { 0, -2 },
+                    size = { width = 0.3, height = 0.3 },
+                    zindex = 200,
+                },
+            },
+        },
+    },
 }
