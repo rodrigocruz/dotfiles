@@ -12,7 +12,13 @@ return {
                 null_ls.builtins.formatting.blade_formatter,
                 require("none-ls.diagnostics.eslint_d"),
                 require("none-ls.formatting.eslint_d"),
-                null_ls.builtins.diagnostics.phpstan, -- TODO: Only if config file
+                null_ls.builtins.diagnostics.phpstan.with({
+                    condition = function (utils)
+                        return utils.root_has_file({
+                            "phpstan.neon",
+                        })
+                    end,
+                }),
                 null_ls.builtins.diagnostics.trail_space.with({ disabled_filetypes = { "NvimTree" } }),
                 null_ls.builtins.formatting.pint.with({
                     condition = function(utils)
