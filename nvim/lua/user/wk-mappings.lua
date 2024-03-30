@@ -42,7 +42,7 @@ wk.register({
         -- q = { vim.lsp.buf.references, "References" },
         r = { vim.lsp.buf.rename, "Rename" },
         s = { ":Lspsaga finder<CR>", "Find References" },
-        t = { ":Trouble<CR>" , "Trouble Menu" },
+        t = { ":Trouble<CR>", "Trouble Menu" },
         y = { ":TailwindFoldToggle<CR>", "Hide Tailwind Classes" },
         z = { ":LspRestart<CR>", "Restart Lsp" },
     },
