@@ -12,18 +12,8 @@ return {
                 null_ls.builtins.formatting.blade_formatter,
                 require("none-ls.diagnostics.eslint_d"),
                 require("none-ls.formatting.eslint_d"),
-                -- null_ls.builtins.diagnostics.eslint_d.with({
-                --     condition = function(utils)
-                --         return utils.root_has_file({ ".eslintrc.js" })
-                --     end,
-                -- }),
-                -- null_ls.builtins.diagnostics.phpstan, -- TODO: Only if config file
+                null_ls.builtins.diagnostics.phpstan, -- TODO: Only if config file
                 null_ls.builtins.diagnostics.trail_space.with({ disabled_filetypes = { "NvimTree" } }),
-                -- null_ls.builtins.formatting.eslint_d.with({
-                --     condition = function(utils)
-                --         return utils.root_has_file({ ".eslintrc.js", ".eslintrc.json" })
-                --     end,
-                -- }),
                 null_ls.builtins.formatting.pint.with({
                     condition = function(utils)
                         return utils.root_has_file({ "vendor/bin/pint" })
