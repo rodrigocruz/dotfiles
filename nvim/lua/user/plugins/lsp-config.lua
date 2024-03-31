@@ -26,9 +26,6 @@ return {
 					"yamlls",
 					"antlersls",
 					"volar",
-                    "phpstan",
-                    "pint",
-                    "prettier",
 				},
 			})
 		end,
