@@ -168,6 +168,8 @@ require("lazy").setup({
     { import = "user.plugins.garbage-day" },
 
     { import = "user.plugins.codeium" },
+
+    { import = "user.plugins.neoclip" },
 }, {
 	checker = {
 		enabled = true,
