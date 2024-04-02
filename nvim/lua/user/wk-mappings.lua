@@ -111,10 +111,6 @@ wk.register({
         m = { ":FzfLua marks<CR>", "List Marks" },
         r = { ":BookmarksGotoRecent<CR>", "Goto Recent Bookmark" },
     },
-    n = {
-        name = "Notifications",
-        d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
-    },
     o = { ":bn<CR>", "Next Buffer" },
     -- p = {
     -- 	name = "PHP",
@@ -169,9 +165,17 @@ wk.register({
         l = { ":Lazy<CR>", "Open Lazy" },
         m = { ":Mason<CR>", "Open Mason" },
         -- r = { "<Plug>RestNvim", "Rest Client" },
+        n = {
+            name = "Notifications",
+            d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
+        },
         q = { ":qa<CR>", "Quit" },
         r = { ":call VrcQuery()<CR>", "Rest Client" },
         w = { ":w<CR>", "Save" },
+    },
+    y = {
+        name = "Yank",
+        l = { ":Telescope neoclip<CR>", "Yank History" },
     },
     w = {
         name = "Windows",
