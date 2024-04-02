@@ -166,6 +166,8 @@ require("lazy").setup({
     { "mg979/vim-visual-multi" },
 
     { import = "user.plugins.garbage-day" },
+
+    { import = "user.plugins.codeium" },
 }, {
 	checker = {
 		enabled = true,

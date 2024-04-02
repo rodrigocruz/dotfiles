@@ -148,6 +148,7 @@ return {
                     { name = "buffer" },
                     { name = "path" },
                     { name = "vim-dadbod-completion" },
+                    { name = "codeium" },
                 },
                 experimental = {
                     ghost_text = false,
