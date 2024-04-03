@@ -170,6 +170,8 @@ require("lazy").setup({
     { import = "user.plugins.codeium" },
 
     { import = "user.plugins.neoclip" },
+
+    { import = "user.plugins.chatgpt" },
 }, {
 	checker = {
 		enabled = true,
