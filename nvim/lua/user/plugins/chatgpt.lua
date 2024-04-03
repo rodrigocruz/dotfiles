@@ -6,7 +6,7 @@ return {
             api_key_cmd = "echo $OPENAI_API_KEY",
             predefined_chat_gpt_prompts = "https://raw.githubusercontent.com/rodrigocruz/custom-gpt-prompts/main/prompts.csv",
             openai_params = {
-                model = "gpt-3.5-turbo",
+                model = "gpt-4",
                 frequency_penalty = 0,
                 presence_penalty = 0,
                 max_tokens = 400,
