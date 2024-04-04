@@ -6,7 +6,7 @@ wk.register({
 	["<tab>"] = { ":b#<CR>", "Previous buffer" },
 	a = {
 		name = "ChatGPT",
-        mode = { "n", "v" },
+		mode = { "n", "v" },
 		a = { "<cmd>ChatGPTActAs<CR>", "Act as" },
 		c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
 		e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
@@ -110,6 +110,13 @@ wk.register({
 	},
 	h = {
 		name = "Help",
+		d = {
+			name = "DevDocs",
+			f = { ":DevdocsOpenFloat<CR>", "DevDocs Open" },
+            i = { ":DevdocsInstall<CR>", "DevDocs Install" },
+            t = { ":DevdocsToggle<CR>", "DevDocs Toggle" },
+            u = { ":DevdocsUpdate<CR>", "DevDocs Update" },
+		},
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
 		-- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
 	},
@@ -210,6 +217,7 @@ wk.register({
 local leaderv = {
 	c = {
 		name = "code",
+		c = { ":CarbonNow<CR>", "Carbon Now" },
 		l = {
 			name = "Php/Laravel",
 			m = { ":PhpactorExtractMethod<CR>", "Extract Method" },
