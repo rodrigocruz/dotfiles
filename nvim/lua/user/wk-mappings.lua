@@ -123,9 +123,9 @@ wk.register({
 	i = { ":bp<CR>", "Prev Buffer" },
 	j = {
 		name = "Jump",
-		j = { ":HopChar2<CR>", "Jump 2-char" },
+		c = { ":HopChar2<CR>", "Jump 2-char" },
 		m = { ":FzfLua marks<CR>", "Jump to mark" },
-		p = { ":HopPattern<CR>", "Jump to Pattern" },
+		j = { ":HopPattern<CR>", "Jump to Pattern" },
 		w = { ":HopWord<CR>", "Jump Word" },
 	},
 	m = {
@@ -146,7 +146,7 @@ wk.register({
 		name = "Search",
 		a = { ":Ags<CR>", "Search word under cursor with Ags" },
 		c = { ":nohlsearch<CR>", "Clear Search Highlight" },
-		d = { ":Telescope dir live_grep<CR>", "Search in Current Folder" },
+		d = { ":Telescope dir live_grep<CR>", "Search in Folder" },
 		-- p = { ":FzfLua live_grep<CR>", "Search in project" },
 		p = { ":Telescope live_grep<CR>", "Search in project" },
 		-- l = { ":FzfLua resume<CR>", "Resume last search" },
