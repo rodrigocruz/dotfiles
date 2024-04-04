@@ -5,9 +5,9 @@ vim.keymap.set("i", "jk", "<Esc>")
 require("user/wk-mappings")
 
 for i = 1, 6 do
-    local lhs = "<Leader>" .. i
-    local rhs = i .. "<C-W>w"
-    vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
+	local lhs = "<Leader>" .. i
+	local rhs = i .. "<C-W>w"
+	vim.keymap.set("n", lhs, rhs, { desc = "Move to window " .. i })
 end
 
 -- Reselect visual selection after indenting.
@@ -30,10 +30,10 @@ vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("i", ";;", "<Esc>A;<Esc>")
 vim.keymap.set("i", ",,", "<Esc>A,<Esc>")
 
-local default_opts = {noremap = true, silent = true}
+local default_opts = { noremap = true, silent = true }
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.api.nvim_set_keymap('t', '<C-d>', '<Esc><C-\\><C-n>:FloatermHide<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<C-d>", "<Esc><C-\\><C-n>:FloatermHide<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
 vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
@@ -43,3 +43,6 @@ vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window s
 vim.keymap.set("i", "..", "->")
 vim.keymap.set("i", "//", "=>")
 
+vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
+vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
+vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })

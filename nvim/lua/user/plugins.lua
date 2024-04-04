@@ -161,19 +161,21 @@ require("lazy").setup({
 
 	{ import = "user.plugins.typescript-tools" },
 
-    { import = "user.plugins.spectre" },
+	{ import = "user.plugins.spectre" },
 
-    { "mg979/vim-visual-multi" },
+	{ "mg979/vim-visual-multi" },
 
-    { import = "user.plugins.garbage-day" },
+	{ import = "user.plugins.garbage-day" },
 
-    { import = "user.plugins.codeium" },
+	{ import = "user.plugins.codeium" },
 
-    { import = "user.plugins.neoclip" },
+	{ import = "user.plugins.neoclip" },
 
-    { import = "user.plugins.chatgpt" },
+	{ import = "user.plugins.chatgpt" },
 
-    { import = "user.plugins.matchup" },
+	{ import = "user.plugins.matchup" },
+
+	{ import = "user.plugins.spider" },
 }, {
 	checker = {
 		enabled = true,
