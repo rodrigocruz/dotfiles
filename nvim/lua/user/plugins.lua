@@ -172,6 +172,8 @@ require("lazy").setup({
     { import = "user.plugins.neoclip" },
 
     { import = "user.plugins.chatgpt" },
+
+    { import = "user.plugins.matchup" },
 }, {
 	checker = {
 		enabled = true,
