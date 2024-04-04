@@ -39,6 +39,7 @@ vim.opt.exrc = true
 vim.opt.secure = true
 vim.opt.titlestring = "%f // nvim"
 vim.opt.hlsearch = true
+vim.opt.numberwidth = 4
 
 vim.opt.exrc = true
 
