@@ -113,9 +113,9 @@ wk.register({
 		d = {
 			name = "DevDocs",
 			f = { ":DevdocsOpenFloat<CR>", "DevDocs Open" },
-            i = { ":DevdocsInstall<CR>", "DevDocs Install" },
-            t = { ":DevdocsToggle<CR>", "DevDocs Toggle" },
-            u = { ":DevdocsUpdate<CR>", "DevDocs Update" },
+			i = { ":DevdocsInstall<CR>", "DevDocs Install" },
+			t = { ":DevdocsToggle<CR>", "DevDocs Toggle" },
+			u = { ":DevdocsUpdate<CR>", "DevDocs Update" },
 		},
 		h = { ":FzfLua help_tags<CR>", "Help tags" },
 		-- h = { function() require('telescope.builtin').help_tags() end, "Help Tags" },
@@ -217,11 +217,12 @@ wk.register({
 local leaderv = {
 	c = {
 		name = "code",
-		c = { ":CarbonNow<CR>", "Carbon Now" },
+        c = { ":CarbonNow<CR>", "Carbon Now" },
 		l = {
 			name = "Php/Laravel",
 			m = { ":PhpactorExtractMethod<CR>", "Extract Method" },
 		},
+		s = { ":CodeSnap<CR>", "CodeSnap" },
 	},
 	p = { '"_dP', "Paste Without Copy" },
 	s = {
