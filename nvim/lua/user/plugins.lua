@@ -181,6 +181,8 @@ require("lazy").setup({
 
     { import = "user.plugins.smooth-cursor" },
 
+    { import = "user.plugins.codesnap" },
+
     -- { import = "user.plugins.carbon" },
 }, {
     checker = {
