@@ -183,7 +183,7 @@ require("lazy").setup({
 
     { import = "user.plugins.codesnap" },
 
-    -- { import = "user.plugins.carbon" },
+    { import = "user.plugins.carbon" },
 }, {
     checker = {
         enabled = true,
