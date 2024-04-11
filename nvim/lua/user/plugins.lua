@@ -57,7 +57,7 @@ require("lazy").setup({
 	{ "tpope/vim-repeat" },
 
 	-- Navigate seamlessly between Vim windows and Tmux panes.
-	{ "christoomey/vim-tmux-navigator" },
+    { import = "user.plugins.vim-tmux-navigator" },
 
 	-- Enable * searching with visually selected text.
 	{ "nelstrom/vim-visual-star-search" },
