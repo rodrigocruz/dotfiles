@@ -38,6 +38,7 @@ wk.register({
 		p = { ":bp<CR>", "Prev Buffer" },
 		o = { ":w <bar> %bd <bar> e# <bar> bd# <CR>", "Close Other Buffers" },
 		s = { ":Scratch<CR>", "Open Scratch Buffer" },
+        t = { ":Telescope buffers<CR>", "List Buffers in Telescope" },
 	},
 	c = {
 		name = "Code",
@@ -110,9 +111,11 @@ wk.register({
 	},
 	h = {
 		name = "Help",
-		d = {
+        d = { ":Dash<CR>", "Dash" },
+		o = {
 			name = "DevDocs",
-			f = { ":DevdocsOpenFloat<CR>", "DevDocs Open" },
+            a = { ":DevdocsUpdateAll<CR>", "DevDocs All" },
+			o = { ":DevdocsOpenFloat<CR>", "DevDocs Open" },
 			i = { ":DevdocsInstall<CR>", "DevDocs Install" },
 			t = { ":DevdocsToggle<CR>", "DevDocs Toggle" },
 			u = { ":DevdocsUpdate<CR>", "DevDocs Update" },
