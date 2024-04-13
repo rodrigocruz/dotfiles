@@ -110,8 +110,6 @@ require("lazy").setup({
 
 	{ import = "user.plugins.vim-dadbod" },
 
-	-- { import = "user.plugins.fine-cmdline" },
-
 	{ import = "user.plugins.ui" },
 
 	{ import = "user.plugins.noice" },
