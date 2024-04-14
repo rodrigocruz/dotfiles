@@ -184,8 +184,6 @@ require("lazy").setup({
 	{ import = "user.plugins.carbon" },
 
     { import = "user.plugins.tidy" },
-
-	-- { import = "user.plugins.cmp-laravel" },
 }, {
 	checker = {
 		enabled = true,
