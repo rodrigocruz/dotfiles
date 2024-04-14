@@ -38,7 +38,7 @@ wk.register({
 		p = { ":bp<CR>", "Prev Buffer" },
 		o = { ":w <bar> %bd <bar> e# <bar> bd# <CR>", "Close Other Buffers" },
 		s = { ":Scratch<CR>", "Open Scratch Buffer" },
-        t = { ":Telescope buffers<CR>", "List Buffers in Telescope" },
+		t = { ":Telescope buffers<CR>", "List Buffers in Telescope" },
 	},
 	c = {
 		name = "Code",
@@ -87,6 +87,17 @@ wk.register({
 	f = {
 		name = "File",
 		["-"] = { "<CMD>Oil --float<CR>", "Open currrent folder" },
+		d = {
+			function()
+				local confirm = vim.fn.confirm("Delete buffer and file?", "&Yes\n&No", 2)
+
+				if confirm == 1 then
+					os.remove(vim.fn.expand("%"))
+					vim.api.nvim_buf_delete(0, { force = true })
+				end
+			end,
+			"Delete Buffer and File",
+		},
 		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
 		-- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
@@ -111,10 +122,10 @@ wk.register({
 	},
 	h = {
 		name = "Help",
-        d = { ":Dash<CR>", "Dash" },
+		d = { ":Dash<CR>", "Dash" },
 		o = {
 			name = "DevDocs",
-            a = { ":DevdocsUpdateAll<CR>", "DevDocs All" },
+			a = { ":DevdocsUpdateAll<CR>", "DevDocs All" },
 			o = { ":DevdocsOpenFloat<CR>", "DevDocs Open" },
 			i = { ":DevdocsInstall<CR>", "DevDocs Install" },
 			t = { ":DevdocsToggle<CR>", "DevDocs Toggle" },
@@ -220,7 +231,7 @@ wk.register({
 local leaderv = {
 	c = {
 		name = "code",
-        c = { ":CarbonNow<CR>", "Carbon Now" },
+		c = { ":CarbonNow<CR>", "Carbon Now" },
 		l = {
 			name = "Php/Laravel",
 			m = { ":PhpactorExtractMethod<CR>", "Extract Method" },
