@@ -48,7 +48,7 @@ require("lazy").setup({
 	{ import = "user.plugins.which-key" },
 
 	-- Commenting support.
-	{ import = "user.plugins.vim-commentary" },
+	-- { import = "user.plugins.vim-commentary" },
 
 	-- Add, change, and delete surrounding text.
 	{ "tpope/vim-surround" },
