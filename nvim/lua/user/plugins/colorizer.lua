@@ -4,7 +4,7 @@ return {
         require("colorizer").setup({
             user_default_options = {
                 tailwind = true,
-                mode = "foreground",
+                mode = "background",
             }
         })
     end,
