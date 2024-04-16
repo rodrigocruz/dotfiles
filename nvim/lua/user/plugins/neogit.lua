@@ -9,8 +9,8 @@ return {
         require("neogit").setup({
             mappings = {
                 finder = {
-                    ["<C-j>"] = "Next",
-                    ["<C-k>"] = "Previous",
+                    ["<c-j>"] = "Next",
+                    ["<c-k>"] = "Previous",
                 }
             }
         })
