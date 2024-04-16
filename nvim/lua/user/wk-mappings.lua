@@ -195,6 +195,7 @@ wk.register({
 	},
 	u = {
 		name = "Utils",
+        c = { ":ColorizerToggle<CR>", "Colorizer" },
 		d = {
 			name = "DB",
 			{
