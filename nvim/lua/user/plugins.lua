@@ -143,7 +143,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.lazygit" },
 
-	{ import = "user.plugins.bookmarks" },
+	-- { import = "user.plugins.bookmarks" },
 
 	{ import = "user.plugins.scratch" },
 
@@ -184,6 +184,8 @@ require("lazy").setup({
 	{ import = "user.plugins.carbon" },
 
     { import = "user.plugins.tidy" },
+
+    { import = "user.plugins.harpoon" },
 }, {
 	checker = {
 		enabled = true,

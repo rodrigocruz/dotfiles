@@ -144,11 +144,13 @@ wk.register({
 	},
 	m = {
 		name = "Bookmarks",
-		a = { ":BookmarksMark<CR>", "Toggle Bookmark" },
-		c = { ":BookmarksCommands<CR>", "Bookmar Commands" },
-		l = { ":BookmarksGoto<CR>", "Goto Bookmark" },
+        a = { ":lua require('harpoon.mark').add_file()<CR>", "Add Bookmark" },
+        l = { ":lua require('harpoon.ui').toggle_quick_menu()<CR>", "List Bookmarks" },
+        n = { ":lua require('harpoon.ui').nav_next()<CR>", "Next Bookmark" },
+        p = { ":lua require('harpoon.ui').nav_prev()<CR>", "Prev Bookmark" },
+        t = { ":lua require('harpoon.mark').toggle_file()<CR>", "Toggle Bookmark" },
+        r = { ":lua require('harpoon.mark').rm_file()<CR>", "Remove Bookmark" },
 		m = { ":FzfLua marks<CR>", "List Marks" },
-		r = { ":BookmarksGotoRecent<CR>", "Goto Recent Bookmark" },
 	},
 	o = { ":bn<CR>", "Next Buffer" },
 	-- p = {
