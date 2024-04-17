@@ -186,6 +186,8 @@ require("lazy").setup({
     { import = "user.plugins.tidy" },
 
     { import = "user.plugins.harpoon" },
+
+    { import = "user.plugins.smart-open" },
 }, {
 	checker = {
 		enabled = true,

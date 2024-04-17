@@ -24,14 +24,13 @@ wk.register({
 	},
 	b = {
 		name = "Buffers",
-		-- b = { ":FzfLua buffers<CR>", "List buffers" },
 		A = { ":%bd<CR>", "Close All Buffers" },
-		-- b = {
-		-- 	function()
-		-- 		require("telescope.builtin").buffers()
-		-- 	end,
-		-- 	"List Buffers",
-		-- },
+		l = {
+			function()
+				require("telescope.builtin").buffers()
+			end,
+			"List Buffers",
+		},
 		b = { ":FzfLua buffers<CR>", "List Buffers" },
 		d = { ":Bdelete<CR>", "Close Buffer" },
 		n = { ":bn<CR>", "Next Buffer" },
@@ -98,27 +97,29 @@ wk.register({
 			end,
 			"Delete Buffer and File",
 		},
-		r = { ":FzfLua oldfiles<CR>", "Recent Files" },
-		-- r = { function() require('telescope.builtin').resume() end, "Recent Search" },
+		-- r = { ":FzfLua oldfiles<CR>", "Recent Files" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
-		-- f = { ":FzfLua files<CR>", "Find files" },
-		f = {
-			function()
-				require("telescope.builtin").find_files()
-			end,
-			"Find files",
-		},
+		f = { ":Telescope smart_open<CR>", "Find Files" },
+		-- f = {
+		-- 	function()
+		-- 		require("telescope.builtin").find_files()
+		-- 	end,
+		-- 	"Find files",
+		-- },
 		g = { ":FzfLua git_status<CR>", "Git Files" },
 	},
 	g = {
 		name = "Git",
 		b = { ":Gitsigns blame_line<CR>", "Git Blame Line" },
+        c = { ":Telescope git_commits<CR>", "Git Commits" },
 		f = { ":FzfLua git_status<CR>", "Git Files" },
+        g = { ":Neogit<CR>", "Neogit" },
 		h = { ":DiffviewFileHistory %<CR>", "Git File History" },
-		l = { ":LazyGit<CR>", "Open Lazy Git" },
+        l = { ":Telescope git_branches<CR>", "Git Branches" },
 		n = { ":Gitsigns next_hunk<CR>", "Next Modification" },
 		p = { ":Gitsigns preview_hunk<CR>", "Preview Change" },
-		s = { ":Neogit<CR>", "Git Status" },
+        s = { ":Telescope git_status<CR>", "Git Status" },
+        z = { ":LazyGit<CR>", "Open Lazy Git" },
 	},
 	h = {
 		name = "Help",
@@ -204,6 +205,7 @@ wk.register({
 			},
 		},
 		h = { ":FzfLua command_history<CR>", "Command History" },
+        k = { ":Telescope keymaps<CR>", "Keymaps" },
 		l = { ":Lazy<CR>", "Open Lazy" },
 		m = { ":Mason<CR>", "Open Mason" },
 		-- r = { "<Plug>RestNvim", "Rest Client" },
