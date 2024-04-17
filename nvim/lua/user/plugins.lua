@@ -188,6 +188,10 @@ require("lazy").setup({
     { import = "user.plugins.harpoon" },
 
     { import = "user.plugins.smart-open" },
+
+    { import = "user.plugins.ui-select" },
+
+    { import = "user.plugins.git-search" },
 }, {
 	checker = {
 		enabled = true,

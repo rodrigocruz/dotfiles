@@ -97,25 +97,19 @@ wk.register({
 			end,
 			"Delete Buffer and File",
 		},
-		-- r = { ":FzfLua oldfiles<CR>", "Recent Files" },
+        l = { ":Telescope advanced_git_search search_log_content_file<CR>", "Search File in Git Log" },
+        f = { ":Telescope smart_open<CR>", "Find Files" },
+        g = { ":FzfLua git_status<CR>", "Git Files" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
-		f = { ":Telescope smart_open<CR>", "Find Files" },
-		-- f = {
-		-- 	function()
-		-- 		require("telescope.builtin").find_files()
-		-- 	end,
-		-- 	"Find files",
-		-- },
-		g = { ":FzfLua git_status<CR>", "Git Files" },
 	},
 	g = {
 		name = "Git",
 		b = { ":Gitsigns blame_line<CR>", "Git Blame Line" },
-        c = { ":Telescope git_commits<CR>", "Git Commits" },
 		f = { ":FzfLua git_status<CR>", "Git Files" },
         g = { ":Neogit<CR>", "Neogit" },
 		h = { ":DiffviewFileHistory %<CR>", "Git File History" },
-        l = { ":Telescope git_branches<CR>", "Git Branches" },
+        l = { ":Telescope advanced_git_search search_log_content<CR>", "Search Commit Log" },
+        -- l = { ":Telescope git_branches<CR>", "Git Branches" },
 		n = { ":Gitsigns next_hunk<CR>", "Next Modification" },
 		p = { ":Gitsigns preview_hunk<CR>", "Preview Change" },
         s = { ":Telescope git_status<CR>", "Git Status" },
@@ -164,9 +158,6 @@ wk.register({
 		a = { ":Ags<CR>", "Search word under cursor with Ags" },
 		c = { ":nohlsearch<CR>", "Clear Search Highlight" },
 		d = { ":Telescope dir live_grep<CR>", "Search in Folder" },
-		-- p = { ":FzfLua live_grep<CR>", "Search in project" },
-		p = { ":Telescope live_grep<CR>", "Search in project" },
-		-- l = { ":FzfLua resume<CR>", "Resume last search" },
 		l = {
 			function()
 				require("telescope.builtin").resume()
@@ -174,14 +165,12 @@ wk.register({
 			"Resume Last Search",
 		},
 		r = { ":Spectre<CR>", "Open Spectre" },
-		-- s = { ":FzfLua lgrep_curbuf<CR>", "FuzZy search current buffer" },
 		s = {
 			function()
 				require("telescope.builtin").current_buffer_fuzzy_find()
 			end,
 			"Fuzzy Seach Current Buffer",
 		},
-		-- j = { function() require('telescope.builtin').lsp_document_symbols() end, "Find Symbols" },
 		j = { ":FzfLua lsp_document_symbols<CR>", "Find Symbols" },
 		u = { ":Telescope grep_string<CR>", "Find Word Under Cursor" },
 		w = { ":BrowserSearch<CR>", "Search Web" },
