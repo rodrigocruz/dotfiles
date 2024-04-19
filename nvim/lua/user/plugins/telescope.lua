@@ -6,8 +6,7 @@ return {
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
-	keys = {
-	},
+	keys = {},
 	config = function()
 		local actions = require("telescope.actions")
 
@@ -41,7 +40,8 @@ return {
 						["<C-Up>"] = actions.cycle_history_prev,
 						["<C-j>"] = actions.move_selection_next,
 						["<C-k>"] = actions.move_selection_previous,
-						["<c-d>"] = require("telescope.actions").delete_buffer,
+						["<C-d>"] = require("telescope.actions").delete_buffer,
+						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
 				file_ignore_patterns = { ".git/" },
