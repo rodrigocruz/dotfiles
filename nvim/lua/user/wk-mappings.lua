@@ -217,12 +217,14 @@ wk.register({
 	},
 	w = {
 		name = "Windows",
+        ["="] = { "<C-w>=", "Balance windows" },
 		d = { "<C-w>q", "Close window" },
 		f = { ":FloatermToggle<CR>", "Toggle Terminal" },
 		m = { ":lua require('maximize').toggle()<CR>", "Maximize Window" },
 		o = { ":only<CR>", "Close other wndows" },
 		s = { ":split<CR>", "Split window vertically" },
 		t = { ":tabclose<CR>", "Close Tab" },
+        x = { "<cmd>close<CR>", "Close Current Split" },
 		v = { ":vsplit<CR>", "Split window vertically" },
 	},
 }, { prefix = "<leader>" })
