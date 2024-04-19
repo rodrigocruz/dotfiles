@@ -192,6 +192,8 @@ require("lazy").setup({
     { import = "user.plugins.ui-select" },
 
     { import = "user.plugins.git-search" },
+
+    { import = "user.plugins.context" },
 }, {
 	checker = {
 		enabled = true,

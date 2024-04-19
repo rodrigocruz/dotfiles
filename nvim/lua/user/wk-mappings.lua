@@ -42,6 +42,7 @@ wk.register({
 	c = {
 		name = "Code",
 		a = { ":Lspsaga code_action<CR>", "Code Actions" },
+        c = { ":ContextToggle<CR>", "Context Toggle" },
 		d = { vim.lsp.buf.definition, "Goto Definition" },
 		f = { vim.lsp.buf.format, "Code Format" },
 		h = { ":Lspsaga hover_doc<CR>", "Hover" },
