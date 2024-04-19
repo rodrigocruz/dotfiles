@@ -3,6 +3,8 @@ local dap = require("dap")
 
 wk.register({
 	["0"] = { ":Neotree filesystem focus left<CR>", "Focus Neotree" },
+    ["+"] = { "<C-a>", "Increment number" },
+    ["-"] = { "<C-x>", "Decrement number" },
 	["<tab>"] = { ":b#<CR>", "Previous buffer" },
 	a = {
 		name = "ChatGPT",
