@@ -101,9 +101,10 @@ wk.register({
 			"Delete Buffer and File",
 		},
         l = { ":Telescope advanced_git_search search_log_content_file<CR>", "Search File in Git Log" },
-        f = { ":Telescope smart_open<CR>", "Find Files" },
+        f = { ":Telescope find_files<CR>", "Find Files" },
         g = { ":FzfLua git_status<CR>", "Git Files" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
+        s = { ":Telescope smart_open<CR>", "Find Files" },
 	},
 	g = {
 		name = "Git",
@@ -167,6 +168,7 @@ wk.register({
 			end,
 			"Resume Last Search",
 		},
+        p = { ":Telescope live_grep<CR>", "Live Grep" },
 		r = { ":Spectre<CR>", "Open Spectre" },
 		s = {
 			function()
