@@ -8,7 +8,7 @@ vim.opt.number = false
 vim.opt.relativenumber = false
 vim.opt.title = true
 vim.opt.termguicolors = true
---vim.opt.spell = true
+vim.opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.wrap = false
@@ -40,6 +40,7 @@ vim.opt.secure = true
 vim.opt.titlestring = "%f // nvim"
 vim.opt.hlsearch = true
 vim.opt.numberwidth = 4
+vim.opt.swapfile = false
 
 vim.opt.exrc = true
 
