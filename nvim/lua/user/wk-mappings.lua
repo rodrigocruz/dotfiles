@@ -3,8 +3,8 @@ local dap = require("dap")
 
 wk.register({
 	["0"] = { ":Neotree filesystem focus left<CR>", "Focus Neotree" },
-    ["+"] = { "<C-a>", "Increment number" },
-    ["-"] = { "<C-x>", "Decrement number" },
+	["+"] = { "<C-a>", "Increment number" },
+	["-"] = { "<C-x>", "Decrement number" },
 	["<tab>"] = { ":b#<CR>", "Previous buffer" },
 	a = {
 		name = "ChatGPT",
@@ -44,9 +44,20 @@ wk.register({
 	c = {
 		name = "Code",
 		a = { ":Lspsaga code_action<CR>", "Code Actions" },
-        c = { ":ContextToggle<CR>", "Context Toggle" },
+		c = { ":ContextToggle<CR>", "Context Toggle" },
 		d = { vim.lsp.buf.definition, "Goto Definition" },
-		f = { vim.lsp.buf.format, "Code Format" },
+		-- f = { vim.lsp.buf.format, "Code Format" },
+		f = {
+			function()
+				local conform = require("conform")
+				conform.format({
+					lsp_fallback = true,
+					async = false,
+					timeout_ms = 1000,
+				})
+			end,
+			"Code Format",
+		},
 		h = { ":Lspsaga hover_doc<CR>", "Hover" },
 		i = { ":DashWord<CR>", "Look Word in Dash" },
 		l = {
@@ -100,24 +111,24 @@ wk.register({
 			end,
 			"Delete Buffer and File",
 		},
-        l = { ":Telescope advanced_git_search search_log_content_file<CR>", "Search File in Git Log" },
-        f = { ":Telescope find_files<CR>", "Find Files" },
-        g = { ":FzfLua git_status<CR>", "Git Files" },
+		l = { ":Telescope advanced_git_search search_log_content_file<CR>", "Search File in Git Log" },
+		f = { ":Telescope find_files<CR>", "Find Files" },
+		g = { ":FzfLua git_status<CR>", "Git Files" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
-        s = { ":Telescope smart_open<CR>", "Find Files" },
+		s = { ":Telescope smart_open<CR>", "Find Files" },
 	},
 	g = {
 		name = "Git",
 		b = { ":Gitsigns blame_line<CR>", "Git Blame Line" },
 		f = { ":FzfLua git_status<CR>", "Git Files" },
-        g = { ":Neogit<CR>", "Neogit" },
+		g = { ":Neogit<CR>", "Neogit" },
 		h = { ":DiffviewFileHistory %<CR>", "Git File History" },
-        l = { ":Telescope advanced_git_search search_log_content<CR>", "Search Commit Log" },
-        -- l = { ":Telescope git_branches<CR>", "Git Branches" },
+		l = { ":Telescope advanced_git_search search_log_content<CR>", "Search Commit Log" },
+		-- l = { ":Telescope git_branches<CR>", "Git Branches" },
 		n = { ":Gitsigns next_hunk<CR>", "Next Modification" },
 		p = { ":Gitsigns preview_hunk<CR>", "Preview Change" },
-        s = { ":Telescope git_status<CR>", "Git Status" },
-        z = { ":LazyGit<CR>", "Open Lazy Git" },
+		s = { ":Telescope git_status<CR>", "Git Status" },
+		z = { ":LazyGit<CR>", "Open Lazy Git" },
 	},
 	h = {
 		name = "Help",
@@ -143,20 +154,20 @@ wk.register({
 	},
 	m = {
 		name = "Bookmarks",
-        a = { ":lua require('harpoon.mark').add_file()<CR>", "Add Bookmark" },
-        l = { ":lua require('harpoon.ui').toggle_quick_menu()<CR>", "List Bookmarks" },
-        n = { ":lua require('harpoon.ui').nav_next()<CR>", "Next Bookmark" },
-        p = { ":lua require('harpoon.ui').nav_prev()<CR>", "Prev Bookmark" },
-        t = { ":lua require('harpoon.mark').toggle_file()<CR>", "Toggle Bookmark" },
-        r = { ":lua require('harpoon.mark').rm_file()<CR>", "Remove Bookmark" },
+		a = { ":lua require('harpoon.mark').add_file()<CR>", "Add Bookmark" },
+		l = { ":lua require('harpoon.ui').toggle_quick_menu()<CR>", "List Bookmarks" },
+		n = { ":lua require('harpoon.ui').nav_next()<CR>", "Next Bookmark" },
+		p = { ":lua require('harpoon.ui').nav_prev()<CR>", "Prev Bookmark" },
+		t = { ":lua require('harpoon.mark').toggle_file()<CR>", "Toggle Bookmark" },
+		r = { ":lua require('harpoon.mark').rm_file()<CR>", "Remove Bookmark" },
 		m = { ":FzfLua marks<CR>", "List Marks" },
 	},
 	o = { ":bn<CR>", "Next Buffer" },
-	-- p = {
-	-- 	name = "PHP",
-	-- 	m = { ":PhpactorContextMenu<CR>", "PHP Actor Menu" },
-	-- },
-	-- p = { ":bn<CR>", "Next Buffer" },
+	p = {
+		name = "Project",
+		s = { "<cmd>SessionSave<cr>", "Save Session" },
+		l = { "<cmd>SessionRestore<cr>", "Load Session" },
+	},
 	s = {
 		name = "Search",
 		a = { ":Ags<CR>", "Search word under cursor with Ags" },
@@ -168,7 +179,7 @@ wk.register({
 			end,
 			"Resume Last Search",
 		},
-        p = { ":Telescope live_grep<CR>", "Live Grep" },
+		p = { ":Telescope live_grep<CR>", "Live Grep" },
 		r = { ":Spectre<CR>", "Open Spectre" },
 		s = {
 			function()
@@ -190,7 +201,7 @@ wk.register({
 	},
 	u = {
 		name = "Utils",
-        c = { ":ColorizerToggle<CR>", "Colorizer" },
+		c = { ":ColorizerToggle<CR>", "Colorizer" },
 		d = {
 			name = "DB",
 			{
@@ -199,7 +210,7 @@ wk.register({
 			},
 		},
 		h = { ":FzfLua command_history<CR>", "Command History" },
-        k = { ":Telescope keymaps<CR>", "Keymaps" },
+		k = { ":Telescope keymaps<CR>", "Keymaps" },
 		l = { ":Lazy<CR>", "Open Lazy" },
 		m = { ":Mason<CR>", "Open Mason" },
 		-- r = { "<Plug>RestNvim", "Rest Client" },
@@ -217,14 +228,14 @@ wk.register({
 	},
 	w = {
 		name = "Windows",
-        ["="] = { "<C-w>=", "Balance windows" },
+		["="] = { "<C-w>=", "Balance windows" },
 		d = { "<C-w>q", "Close window" },
 		f = { ":FloatermToggle<CR>", "Toggle Terminal" },
 		m = { ":lua require('maximize').toggle()<CR>", "Maximize Window" },
 		o = { ":only<CR>", "Close other wndows" },
 		s = { ":split<CR>", "Split window vertically" },
 		t = { ":tabclose<CR>", "Close Tab" },
-        x = { "<cmd>close<CR>", "Close Current Split" },
+		x = { "<cmd>close<CR>", "Close Current Split" },
 		v = { ":vsplit<CR>", "Split window vertically" },
 	},
 }, { prefix = "<leader>" })

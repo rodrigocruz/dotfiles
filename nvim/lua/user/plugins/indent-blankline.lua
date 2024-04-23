@@ -1,14 +1,16 @@
 return {
-  'lukas-reineke/indent-blankline.nvim',
-  main = 'ibl',
-  opts = {
-    scope = {
-      show_start = false,
-    },
-    exclude = {
-      filetypes = {
-        'dashboard',
-      },
-    },
-  }
+	"lukas-reineke/indent-blankline.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	main = "ibl",
+	opts = {
+		indent = { char = "┊" },
+		scope = {
+			show_start = false,
+		},
+		exclude = {
+			filetypes = {
+				"dashboard",
+			},
+		},
+	},
 }

@@ -2,17 +2,26 @@ return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+        { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
 		"nvim-telescope/telescope-live-grep-args.nvim",
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
-	keys = {},
 	config = function()
+        local telescope = require("telescope")
 		local actions = require("telescope.actions")
 
-		require("telescope").setup({
+		telescope.setup({
 			defaults = {
-				path_display = { truncate = 1 },
+				path_display = { "smart" },
+                mappings = {
+                    i = {
+                        ["<esc>"] = actions.close,
+                        ["<C-j>"] = actions.move_selection_next,
+                        ["<C-k>"] = actions.move_selection_previous,
+                        ["<C-d>"] = require("telescope.actions").delete_buffer,
+                        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+                    },
+                },
 				prompt_prefix = "   ",
 				selection_caret = "  ",
 				layout_config = {
@@ -33,17 +42,6 @@ return {
 					timeout = 200,
 				},
 				sorting_strategy = "ascending",
-				mappings = {
-					i = {
-						["<esc>"] = actions.close,
-						["<C-Down>"] = actions.cycle_history_next,
-						["<C-Up>"] = actions.cycle_history_prev,
-						["<C-j>"] = actions.move_selection_next,
-						["<C-k>"] = actions.move_selection_previous,
-						["<C-d>"] = require("telescope.actions").delete_buffer,
-						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-					},
-				},
 				file_ignore_patterns = { ".git/" },
 				winblend = 0,
 				border = {},

@@ -17,13 +17,15 @@ require("lazy").setup({
 
 	{ import = "user.plugins.everforest" },
 
+	{ import = "user.plugins.mason" },
+
 	-- { import = "user.plugins.catppuccin" },
 
 	{ import = "user.plugins.alpha" },
 
 	{ import = "user.plugins.autopairs" },
 
-	{ import = "user.plugins.completions" },
+	{ import = "user.plugins.nvim-cmp" },
 
 	{ import = "user.plugins.debugging" },
 
@@ -37,11 +39,11 @@ require("lazy").setup({
 
 	{ import = "user.plugins.neotree" },
 
-	{ import = "user.plugins.none-ls" },
+	-- { import = "user.plugins.none-ls" },
 
 	{ import = "user.plugins.telescope" },
 
-	{ import = "user.plugins.tree-sitter" },
+	{ import = "user.plugins.treesitter" },
 
 	{ import = "user.plugins.trouble" },
 
@@ -51,7 +53,7 @@ require("lazy").setup({
 	{ import = "user.plugins.vim-commentary" },
 
 	-- Add, change, and delete surrounding text.
-	{ "tpope/vim-surround" },
+	{ import = "user.plugins.nvim-surround" },
 
 	-- Allow plugins to enable repeating of commands.
 	{ "tpope/vim-repeat" },
@@ -165,7 +167,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.garbage-day" },
 
-	{ import = "user.plugins.codeium" },
+	-- { import = "user.plugins.codeium" },
 
 	{ import = "user.plugins.neoclip" },
 
@@ -183,17 +185,25 @@ require("lazy").setup({
 
 	{ import = "user.plugins.carbon" },
 
-    { import = "user.plugins.tidy" },
+	{ import = "user.plugins.tidy" },
 
-    { import = "user.plugins.harpoon" },
+	{ import = "user.plugins.harpoon" },
 
-    { import = "user.plugins.smart-open" },
+	{ import = "user.plugins.smart-open" },
 
-    { import = "user.plugins.ui-select" },
+	{ import = "user.plugins.ui-select" },
 
-    { import = "user.plugins.git-search" },
+	{ import = "user.plugins.git-search" },
 
-    { import = "user.plugins.context" },
+	{ import = "user.plugins.context" },
+
+	{ import = "user.plugins.auto-session" },
+
+	{ import = "user.plugins.dressing" },
+
+	{ import = "user.plugins.formatting" },
+
+	{ import = "user.plugins.linting" },
 }, {
 	checker = {
 		enabled = true,
