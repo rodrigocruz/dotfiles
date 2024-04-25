@@ -4,7 +4,12 @@ return {
 	opts = {
 		width = 105,
 		autocmds = {
-			enableOnVimEnter = true,
+			enableOnVimEnter = false,
+		},
+		buffers = {
+			right = {
+				enabled = false,
+			},
 		},
 	},
 }
