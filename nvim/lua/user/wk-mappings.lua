@@ -120,6 +120,7 @@ wk.register({
 	g = {
 		name = "Git",
 		b = { ":Gitsigns blame_line<CR>", "Git Blame Line" },
+		d = { ":Gitsigns diffthis<CR>", "Diff this file" },
 		f = { ":FzfLua git_status<CR>", "Git Files" },
 		g = { ":Neogit<CR>", "Neogit" },
 		h = { ":DiffviewFileHistory %<CR>", "Git File History" },
