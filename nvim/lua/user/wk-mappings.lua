@@ -240,7 +240,9 @@ wk.register({
 		t = { ":tabclose<CR>", "Close Tab" },
 		x = { "<cmd>close<CR>", "Close Current Split" },
 		v = { ":vsplit<CR>", "Split window vertically" },
+		-- z = { ":ZenMode<CR>", "Zen Mode" },
 	},
+	z = { ":ZenMode<CR>", "Zen Mode" },
 }, { prefix = "<leader>" })
 
 local leaderv = {

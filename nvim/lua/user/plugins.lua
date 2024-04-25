@@ -195,6 +195,8 @@ require("lazy").setup({
 	{ import = "user.plugins.linting" },
 
 	{ import = "user.plugins.neck" },
+
+	{ import = "user.plugins.zenmode" },
 }, {
 	checker = {
 		enabled = true,
