@@ -218,6 +218,7 @@ wk.register({
 			name = "Notifications",
 			d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
 		},
+		p = { ":NoNeckPain<CR>", "NoNeckPain" },
 		q = { ":qa<CR>", "Quit" },
 		r = { ":call VrcQuery()<CR>", "Rest Client" },
 		w = { ":w<CR>", "Save" },

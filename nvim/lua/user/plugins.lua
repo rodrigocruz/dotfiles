@@ -167,7 +167,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.garbage-day" },
 
-	-- { import = "user.plugins.codeium" },
+	{ import = "user.plugins.codeium" },
 
 	{ import = "user.plugins.neoclip" },
 
@@ -204,6 +204,8 @@ require("lazy").setup({
 	{ import = "user.plugins.formatting" },
 
 	{ import = "user.plugins.linting" },
+
+	{ import = "user.plugins.neck" },
 }, {
 	checker = {
 		enabled = true,
