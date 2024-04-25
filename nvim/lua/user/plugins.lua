@@ -197,6 +197,10 @@ require("lazy").setup({
 	{ import = "user.plugins.neck" },
 
 	{ import = "user.plugins.zenmode" },
+
+	{ import = "user.plugins.truezen" },
+
+    { import = "user.plugins.twilight" },
 }, {
 	checker = {
 		enabled = true,
