@@ -27,19 +27,13 @@ wk.register({
 	b = {
 		name = "Buffers",
 		A = { ":%bd<CR>", "Close All Buffers" },
-		l = {
-			function()
-				require("telescope.builtin").buffers()
-			end,
-			"List Buffers",
-		},
+		l = { ":Telescope buffers<CR>", "List Buffers in Telescope" },
 		b = { ":FzfLua buffers<CR>", "List Buffers" },
 		d = { ":Bdelete<CR>", "Close Buffer" },
 		n = { ":bn<CR>", "Next Buffer" },
 		p = { ":bp<CR>", "Prev Buffer" },
 		o = { ":w <bar> %bd <bar> e# <bar> bd# <CR>", "Close Other Buffers" },
 		s = { ":Scratch<CR>", "Open Scratch Buffer" },
-		t = { ":Telescope buffers<CR>", "List Buffers in Telescope" },
 	},
 	c = {
 		name = "Code",
@@ -115,6 +109,7 @@ wk.register({
 		f = { ":Telescope find_files<CR>", "Find Files" },
 		g = { ":FzfLua git_status<CR>", "Git Files" },
 		t = { ":Neotree filesystem toggle left<CR>", "Open Neotree" },
+		o = { ":Neotree filesystem toggle current<CR>", "Open Neotree Current Window" },
 		s = { ":Telescope smart_open<CR>", "Find Files" },
 	},
 	g = {
@@ -161,7 +156,7 @@ wk.register({
 		p = { ":lua require('harpoon.ui').nav_prev()<CR>", "Prev Bookmark" },
 		t = { ":lua require('harpoon.mark').toggle_file()<CR>", "Toggle Bookmark" },
 		r = { ":lua require('harpoon.mark').rm_file()<CR>", "Remove Bookmark" },
-		m = { ":FzfLua marks<CR>", "List Marks" },
+		m = { ":fzflua marks<cr>", "list nvim marks" },
 	},
 	o = { ":bn<CR>", "Next Buffer" },
 	p = {
