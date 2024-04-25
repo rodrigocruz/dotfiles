@@ -234,6 +234,7 @@ wk.register({
 		d = { "<C-w>q", "Close window" },
 		f = { ":FloatermToggle<CR>", "Toggle Terminal" },
 		m = { ":lua require('maximize').toggle()<CR>", "Maximize Window" },
+		n = { ":NoNeckPain<CR>", "NoNeckPain" },
 		o = { ":only<CR>", "Close other wndows" },
 		s = { ":split<CR>", "Split window vertically" },
 		t = { ":tabclose<CR>", "Close Tab" },
