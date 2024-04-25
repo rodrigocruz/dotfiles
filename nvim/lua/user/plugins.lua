@@ -12,14 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- Color scheme
-	-- { import = "user.plugins.tokyonight" },
-
 	{ import = "user.plugins.everforest" },
 
 	{ import = "user.plugins.mason" },
-
-	-- { import = "user.plugins.catppuccin" },
 
 	{ import = "user.plugins.alpha" },
 
@@ -38,8 +33,6 @@ require("lazy").setup({
 	{ import = "user.plugins.neogit" },
 
 	{ import = "user.plugins.neotree" },
-
-	-- { import = "user.plugins.none-ls" },
 
 	{ import = "user.plugins.telescope" },
 
@@ -66,9 +59,6 @@ require("lazy").setup({
 
 	-- Text objects for HTML attributes.
 	{ "whatyouhide/vim-textobj-xmlattr", dependencies = "kana/vim-textobj-user" },
-
-	-- Add smooth scrolling to avoid jarring jumps
-	-- { "karb94/neoscroll.nvim", config = true },
 
 	-- Automatically fix indentation when pasting code.
 	{ import = "user.plugins.vim-pasta" },
@@ -118,8 +108,6 @@ require("lazy").setup({
 
 	{ import = "user.plugins.searchbox" },
 
-	-- { "kazhala/close-buffers.nvim" },
-
 	{ import = "user.plugins.oil" },
 
 	{ import = "user.plugins.lsp-saga" },
@@ -159,11 +147,11 @@ require("lazy").setup({
 
 	{ import = "user.plugins.tailwind-fold" },
 
-	{ import = "user.plugins.typescript-tools" },
+	-- { import = "user.plugins.typescript-tools" },
 
 	{ import = "user.plugins.spectre" },
 
-	{ "mg979/vim-visual-multi" },
+	-- { "mg979/vim-visual-multi" },
 
 	{ import = "user.plugins.garbage-day" },
 
