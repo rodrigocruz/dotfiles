@@ -26,7 +26,8 @@ require("lazy").setup({
 
 	{ import = "user.plugins.fzf-lua" },
 
-	{ import = "user.plugins.lsp-config" },
+	-- { import = "user.plugins.lsp-config" },
+	{ import = "user.plugins.lsp" },
 
 	{ import = "user.plugins.lualine" },
 
