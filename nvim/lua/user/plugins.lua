@@ -200,7 +200,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.truezen" },
 
-    { import = "user.plugins.twilight" },
+	{ import = "user.plugins.twilight" },
 }, {
 	checker = {
 		enabled = true,
