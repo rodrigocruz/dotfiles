@@ -2,12 +2,12 @@ return {
 	"nvimdev/lspsaga.nvim",
 	config = function()
 		require("lspsaga").setup({
-			-- lightbulb = {
-			-- 	enable = true,
-			-- },
-			-- outline = {
-			-- 	win_width = 40,
-			-- },
+			lightbulb = {
+				enable = false,
+			},
+			outline = {
+				win_width = 40,
+			},
 		})
 	end,
 	dependencies = {

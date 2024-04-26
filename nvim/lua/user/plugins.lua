@@ -26,7 +26,6 @@ require("lazy").setup({
 
 	{ import = "user.plugins.fzf-lua" },
 
-	-- { import = "user.plugins.lsp-config" },
 	{ import = "user.plugins.lsp" },
 
 	{ import = "user.plugins.lualine" },
@@ -43,58 +42,38 @@ require("lazy").setup({
 
 	{ import = "user.plugins.which-key" },
 
-	-- Commenting support.
 	{ import = "user.plugins.vim-commentary" },
 
-	-- Add, change, and delete surrounding text.
 	{ import = "user.plugins.nvim-surround" },
 
-	-- Allow plugins to enable repeating of commands.
 	{ "tpope/vim-repeat" },
 
-	-- Navigate seamlessly between Vim windows and Tmux panes.
 	{ "christoomey/vim-tmux-navigator" },
 
-	-- Enable * searching with visually selected text.
 	{ "nelstrom/vim-visual-star-search" },
 
-	-- Text objects for HTML attributes.
 	{ "whatyouhide/vim-textobj-xmlattr", dependencies = "kana/vim-textobj-user" },
 
-	-- Automatically fix indentation when pasting code.
 	{ import = "user.plugins.vim-pasta" },
 
-	-- Display buffers as tabs.
 	{ import = "user.plugins.bufferline" },
 
-	-- Git integration.
 	{ import = "user.plugins.gitsigns" },
 
-	--- Floating terminal.
 	{ import = "user.plugins.floaterm" },
 
-	-- Testing helper
 	{ import = "user.plugins.vim-test" },
 
-	-- All closing buffers without closing the split window.
 	{ import = "user.plugins.bufdelete" },
 
-	-- Split arrays and methods onto multiple lines, or join them back up.
 	{ import = "user.plugins.treesj" },
 
-	-- Show file and LSP context in a bar at the top of the screen.
-	-- { import = "user.plugins.barbecue" },
-
-	-- Colorize Hex Codes
 	{ import = "user.plugins.colorizer" },
 
-	-- Display indentation lines.
 	{ import = "user.plugins.indent-blankline" },
 
-	-- Project Configuration.
 	{ import = "user.plugins.projectionist" },
 
-	-- PHP Refactoring Tools
 	{ import = "user.plugins.phpactor" },
 
 	{ import = "user.plugins.nvim-bqf" },
@@ -123,7 +102,6 @@ require("lazy").setup({
 
 	{ import = "user.plugins.dash" },
 
-	-- Automatically set the working directory to the project root.
 	{ import = "user.plugins.vim-rooter" },
 
 	{ import = "user.plugins.ts-error-translator" },
@@ -133,8 +111,6 @@ require("lazy").setup({
 	"sindrets/diffview.nvim",
 
 	{ import = "user.plugins.lazygit" },
-
-	-- { import = "user.plugins.bookmarks" },
 
 	{ import = "user.plugins.scratch" },
 
