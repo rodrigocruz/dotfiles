@@ -20,6 +20,8 @@ return {
 			"method",
 			"table",
 			"if_statement",
+			"function_declaration",
+			"method_declaration",
 		},
 		exclude = {}, -- exclude these filetypes	-- refer to the configuration section below
 	},
