@@ -236,9 +236,9 @@ wk.register({
 		x = { "<cmd>close<CR>", "Close Current Split" },
 		v = { ":vsplit<CR>", "Split window vertically" },
 		w = { ":Twilight<CR>", "Twilight Mode" },
-		z = { ":ZenMode<CR>", "Zen Mode" },
+		z = { ":TZAtaraxis<CR>", "Ataraxis Mode" },
 	},
-	z = { ":TZAtaraxis<CR>", "True-Zen Mode" },
+	z = { ":ZenMode<CR>", "Zen Mode" },
 }, { prefix = "<leader>" })
 
 local leaderv = {
