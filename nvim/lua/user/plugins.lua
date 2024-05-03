@@ -76,7 +76,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.phpactor" },
 
-	{ import = "user.plugins.nvim-bqf" },
+	-- { import = "user.plugins.nvim-bqf" },
 
 	{ import = "user.plugins.vim-ags" },
 
@@ -130,7 +130,7 @@ require("lazy").setup({
 
 	-- { "mg979/vim-visual-multi" },
 
-	{ import = "user.plugins.garbage-day" },
+	-- { import = "user.plugins.garbage-day" },
 
 	{ import = "user.plugins.codeium" },
 
@@ -142,7 +142,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.spider" },
 
-	{ import = "user.plugins.devdocs" },
+	-- { import = "user.plugins.devdocs" },
 
 	{ import = "user.plugins.smooth-cursor" },
 
@@ -156,7 +156,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.smart-open" },
 
-	{ import = "user.plugins.ui-select" },
+	-- { import = "user.plugins.ui-select" },
 
 	{ import = "user.plugins.git-search" },
 
@@ -164,21 +164,21 @@ require("lazy").setup({
 
 	{ import = "user.plugins.auto-session" },
 
-	{ import = "user.plugins.dressing" },
+	-- { import = "user.plugins.dressing" },
 
 	{ import = "user.plugins.formatting" },
 
 	{ import = "user.plugins.linting" },
 
-	{ import = "user.plugins.neck" },
+	-- { import = "user.plugins.neck" },
 
 	{ import = "user.plugins.zenmode" },
 
-	{ import = "user.plugins.truezen" },
+	-- { import = "user.plugins.truezen" },
 
 	{ import = "user.plugins.twilight" },
 
-	{ import = "user.plugins.obsidian" },
+	-- { import = "user.plugins.obsidian" },
 
 	{ import = "user.plugins.xcodebuild" },
 }, {
