@@ -181,6 +181,10 @@ require("lazy").setup({
 	-- { import = "user.plugins.obsidian" },
 
 	{ import = "user.plugins.xcodebuild" },
+
+	-- { import = "user.plugins.fidget" },
+
+	{ import = "user.plugins.notify" },
 }, {
 	checker = {
 		enabled = true,

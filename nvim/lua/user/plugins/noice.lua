@@ -52,11 +52,11 @@ return {
 					winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
 				},
 			},
-			notify = {
-				window = {},
-				render = "wrapped-compact",
-				timeout = 5000,
-			},
+			-- notify = {
+			-- 	window = {},
+			-- 	render = "wrapped-compact",
+			-- 	timeout = 5000,
+			-- },
 		},
 		routes = {
 			{
