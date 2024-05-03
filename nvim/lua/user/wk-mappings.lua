@@ -254,7 +254,7 @@ wk.register({
 				name = "Xcode Debug",
 				-- b = { require("xcodebuild.integrations.dap").toggle_breakpoint, "Toggle Breakpoint" },
 				d = { require("xcodebuild.integrations.dap").build_and_debug, "Build & Debug" },
-				x = { require("xcodebuild.integrations.dap").terminate_session, "Clear Breakpoints" },
+				x = { require("xcodebuild.integrations.dap").terminate_session, "Terminate Session" },
 			},
 			l = { ":XcodebuildToggleLogs<CR>", "Xcode Logs" },
 			m = { ":XcodebuildPicker<CR>", "Xcode Menu" },
