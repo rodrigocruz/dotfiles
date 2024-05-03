@@ -76,6 +76,12 @@ wk.register({
 		name = "Debugging",
 		b = { dap.toggle_breakpoint, "Set Breakpoint" },
 		c = { dap.continue, "Continue" },
+		C = { dap.run_to_cursor, "Run To Cursor" },
+		e = { require("dapui").eval, "Eval" },
+		s = { dap.step_over, "Step Over" },
+		i = { dap.step_into, "Step Into" },
+		o = { dap.step_out, "Step Out" },
+		h = { require("dap.ui.widgets").hover, "Hover" },
 		x = { dap.close, "Close" },
 	},
 	e = {
@@ -211,10 +217,11 @@ wk.register({
 		l = { ":Lazy<CR>", "Open Lazy" },
 		m = { ":Mason<CR>", "Open Mason" },
 		-- r = { "<Plug>RestNvim", "Rest Client" },
-		n = {
-			name = "Notifications",
-			d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
-		},
+		-- n = {
+		-- 	name = "Notifications",
+		-- 	d = { ":NoiceDismiss<CR>", "Dismiss Notification" },
+		-- },
+		n = { ":Telescope notify<CR>", "Notifications" },
 		p = { ":NoNeckPain<CR>", "NoNeckPain" },
 		q = { ":qa<CR>", "Quit" },
 		r = { ":call VrcQuery()<CR>", "Rest Client" },
@@ -243,6 +250,12 @@ wk.register({
 		name = "Xcode",
 		{
 			b = { ":XcodebuildBuild<CR>", "Xcode Build" },
+			d = {
+				name = "Xcode Debug",
+				-- b = { require("xcodebuild.integrations.dap").toggle_breakpoint, "Toggle Breakpoint" },
+				d = { require("xcodebuild.integrations.dap").build_and_debug, "Build & Debug" },
+				x = { require("xcodebuild.integrations.dap").terminate_session, "Clear Breakpoints" },
+			},
 			l = { ":XcodebuildToggleLogs<CR>", "Xcode Logs" },
 			m = { ":XcodebuildPicker<CR>", "Xcode Menu" },
 			p = { ":XcodebuildProjectManager<CR>", "Xcode Project Manager" },
