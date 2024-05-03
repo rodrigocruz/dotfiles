@@ -21,6 +21,12 @@ return {
 				python = { "isort", "black" },
 				php = { "pint" },
 				blade = { "blade-formatter" },
+				swift = { "swiftformat" },
+			},
+			formatters = {
+				prettier = {
+					prepend_args = { "--tab-width=2" },
+				},
 			},
 			format_on_save = {
 				lsp_fallback = true,

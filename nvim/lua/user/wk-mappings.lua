@@ -47,7 +47,7 @@ wk.register({
 				conform.format({
 					lsp_fallback = true,
 					async = false,
-					timeout_ms = 1000,
+					timeout_ms = 500,
 				})
 			end,
 			"Code Format",
@@ -238,6 +238,15 @@ wk.register({
 		v = { ":vsplit<CR>", "Split window vertically" },
 		w = { ":Twilight<CR>", "Twilight Mode" },
 		z = { ":TZAtaraxis<CR>", "Ataraxis Mode" },
+	},
+	x = {
+		name = "Xcode",
+		{
+			b = { ":XcodebuildBuild<CR>", "Xcode Build" },
+			r = { ":XcodebuildBuildRun<CR>", "Xcode Run" },
+			l = { ":XcodebuildToggleLogs<CR>", "Xcode Logs" },
+			m = { ":XcodebuildPicker<CR>", "Xcode Menu" },
+		},
 	},
 	z = { ":ZenMode<CR>", "Zen Mode" },
 }, { prefix = "<leader>" })

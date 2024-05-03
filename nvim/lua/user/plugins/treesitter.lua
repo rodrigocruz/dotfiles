@@ -46,6 +46,7 @@ return {
 				"lua",
 				"make",
 				"markdown",
+				"markdown_inline",
 				"php",
 				"phpdoc",
 				"python",
@@ -56,6 +57,7 @@ return {
 				"vue",
 				"xml",
 				"yaml",
+				"swift",
 			},
 			rainbow = {
 				enable = true,
