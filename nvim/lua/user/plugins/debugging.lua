@@ -2,11 +2,16 @@ return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
+		"wojciech-kulik/xcodebuild.nvim",
 	},
 	config = function()
 		local dap, dapui = require("dap"), require("dapui")
+		local xcodebuild = require("xcodebuild.integrations.dap")
+		local codelldbPath = os.getenv("HOME") .. "/Workspace/tools/codelldb-aarch64-darwin/extension/adapter/codelldb"
 
-    require("dapui").setup()
+		xcodebuild.setup(codelldbPath)
+
+		require("dapui").setup()
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
