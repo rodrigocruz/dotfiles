@@ -2,8 +2,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.keymap.set("i", "jk", "<Esc>")
 
-require("user/wk-mappings")
-
 for i = 1, 6 do
 	local lhs = "<Leader>" .. i
 	local rhs = i .. "<C-W>w"
