@@ -74,7 +74,7 @@ return {
 				{ name = "path" }, -- file system paths
 			}),
 			formatting = {
-				fields = { "kind", "abbr", "menu" },
+				fields = { "abbr", "menu", "kind" },
 				format = lspkind.cmp_format({
 					maxwidth = 50,
 					ellipsis_char = "...",
