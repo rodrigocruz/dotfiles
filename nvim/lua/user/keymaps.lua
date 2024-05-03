@@ -40,8 +40,8 @@ vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window sma
 vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
 vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
 
-vim.keymap.set("i", "..", "->")
-vim.keymap.set("i", "//", "=>")
+-- vim.keymap.set("i", "..", "->")
+-- vim.keymap.set("i", "//", "=>")
 
 vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
 vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
