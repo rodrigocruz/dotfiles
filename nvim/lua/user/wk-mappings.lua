@@ -243,9 +243,10 @@ wk.register({
 		name = "Xcode",
 		{
 			b = { ":XcodebuildBuild<CR>", "Xcode Build" },
-			r = { ":XcodebuildBuildRun<CR>", "Xcode Run" },
 			l = { ":XcodebuildToggleLogs<CR>", "Xcode Logs" },
 			m = { ":XcodebuildPicker<CR>", "Xcode Menu" },
+			p = { ":XcodebuildProjectManager<CR>", "Xcode Project Manager" },
+			r = { ":XcodebuildBuildRun<CR>", "Xcode Run" },
 		},
 	},
 	z = { ":ZenMode<CR>", "Zen Mode" },
