@@ -177,6 +177,10 @@ require("lazy").setup({
 	{ import = "user.plugins.truezen" },
 
 	{ import = "user.plugins.twilight" },
+
+	{ import = "user.plugins.obsidian" },
+
+	{ import = "user.plugins.xcodebuild" },
 }, {
 	checker = {
 		enabled = true,

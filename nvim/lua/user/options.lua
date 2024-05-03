@@ -44,6 +44,9 @@ vim.opt.swapfile = false
 
 vim.opt.exrc = true
 
+-- obsidian
+vim.opt.conceallevel = 1
+
 if vim.g.neovide then
 	vim.o.guifont = "JetBrainsMono Nerd Font:h17"
 end
