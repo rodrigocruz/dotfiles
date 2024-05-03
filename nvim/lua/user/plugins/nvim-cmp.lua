@@ -39,13 +39,13 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+				["<C-k>"] = cmp.mapping.select_prev_item(),
+				["<C-j>"] = cmp.mapping.select_next_item(),
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-s>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
-				["<CR>"] = cmp.mapping.confirm({ select = false }),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
@@ -80,20 +80,9 @@ return {
 					ellipsis_char = "...",
 				}),
 			},
+			experimental = {
+				ghost_text = true,
+			},
 		})
-		-- sources = {
-		-- 	{ name = "nvim_lsp" },
-		-- 	{ name = "nvim_lsp_signature_help" },
-		-- 	{ name = "luasnip" },
-		-- 	-- { name = 'copilot' },
-		-- 	{ name = "buffer" },
-		-- 	{ name = "path" },
-		-- 	{ name = "vim-dadbod-completion" },
-		-- 	{ name = "codeium" },
-		-- },
-		-- experimental = {
-		-- 	ghost_text = false,
-		-- },
-		-- })
 	end,
 }
