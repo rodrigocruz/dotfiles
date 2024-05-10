@@ -163,7 +163,7 @@ wk.register({
 		p = { ":lua require('harpoon.ui').nav_prev()<CR>", "Prev Bookmark" },
 		t = { ":lua require('harpoon.mark').toggle_file()<CR>", "Toggle Bookmark" },
 		r = { ":lua require('harpoon.mark').rm_file()<CR>", "Remove Bookmark" },
-		m = { ":fzflua marks<cr>", "list nvim marks" },
+		-- m = { ":Fzflua marks<cr>", "list nvim marks" },
 	},
 	o = { ":bn<CR>", "Next Buffer" },
 	p = {
