@@ -22,15 +22,17 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "searchcount", "diagnostics" },
+				-- lualine_b = { "branch", "diff", "searchcount", "diagnostics", "location" },
+				lualine_b = { "searchcount", "diagnostics", "location" },
 				lualine_c = { "filename" },
 				lualine_x = {
 					{ "' ' .. vim.g.xcodebuild_last_status", color = { fg = "#a6e3a1" } },
 					-- { "'󰙨 ' .. vim.g.xcodebuild_test_plan", color = { fg = "#a6e3a1", bg = "#161622" } },
 					-- { xcodebuild_device, color = { fg = "#f9e2af", bg = "#161622" } },
+					{ "filetype" },
 				},
-				lualine_y = { "progress", require("recorder").displaySlots },
-				lualine_z = { "location", require("recorder").recordingStatus },
+				lualine_y = { "diff", "branch", require("recorder").displaySlots },
+				lualine_z = { "progress", require("recorder").recordingStatus },
 			},
 			inactive_sections = {
 				lualine_a = {},
