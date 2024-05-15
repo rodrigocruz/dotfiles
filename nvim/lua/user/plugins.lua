@@ -56,7 +56,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.vim-pasta" },
 
-	{ import = "user.plugins.bufferline" },
+	-- { import = "user.plugins.bufferline" },
 
 	{ import = "user.plugins.gitsigns" },
 
