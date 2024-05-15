@@ -185,6 +185,8 @@ require("lazy").setup({
 	-- { import = "user.plugins.fidget" },
 
 	{ import = "user.plugins.notify" },
+
+	{ import = "user.plugins.vim-indent-object" },
 }, {
 	checker = {
 		enabled = true,
