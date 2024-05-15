@@ -48,7 +48,7 @@ return {
 				"markdown",
 				"markdown_inline",
 				"php",
-				"phpdoc",
+				-- "phpdoc",
 				"python",
 				"regex",
 				"sql",
@@ -58,6 +58,7 @@ return {
 				"xml",
 				"yaml",
 				"swift",
+				"c_sharp",
 			},
 			rainbow = {
 				enable = true,
@@ -101,19 +102,19 @@ return {
 			filetype = "blade",
 		}
 
-		parser_config.phpdoc = {
-			install_info = {
-				url = "~/sources/treesitter/tree-sitter-phpdoc",
-				files = {
-					"src/parser.c",
-					"src/scanner.c",
-				},
-				branch = "master",
-				generate_requires_npm = true,
-				requires_generate_from_grammar = true,
-			},
-			filetype = "php",
-		}
+		-- parser_config.phpdoc = {
+		-- 	install_info = {
+		-- 		url = "~/sources/treesitter/tree-sitter-phpdoc",
+		-- 		files = {
+		-- 			"src/parser.c",
+		-- 			"src/scanner.c",
+		-- 		},
+		-- 		branch = "master",
+		-- 		generate_requires_npm = true,
+		-- 		requires_generate_from_grammar = true,
+		-- 	},
+		-- 	filetype = "php",
+		-- }
 
 		vim.filetype.add({
 			pattern = {
