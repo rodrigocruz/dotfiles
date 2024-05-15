@@ -84,5 +84,13 @@ return {
 				ghost_text = true,
 			},
 		})
+
+		-- Setup up vim-dadbod
+		cmp.setup.filetype({ "mysql" }, {
+			sources = {
+				{ name = "vim-dadbod-completion" },
+				{ name = "buffer" },
+			},
+		})
 	end,
 }
