@@ -87,6 +87,8 @@ return {
 							"javascript",
 							"typescript",
 							"vue",
+                            "typescriptreact",
+                            "typescript.tsx",
 						},
 					})
 				end,
@@ -148,23 +150,22 @@ return {
 							"scss",
 							"svelte",
 							"pug",
-							-- "typescriptreact",
+							"typescriptreact",
 							"vue",
 							"blade",
 						},
 					})
 				end,
-				-- ["jsonls"] = function()
-				-- 	local lspconfig = require("lspconfig")
-				-- 	lspconfig.jsonls.setup({
-				-- 		capabilities = capabilities,
-				-- 		settings = {
-				-- 			json = {
-				-- 				schemas = require("schemastore").json.schemas(),
-				-- 			},
-				-- 		},
-				-- 	})
-				-- end,
+				["jsonls"] = function()
+					lspconfig.jsonls.setup({
+						capabilities = capabilities,
+						-- settings = {
+						-- 	json = {
+						-- 		schemas = require("schemastore").json.schemas(),
+						-- 	},
+						-- },
+					})
+				end,
 				["phpactor"] = function()
 					local lspconfig = require("lspconfig")
 					lspconfig.phpactor.setup({
@@ -195,7 +196,6 @@ return {
 					})
 				end,
 				["cssls"] = function()
-					local lspconfig = require("lspconfig")
 					lspconfig.cssls.setup({
 						settings = {
 							css = {
