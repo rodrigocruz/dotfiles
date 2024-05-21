@@ -1,5 +1,6 @@
 return {
 	"NeogitOrg/neogit",
+	branch = "master",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"sindrets/diffview.nvim",
@@ -16,6 +17,10 @@ return {
 			integrations = {
 				telescope = true,
 				diffview = true,
+			},
+			commit_editor = {
+				-- kind = "vsplit",
+				show_staged_diff = true,
 			},
 		})
 	end,

@@ -24,6 +24,16 @@ return {
 		)
 
 		local lspconfig = require("lspconfig")
+
+		local pid = vim.fn.getpid()
+		local omnisharp_bin = "/Users/rodrigocruz/Workspace/tools/omnisharp-osx/run"
+
+		require("lspconfig").omnisharp.setup({
+			flags = {
+				debounce_text_changes = 150,
+			},
+			cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+		})
 		lspconfig["sourcekit"].setup({
 			capabilities = capabilities,
 		})
@@ -43,6 +53,7 @@ return {
 				"yamlls",
 				"antlersls",
 				"volar",
+				-- "omnisharp",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -66,6 +77,9 @@ return {
 								diagnostics = {
 									globals = { "vim", "it", "describe", "before_each", "after_each" },
 								},
+								hint = {
+									enable = true,
+								},
 							},
 						},
 					})
@@ -87,8 +101,8 @@ return {
 							"javascript",
 							"typescript",
 							"vue",
-                            "typescriptreact",
-                            "typescript.tsx",
+							"typescriptreact",
+							"typescript.tsx",
 						},
 					})
 				end,
@@ -219,6 +233,16 @@ return {
 						},
 					})
 				end,
+				-- ["omnisharp"] = function()
+				-- 	lspconfig.omnisharp.setup({
+				-- 		settings = {
+				-- 			omnisharp = {
+				-- 				useModernNet = false,
+				-- 				filetypes = { "cs" },
+				-- 			},
+				-- 		},
+				-- 	})
+				-- end,
 			},
 		})
 

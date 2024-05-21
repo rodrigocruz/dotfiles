@@ -132,8 +132,6 @@ require("lazy").setup({
 
 	-- { import = "user.plugins.garbage-day" },
 
-	{ import = "user.plugins.codeium" },
-
 	{ import = "user.plugins.neoclip" },
 
 	{ import = "user.plugins.chatgpt" },
@@ -187,6 +185,16 @@ require("lazy").setup({
 	{ import = "user.plugins.notify" },
 
 	{ import = "user.plugins.vim-indent-object" },
+
+	{ import = "user.plugins.icon-picker" },
+
+	{ import = "user.plugins.codeium" },
+
+	-- { import = "user.plugins.hardtime" },
+
+	{ import = "user.plugins.precognition" },
+
+	-- { import = "user.plugins.overseer" },
 }, {
 	checker = {
 		enabled = true,
