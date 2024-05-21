@@ -15,6 +15,13 @@ return {
 
 			return " " .. vim.g.xcodebuild_device_name
 		end
+		local function inlay_hint_status()
+			if vim.lsp.inlay_hint.is_enabled() then
+				return "󰄬" .. " hints"
+			end
+
+			return "" .. " hints"
+		end
 		require("lualine").setup({
 			options = {
 				theme = "dracula",
@@ -31,7 +38,12 @@ return {
 					-- { xcodebuild_device, color = { fg = "#f9e2af", bg = "#161622" } },
 					{ "filetype" },
 				},
-				lualine_y = { "diff", "branch", require("recorder").displaySlots },
+				lualine_y = {
+					"diff",
+					"branch",
+					{ inlay_hint_status, color = { fg = "#f9e2af" } },
+					require("recorder").displaySlots,
+				},
 				lualine_z = { "progress", require("recorder").recordingStatus },
 			},
 			inactive_sections = {
