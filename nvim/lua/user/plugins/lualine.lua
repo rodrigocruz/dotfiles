@@ -30,7 +30,7 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				-- lualine_b = { "branch", "diff", "searchcount", "diagnostics", "location" },
-				lualine_b = { "searchcount", "diagnostics", "location" },
+				lualine_b = { "searchcount", "diagnostics", "location", "branch" },
 				lualine_c = { "filename" },
 				lualine_x = {
 					{ "' ' .. vim.g.xcodebuild_last_status", color = { fg = "#a6e3a1" } },
@@ -40,7 +40,6 @@ return {
 				},
 				lualine_y = {
 					"diff",
-					"branch",
 					{ inlay_hint_status, color = { fg = "#f9e2af" } },
 					require("recorder").displaySlots,
 				},
