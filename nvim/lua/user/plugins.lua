@@ -192,7 +192,7 @@ require("lazy").setup({
 
 	-- { import = "user.plugins.hardtime" },
 
-	{ import = "user.plugins.precognition" },
+	-- { import = "user.plugins.precognition" },
 
 	-- { import = "user.plugins.overseer" },
 }, {
