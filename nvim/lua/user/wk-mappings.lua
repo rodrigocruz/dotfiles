@@ -152,10 +152,22 @@ wk.register({
 	i = { ":bp<CR>", "Prev Buffer" },
 	j = {
 		name = "Jump",
-		c = { ":HopChar2<CR>", "Jump 2-char" },
-		m = { ":FzfLua marks<CR>", "Jump to mark" },
-		j = { ":HopPattern<CR>", "Jump to Pattern" },
-		w = { ":HopWord<CR>", "Jump Word" },
+		j = {
+			function()
+				require("flash").jump()
+			end,
+			"Flash jump",
+		},
+		t = {
+			function()
+				require("flash").treesitter()
+			end,
+			"Flash treesitter",
+		},
+		-- c = { ":HopChar2<CR>", "Jump 2-char" },
+		-- m = { ":FzfLua marks<CR>", "Jump to mark" },
+		-- j = { ":HopPattern<CR>", "Jump to Pattern" },
+		-- w = { ":HopWord<CR>", "Jump Word" },
 	},
 	m = {
 		name = "Bookmarks",

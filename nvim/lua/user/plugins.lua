@@ -92,7 +92,9 @@ require("lazy").setup({
 
 	{ import = "user.plugins.lsp-saga" },
 
-	{ import = "user.plugins.hop" },
+	-- { import = "user.plugins.hop" },
+
+	{ import = "user.plugins.flash" },
 
 	{ import = "user.plugins.browser-search" },
 
@@ -189,6 +191,8 @@ require("lazy").setup({
 	{ import = "user.plugins.icon-picker" },
 
 	{ import = "user.plugins.codeium" },
+
+	{ import = "user.plugins.arduino" },
 
 	-- { import = "user.plugins.hardtime" },
 

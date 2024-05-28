@@ -1,6 +1,5 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
@@ -69,9 +68,10 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "luasnip" }, -- snippets
-				{ name = "buffer" }, -- text within current buffer
+				{ name = "buffer", keyword_length = 3 },
+				{ name = "luasnip", keyword_length = 2 },
 				{ name = "path" }, -- file system paths
+				{ name = "codeium", keyword_length = 0 },
 			}),
 			formatting = {
 				fields = { "abbr", "menu", "kind" },

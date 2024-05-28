@@ -53,6 +53,7 @@ return {
 				"yamlls",
 				"antlersls",
 				"volar",
+				"arduino_language_server",
 				-- "omnisharp",
 			},
 			handlers = {
@@ -230,6 +231,18 @@ return {
 									unknownAtRules = "ignore",
 								},
 							},
+						},
+					})
+				end,
+				["arduino_language_server"] = function()
+					local MY_FQBN = "arduino:renesas_uno:unor4wifi"
+					lspconfig.arduino_language_server.setup({
+						cmd = {
+							"arduino-language-server",
+							"-cli-config",
+							"/Users/rodrigocruz/Library/Arduino15/arduino-cli.yaml",
+							"-fqbn",
+							MY_FQBN,
 						},
 					})
 				end,
