@@ -14,19 +14,19 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ import = "user.plugins.everforest" },
 
-	{ import = "user.plugins.mason" },
+	-- { import = "user.plugins.mason" },
 
 	{ import = "user.plugins.alpha" },
 
 	{ import = "user.plugins.autopairs" },
 
-	{ import = "user.plugins.nvim-cmp" },
+	-- { import = "user.plugins.nvim-cmp" },
 
 	{ import = "user.plugins.debugging" },
 
 	{ import = "user.plugins.fzf-lua" },
 
-	{ import = "user.plugins.lsp" },
+	-- { import = "user.plugins.lsp" },
 
 	{ import = "user.plugins.lualine" },
 
@@ -56,8 +56,6 @@ require("lazy").setup({
 
 	{ import = "user.plugins.vim-pasta" },
 
-	-- { import = "user.plugins.bufferline" },
-
 	{ import = "user.plugins.gitsigns" },
 
 	{ import = "user.plugins.floaterm" },
@@ -76,8 +74,6 @@ require("lazy").setup({
 
 	{ import = "user.plugins.phpactor" },
 
-	-- { import = "user.plugins.nvim-bqf" },
-
 	{ import = "user.plugins.vim-ags" },
 
 	{ import = "user.plugins.vim-dadbod" },
@@ -91,8 +87,6 @@ require("lazy").setup({
 	{ import = "user.plugins.oil" },
 
 	{ import = "user.plugins.lsp-saga" },
-
-	-- { import = "user.plugins.hop" },
 
 	{ import = "user.plugins.flash" },
 
@@ -132,8 +126,6 @@ require("lazy").setup({
 
 	-- { "mg979/vim-visual-multi" },
 
-	-- { import = "user.plugins.garbage-day" },
-
 	{ import = "user.plugins.neoclip" },
 
 	{ import = "user.plugins.chatgpt" },
@@ -156,33 +148,23 @@ require("lazy").setup({
 
 	{ import = "user.plugins.smart-open" },
 
-	-- { import = "user.plugins.ui-select" },
-
 	{ import = "user.plugins.git-search" },
 
 	{ import = "user.plugins.context" },
 
 	{ import = "user.plugins.auto-session" },
 
-	-- { import = "user.plugins.dressing" },
-
 	{ import = "user.plugins.formatting" },
 
 	{ import = "user.plugins.linting" },
 
-	-- { import = "user.plugins.neck" },
-
 	{ import = "user.plugins.zenmode" },
-
-	-- { import = "user.plugins.truezen" },
 
 	{ import = "user.plugins.twilight" },
 
 	-- { import = "user.plugins.obsidian" },
 
 	{ import = "user.plugins.xcodebuild" },
-
-	-- { import = "user.plugins.fidget" },
 
 	{ import = "user.plugins.notify" },
 
@@ -194,11 +176,7 @@ require("lazy").setup({
 
 	{ import = "user.plugins.arduino" },
 
-	-- { import = "user.plugins.hardtime" },
-
-	-- { import = "user.plugins.precognition" },
-
-	-- { import = "user.plugins.overseer" },
+	{ import = "user.plugins.code-completion" },
 }, {
 	checker = {
 		enabled = true,
