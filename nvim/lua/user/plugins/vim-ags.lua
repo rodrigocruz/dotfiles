@@ -1,3 +1,0 @@
-return {
-    "gabesoft/vim-ags",
-}

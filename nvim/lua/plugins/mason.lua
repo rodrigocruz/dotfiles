@@ -1,0 +1,27 @@
+return {
+  "williamboman/mason.nvim",
+  opts = {
+    ensure_installed = {
+      "actionlint",
+      "black",
+      "bash-language-server",
+      "blade-formatter",
+      "docker-compose-language-service",
+      "dockerfile-language-server",
+      "dot-language-server",
+      "emmet-ls",
+      "eslint_d",
+      "html-lsp",
+      "intelephense",
+      "php-debug-adapter",
+      "phpstan",
+      "prettierd",
+      "pyright",
+      "shellcheck",
+      "stylua",
+      "tailwindcss-language-server",
+      "clangd",
+      "twiggy-language-server",
+    },
+  },
+}
