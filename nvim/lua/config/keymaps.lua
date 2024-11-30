@@ -69,3 +69,13 @@ vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Sh
 vim.keymap.set("n", "<leader>cg", "<cmd>Octo actions<cr>", { desc = "github actions" })
 
 vim.keymap.set("n", "<leader>bs", "<cmd>Scratch<cr>", { desc = "Scratch buffer" })
+
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNewFromTemplate<cr>", { desc = "New Obsidian Note from Template" })
+vim.keymap.set("n", "<leader>oN", "<cmd>ObsidianNew<cr>", { desc = "New Obsidian Note" })
+vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Switch" })
+vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "Search" })
+vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Backlinks" })
+vim.keymap.set("n", "<leader>od", "<cmd>ObsidianDailies<cr>", { desc = "Dailies" })
+vim.keymap.set("n", "<leader>ol", "<cmd>ObsidianLinks<cr>", { desc = "Links" })
+vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianTOC<cr>", { desc = "TOC" })
+vim.keymap.set("n", "<leader>oa", "<cmd>ObsidianTags<cr>", { desc = "Tags" })
