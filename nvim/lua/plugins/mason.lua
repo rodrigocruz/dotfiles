@@ -22,6 +22,7 @@ return {
       "tailwindcss-language-server",
       "clangd",
       "twiggy-language-server",
+      "pint",
     },
   },
 }
