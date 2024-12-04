@@ -1,3 +1,6 @@
+-- require("config.keymaps.obsidian")
+require("config.keymaps.neorg")
+
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
@@ -70,12 +73,7 @@ vim.keymap.set("n", "<leader>cg", "<cmd>Octo actions<cr>", { desc = "github acti
 
 vim.keymap.set("n", "<leader>bs", "<cmd>Scratch<cr>", { desc = "Scratch buffer" })
 
-vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNewFromTemplate<cr>", { desc = "New Obsidian Note from Template" })
-vim.keymap.set("n", "<leader>oN", "<cmd>ObsidianNew<cr>", { desc = "New Obsidian Note" })
-vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Switch" })
-vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "Search" })
-vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Backlinks" })
-vim.keymap.set("n", "<leader>od", "<cmd>ObsidianDailies<cr>", { desc = "Dailies" })
-vim.keymap.set("n", "<leader>ol", "<cmd>ObsidianLinks<cr>", { desc = "Links" })
-vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianTOC<cr>", { desc = "TOC" })
-vim.keymap.set("n", "<leader>oa", "<cmd>ObsidianTags<cr>", { desc = "Tags" })
+vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
+vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
+vim.keymap.set("n", "<leader>ph", "<cmd>TimerHide<cr>", { desc = "Timer Hide" })
+vim.keymap.set("n", "<leader>ps", "<cmd>TimerShow<cr>", { desc = "Timer Show" })

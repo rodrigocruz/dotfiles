@@ -62,3 +62,13 @@ vim.api.nvim_create_autocmd("User", {
     end
   end,
 })
+
+vim.api.nvim_create_augroup("NeorgKeybinds", { clear = true })
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = "NeorgKeybinds",
+  pattern = "norg",
+  callback = function()
+    require("config.keymaps.neorg-only")
+  end,
+})
