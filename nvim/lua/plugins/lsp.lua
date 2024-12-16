@@ -16,7 +16,7 @@ return {
           },
         },
         twiggy_language_server = {
-          filetypes = { "twig", "html" },
+          filetypes = { "twig", "html", "htm" },
         },
         tailwindcss = {
           filetypes = { "html", "htm" },
