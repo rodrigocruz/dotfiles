@@ -42,7 +42,7 @@ vim.keymap.set("n", "<leader>vM", function()
 end, { desc = "Diff against origin/main" })
 --
 
-vim.keymap.set("n", "<leader>aa", ":AvanteChat<cr>", { desc = "Ask AI" })
+-- vim.keymap.set("n", "<leader>aa", ":AvanteChat<cr>", { desc = "Ask AI" })
 
 vim.keymap.set("n", "<leader>I", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
 vim.keymap.set("n", "<leader>if", "<cmd>XcodebuildProjectManager<cr>", { desc = "Show Project Manager Actions" })
@@ -69,11 +69,7 @@ vim.keymap.set("n", "<leader>iq", "<cmd>Telescope quickfix<cr>", { desc = "Show 
 vim.keymap.set("n", "<leader>ix", "<cmd>XcodebuildQuickfixLine<cr>", { desc = "Quickfix Line" })
 vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Show Code Actions" })
 
-vim.keymap.set("n", "<leader>cg", "<cmd>Octo actions<cr>", { desc = "github actions" })
-
-vim.keymap.set("n", "<leader>bs", "<cmd>Scratch<cr>", { desc = "Scratch buffer" })
-
-vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
-vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
-vim.keymap.set("n", "<leader>ph", "<cmd>TimerHide<cr>", { desc = "Timer Hide" })
-vim.keymap.set("n", "<leader>ps", "<cmd>TimerShow<cr>", { desc = "Timer Show" })
+-- vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
+-- vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
+-- vim.keymap.set("n", "<leader>ph", "<cmd>TimerHide<cr>", { desc = "Timer Hide" })
+-- vim.keymap.set("n", "<leader>ps", "<cmd>TimerShow<cr>", { desc = "Timer Show" })
