@@ -1,5 +1,6 @@
 return {
   "svampkorg/moody.nvim",
+  enabled = false,
   event = { "ModeChanged", "BufWinEnter", "WinEnter" },
   dependencies = {
     -- or whatever "colorscheme" you use to setup your HL groups :)
