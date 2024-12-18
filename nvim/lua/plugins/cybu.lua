@@ -67,7 +67,7 @@ return {
     })
     -- vim.keymap.set("n", "K", "<Plug>(CybuPrev)")
     -- vim.keymap.set("n", "J", "<Plug>(CybuNext)")
-    vim.keymap.set({ "n", "v" }, "<C-j>", "<plug>(CybuLastusedPrev)")
-    vim.keymap.set({ "n", "v" }, "<C-k>", "<plug>(CybuLastusedNext)")
+    vim.keymap.set({ "n", "v" }, "<C-k>", "<plug>(CybuLastusedPrev)")
+    vim.keymap.set({ "n", "v" }, "<C-j>", "<plug>(CybuLastusedNext)")
   end,
 }
