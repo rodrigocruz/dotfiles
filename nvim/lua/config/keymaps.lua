@@ -72,11 +72,11 @@ vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Sh
 vim.keymap.set("n", "<leader>ci", "<cmd>CccPick<cr>", { desc = "Pick Color" })
 
 -- For default preset
-vim.keymap.set("n", "<leader>j", require("treesj").toggle)
+vim.keymap.set("n", "<leader>j", require("treesj").toggle, { desc = "Toggle line join" })
 -- For extending default preset with `recursive = true`
 vim.keymap.set("n", "<leader>J", function()
   require("treesj").toggle({ split = { recursive = true } })
-end)
+end, { desc = "Toggle line join recursively" })
 
 -- vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
 -- vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
