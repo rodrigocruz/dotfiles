@@ -78,6 +78,8 @@ vim.keymap.set("n", "<leader>J", function()
   require("treesj").toggle({ split = { recursive = true } })
 end, { desc = "Toggle line join recursively" })
 
+vim.keymap.set("n", "<leader>ud", require("dbee").toggle, { desc = "Toggle DBEE" })
+
 -- vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
 -- vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
 -- vim.keymap.set("n", "<leader>ph", "<cmd>TimerHide<cr>", { desc = "Timer Hide" })
