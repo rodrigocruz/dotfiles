@@ -27,7 +27,7 @@ wk.add({
   vim.keymap.set("n", "<localleader>li", "<plug>(neorg.pivot.list.invert)", { desc = "List Invert" }),
 
   { "<localleader>o", group = "Neorg" },
-  vim.keymap.set("n", "<localleader>oo", "<cmd>Neorg<cr>", { desc = "Menu" }),
-  vim.keymap.set("n", "<localleader>oi", "<cmd>Neorg index<cr>", { desc = "Index" }),
-  vim.keymap.set("n", "<localleader>or", "<cmd>Neorg return<cr>", { desc = "Neorg Return" }),
+  vim.keymap.set("n", "<localleader>no", "<cmd>Neorg<cr>", { desc = "Menu" }),
+  vim.keymap.set("n", "<localleader>ni", "<cmd>Neorg index<cr>", { desc = "Index" }),
+  vim.keymap.set("n", "<localleader>nr", "<cmd>Neorg return<cr>", { desc = "Neorg Return" }),
 })
