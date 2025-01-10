@@ -1,13 +1,3 @@
--- add more treesitter parsers
--- return {
---   -- Add a Treesitter parser for Laravel Blade to provide Blade syntax highlighting.
---   "nvim-treesitter/nvim-treesitter",
---   opts = {
---     highlight = {
---       enable = true,
---     },
---   },
--- }
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
@@ -41,6 +31,7 @@ return {
         "python",
         "php",
         "blade",
+        "twig",
       },
       sync_install = false,
       highlight = { enable = true },
