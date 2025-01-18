@@ -79,6 +79,7 @@ vim.keymap.set("n", "<leader>J", function()
 end, { desc = "Toggle line join recursively" })
 
 vim.keymap.set("n", "<leader>ud", require("dbee").toggle, { desc = "Toggle DBEE" })
+vim.keymap.set("n", "<leader>;", "<cmd>CommaOrSemiColon<cr>", { desc = "Toggle Comma or Semicolon" })
 
 -- vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
 -- vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
