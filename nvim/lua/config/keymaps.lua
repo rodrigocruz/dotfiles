@@ -81,6 +81,47 @@ end, { desc = "Toggle line join recursively" })
 vim.keymap.set("n", "<leader>ud", require("dbee").toggle, { desc = "Toggle DBEE" })
 vim.keymap.set("n", "<leader>;", "<cmd>CommaOrSemiColon<cr>", { desc = "Toggle Comma or Semicolon" })
 
+vim.keymap.set("i", "<C-s>", function()
+  local ls = require("luasnip")
+  local fzf_lua = require("fzf-lua")
+
+  -- Collect snippet triggers for the current filetype
+  local snippets = ls.get_snippets(vim.bo.filetype) or {}
+  local available = vim.tbl_map(function(snippet)
+    return snippet.trigger
+  end, snippets)
+
+  if #available == 0 then
+    vim.notify("No snippets available", vim.log.levels.INFO)
+    return
+  end
+
+  fzf_lua.fzf_exec(available, {
+    prompt = "Snippets> ",
+    actions = {
+      ["default"] = function(selected)
+        local selected_trigger = selected[1]
+        if not selected_trigger then
+          return
+        end
+
+        -- Find and expand the selected snippet
+        for _, snippet in ipairs(snippets) do
+          if snippet.trigger == selected_trigger then
+            local success, err = pcall(ls.snip_expand, snippet)
+            if not success then
+              vim.notify("Error expanding snippet: " .. err, vim.log.levels.ERROR)
+            end
+            return
+          end
+        end
+
+        vim.notify("Snippet not found: " .. selected_trigger, vim.log.levels.WARN)
+      end,
+    },
+  })
+end, { silent = true, noremap = true, desc = "Show and expand LuaSnip snippets" })
+
 -- vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
 -- vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
 -- vim.keymap.set("n", "<leader>ph", "<cmd>TimerHide<cr>", { desc = "Timer Hide" })

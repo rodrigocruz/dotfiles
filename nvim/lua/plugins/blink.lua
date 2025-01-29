@@ -11,6 +11,7 @@ return {
         show_on_insert_on_trigger_character = false,
       },
     },
+    -- signature = { enabled = true },
     sources = {
       -- adding any nvim-cmp sources here will enable them
       -- with blink.compat
