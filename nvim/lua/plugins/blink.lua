@@ -11,5 +11,12 @@ return {
         show_on_insert_on_trigger_character = false,
       },
     },
+    sources = {
+      -- adding any nvim-cmp sources here will enable them
+      -- with blink.compat
+      compat = {},
+      default = { "lsp", "path", "snippets", "buffer" },
+      cmdline = {},
+    },
   },
 }
