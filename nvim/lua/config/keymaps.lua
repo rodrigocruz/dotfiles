@@ -122,6 +122,8 @@ vim.keymap.set("i", "<C-s>", function()
   })
 end, { silent = true, noremap = true, desc = "Show and expand LuaSnip snippets" })
 
+vim.keymap.set("n", "<leader><space>", Snacks.picker.smart, { desc = "Find Files (Root Dir)" })
+
 -- vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
 -- vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
 -- vim.keymap.set("n", "<leader>ph", "<cmd>TimerHide<cr>", { desc = "Timer Hide" })
