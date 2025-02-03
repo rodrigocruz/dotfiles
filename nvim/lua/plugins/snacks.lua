@@ -9,7 +9,7 @@ return {
         preset = "ivy",
         -- When reaching the bottom of the results in the picker, I don't want
         -- it to cycle and go back to the top
-        cycle = false,
+        -- cycle = false,
       },
       layouts = {
         -- Then call this layout in the keymaps above
