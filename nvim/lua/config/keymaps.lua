@@ -78,7 +78,7 @@ vim.keymap.set("n", "<leader>J", function()
   require("treesj").toggle({ split = { recursive = true } })
 end, { desc = "Toggle line join recursively" })
 
-vim.keymap.set("n", "<leader>ud", require("dbee").toggle, { desc = "Toggle DBEE" })
+-- vim.keymap.set("n", "<leader>ud", require("dbee").toggle, { desc = "Toggle DBEE" })
 vim.keymap.set("n", "<leader>;", "<cmd>CommaOrSemiColon<cr>", { desc = "Toggle Comma or Semicolon" })
 
 vim.keymap.set("i", "<C-s>", function()
