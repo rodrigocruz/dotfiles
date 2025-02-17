@@ -6,12 +6,6 @@ return {
     end,
   },
   {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 10000,
-    },
-  },
-  {
     "b0o/incline.nvim",
     event = "BufReadPre",
     priority = 1200,
@@ -19,7 +13,7 @@ return {
       require("incline").setup({
         window = { margin = { vertical = 0, horizontal = 1 } },
         hide = {
-          cursorline = true,
+          cursorline = false,
         },
         render = function(props)
           local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
