@@ -15,7 +15,7 @@ vim.keymap.set(
 )
 vim.keymap.set("n", "<leader>xX", ":Trouble diagnostics toggle focus=true<cr>", { desc = "Split Window Below" })
 vim.keymap.set("v", "<leader>si", ":BrowserSearch<cr>", { desc = "Search selected word in Web" })
-vim.keymap.set("n", "<leader>gn", ":Neogit<cr>", { desc = "Open Neogit" })
+-- vim.keymap.set("n", "<leader>gn", ":Neogit<cr>", { desc = "Open Neogit" })
 
 vim.keymap.set("n", "<leader>cvgm", function()
   require("laravel-ide-helper").generate_models(vim.fn.expand("%"))
