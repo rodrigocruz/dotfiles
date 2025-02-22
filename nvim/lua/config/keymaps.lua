@@ -80,6 +80,9 @@ end, { desc = "Toggle line join recursively" })
 
 -- vim.keymap.set("n", "<leader>ud", require("dbee").toggle, { desc = "Toggle DBEE" })
 vim.keymap.set("n", "<leader>;", "<cmd>CommaOrSemiColon<cr>", { desc = "Toggle Comma or Semicolon" })
+vim.keymap.set("n", "<Leader>xk", function()
+  require("zendiagram").open()
+end, { silent = true, desc = "Open diagnostics float" })
 
 vim.keymap.set("i", "<C-s>", function()
   local ls = require("luasnip")

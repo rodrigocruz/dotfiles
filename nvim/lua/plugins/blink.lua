@@ -17,7 +17,9 @@ return {
       -- with blink.compat
       compat = {},
       default = { "lsp", "path", "snippets", "buffer" },
-      cmdline = {},
+    },
+    cmdline = {
+      sources = {},
     },
   },
 }
