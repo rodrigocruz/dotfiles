@@ -9,7 +9,7 @@ return {
       "docker-compose-language-service",
       "dockerfile-language-server",
       "dot-language-server",
-      "emmet-ls",
+      "emmet-language-server",
       "eslint_d",
       "html-lsp",
       "intelephense",
