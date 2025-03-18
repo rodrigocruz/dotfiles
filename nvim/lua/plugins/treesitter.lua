@@ -4,6 +4,9 @@ return {
   config = function()
     local configs = require("nvim-treesitter.configs")
     local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+    local install = require("nvim-treesitter.install")
+
+    install.compilers = { "gcc-14" }
 
     parser_config.blade = {
       install_info = {

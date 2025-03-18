@@ -12,7 +12,7 @@ return {
           icons = {
             todo = {
               pending = {
-                icon = "",
+                icon = "",
               },
             },
           },
