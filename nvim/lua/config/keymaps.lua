@@ -84,6 +84,7 @@ vim.keymap.set("n", "<Leader>xk", function()
   require("zendiagram").open()
 end, { silent = true, desc = "Open diagnostics float" })
 
+-- vim.keymap.set("i", "<C-s>", function()
 vim.keymap.set("i", "<C-s>", function()
   local ls = require("luasnip")
   local fzf_lua = require("fzf-lua")

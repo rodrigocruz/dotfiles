@@ -6,14 +6,17 @@ return {
       inlay_hints = { enabled = false },
       servers = {
         intelephense = {
-          format = {
-            braces = "k&r",
+          settings = {
+            format = {
+              braces = "k&r",
+            },
+            filetypes = { "php", "blade" },
+            files = {
+              associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
+              maxSize = 5000000,
+            },
           },
-          filetypes = { "php", "blade" },
-          files = {
-            associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
-            maxSize = 5000000,
-          },
+          init_options = {},
         },
         twiggy_language_server = {
           filetypes = { "twig", "html", "htm" },
@@ -23,6 +26,22 @@ return {
         },
         yamlls = {},
         sourcekit = {},
+        emmet_ls = {
+          filetypes = {
+            "astro",
+            "blade",
+            "blade.php",
+            "css",
+            "html",
+            "javascriptreact",
+            "less",
+            "sass",
+            "scss",
+            "svelte",
+            "typescriptreact",
+            "vue",
+          },
+        },
       },
     },
   },
