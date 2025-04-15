@@ -24,6 +24,7 @@ return {
         python = { "isort", "black" },
         php = { "pint", "php_cs_fixer" },
         blade = { "blade-formatter", "rustywind" },
+        vue = { "prettier" },
       },
     }
     return opts
