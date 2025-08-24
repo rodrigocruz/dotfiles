@@ -13,7 +13,7 @@ return {
     config.defaults.keymap.fzf["ctrl-n"] = "preview-page-down"
     config.defaults.keymap.fzf["ctrl-h"] = "preview-page-up"
     config.defaults.keymap.builtin["<c-n>"] = "preview-page-down"
-    config.defaults.keymap.builtin["<c-h>"] = "preview-page-up"
+    -- config.defaults.keymap.builtin["<c-h>"] = "preview-page-up"
 
     return {
       "default-title",

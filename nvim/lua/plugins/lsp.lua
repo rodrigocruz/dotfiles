@@ -24,6 +24,14 @@ return {
         tailwindcss = {
           filetypes = { "html", "htm" },
         },
+        cssls = {
+          settings = {
+            css = { validate = true },
+            scss = { validate = true },
+            less = { validate = true },
+          },
+          filetypes = { "css", "scss", "less" },
+        },
         yamlls = {},
         sourcekit = {},
         emmet_ls = {
@@ -32,6 +40,7 @@ return {
             "blade",
             "blade.php",
             "css",
+            "scss",
             "html",
             "javascriptreact",
             "less",

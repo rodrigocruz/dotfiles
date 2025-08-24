@@ -67,6 +67,7 @@ vim.keymap.set("n", "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", { desc = 
 vim.keymap.set("n", "<leader>iq", "<cmd>Telescope quickfix<cr>", { desc = "Show QuickFix List" })
 
 vim.keymap.set("n", "<leader>ix", "<cmd>XcodebuildQuickfixLine<cr>", { desc = "Quickfix Line" })
+vim.keymap.set("n", "<leader>iS", "<cmd>XcodebuildSetup<cr>", { desc = "Initial Setup" })
 vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Show Code Actions" })
 
 vim.keymap.set("n", "<leader>ci", "<cmd>CccPick<cr>", { desc = "Pick Color" })
@@ -130,9 +131,42 @@ vim.keymap.set("n", "<leader><space>", function()
   Snacks.picker.smart({ multi = { "files" } })
 end, { desc = "Find Files (Root Dir)" })
 
-vim.keymap.set("n", "<leader>ga", "<cmd>Octo actions<cr>", { desc = "Octo actions" })
+vim.keymap.set("n", "<leader>Ac", ":ArduinoVerify<CR>", { desc = "Arduino: Verify/Compile" })
+vim.keymap.set("n", "<leader>Au", ":ArduinoUpload<CR>", { desc = "Arduino: Upload" })
+vim.keymap.set("n", "<leader>As", ":ArduinoSerial<CR>", { desc = "Arduino: Serial Monitor" })
+vim.keymap.set("n", "<leader>Ab", ":ArduinoChooseBoard<CR>", { desc = "Arduino: Choose Board" })
+vim.keymap.set("n", "<leader>Ap", ":ArduinoChoosePort<CR>", { desc = "Arduino: Choose Port" })
+vim.keymap.set("n", "<leader>Ad", ":ArduinoUploadAndSerial<CR>", { desc = "Arduino: Upload & Serial" })
 
--- vim.keymap.set("n", "<leader>pp", "<cmd>TimerSession pomodoro<cr>", { desc = "Timer Session" })
--- vim.keymap.set("n", "<leader>px", "<cmd>TimerStop<cr>", { desc = "Timer Stop" })
--- vim.keymap.set("n", "<leader>ph", "<cmd>TimerHide<cr>", { desc = "Timer Hide" })
--- vim.keymap.set("n", "<leader>ps", "<cmd>TimerShow<cr>", { desc = "Timer Show" })
+vim.keymap.set("n", "<leader>Pb", ":Piocmdf run<CR>", { desc = "PlatformIO: Build" })
+vim.keymap.set("n", "<leader>Pu", ":Piocmdf run -t upload<CR>", { desc = "PlatformIO: Upload" })
+vim.keymap.set("n", "<leader>Pc", ":Piocmdf run -t clean<CR>", { desc = "PlatformIO: Clean" })
+vim.keymap.set("n", "<leader>Pf", ":Piocmdf run -t fullclean<CR>", { desc = "PlatformIO: Full Clean" })
+vim.keymap.set("n", "<leader>Ps", ":Piocmdh run -t monitor<CR>", { desc = "PlatformIO: Serial Monitor" })
+vim.keymap.set("n", "<leader>Pd", ":Piocmdf device list<CR>", { desc = "PlatformIO: Device List" })
+vim.keymap.set("n", "<leader>PB", ":Piocmdf run -t buildfs<CR>", { desc = "PlatformIO: Build File System" })
+vim.keymap.set("n", "<leader>PU", ":Piocmdf run -t uploadfs<CR>", { desc = "PlatformIO: Upload File System" })
+vim.keymap.set("n", "<leader>PE", ":Piocmdf run -t erase<CR>", { desc = "PlatformIO: Erase Flash" })
+vim.keymap.set("n", "<leader>PL", ":Piocmdf pkg list<CR>", { desc = "PlatformIO: List Packages" })
+vim.keymap.set("n", "<leader>PO", ":Piocmdf pkg outdated<CR>", { desc = "PlatformIO: Outdated Packages" })
+vim.keymap.set("n", "<leader>PP", ":Piocmdf pkg update<CR>", { desc = "PlatformIO: Update Packages" })
+vim.keymap.set("n", "<leader>Pt", ":Piocmdf test<CR>", { desc = "PlatformIO: Test" })
+vim.keymap.set("n", "<leader>PC", ":Piocmdf check<CR>", { desc = "PlatformIO: Check" })
+vim.keymap.set("n", "<leader>PD", ":Piocmdf debug<CR>", { desc = "PlatformIO: Debug" })
+vim.keymap.set("n", "<leader>PvB", ":Piocmdf run -v<CR>", { desc = "PlatformIO: Verbose Build" })
+vim.keymap.set("n", "<leader>PvU", ":Piocmdf run -v -t upload<CR>", { desc = "PlatformIO: Verbose Upload" })
+vim.keymap.set("n", "<leader>PvT", ":Piocmdf test -v<CR>", { desc = "PlatformIO: Verbose Test" })
+vim.keymap.set("n", "<leader>PvC", ":Piocmdf check -v<CR>", { desc = "PlatformIO: Verbose Check" })
+vim.keymap.set("n", "<leader>PvD", ":Piocmdf debug -v<CR>", { desc = "PlatformIO: Verbose Debug" })
+vim.keymap.set("n", "<leader>PUg", ":Piocmdf upgrade<CR>", { desc = "PlatformIO: Upgrade Core" })
+
+vim.keymap.set("n", "<c-h>", ":TmuxNavigateLeft<cr>", { desc = "" })
+vim.keymap.set("n", "<c-k>", ":TmuxNavigateDown<cr>", { desc = "" })
+vim.keymap.set("n", "<c-k>", ":TmuxNavigateUp<cr>", { desc = "" })
+vim.keymap.set("n", "<c-l>", ":TmuxNavigateRight<cr>", { desc = "" })
+
+-- { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+-- { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+-- { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+-- { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+-- { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },

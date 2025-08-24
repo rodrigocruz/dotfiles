@@ -13,6 +13,7 @@ return {
         html = { "prettier" },
         javascript = { "prettier" },
         css = { "prettier" },
+        scss = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
         typescriptreact = { "prettier" },
