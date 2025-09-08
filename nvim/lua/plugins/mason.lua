@@ -2,8 +2,6 @@ return {
   "williamboman/mason.nvim",
   opts = {
     ensure_installed = {
-      "actionlint",
-      "black",
       "bash-language-server",
       "blade-formatter",
       "emmet-language-server",
@@ -14,10 +12,8 @@ return {
       "phpstan",
       "prettierd",
       "pyright",
-      "shellcheck",
       "stylua",
       "tailwindcss-language-server",
-      "clangd",
       "twiggy-language-server",
       "pint",
     },

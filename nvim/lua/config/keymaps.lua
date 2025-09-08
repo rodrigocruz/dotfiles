@@ -165,8 +165,6 @@ vim.keymap.set("n", "<c-k>", ":TmuxNavigateDown<cr>", { desc = "" })
 vim.keymap.set("n", "<c-k>", ":TmuxNavigateUp<cr>", { desc = "" })
 vim.keymap.set("n", "<c-l>", ":TmuxNavigateRight<cr>", { desc = "" })
 
--- { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
--- { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
--- { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
--- { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
--- { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+vim.keymap.set("n", "<leader>Of", function()
+  vim.fn.jobstart({ "open", vim.fn.expand("%:p:h") })
+end, { desc = "Open containing folder in Finder" })
