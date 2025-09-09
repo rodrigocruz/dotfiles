@@ -47,23 +47,23 @@ vim.keymap.set("n", "<leader>I", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xco
 wk.add({
   { "<leader>i", group = "iOS/Xcode" },
   { "<leader>if", "<cmd>XcodebuildProjectManager<cr>", desc = "Show Project Manager Actions" },
-  { "<leader>ib", "<cmd>XcodebuildBuild<cr>", { desc = "Build Project" } },
-  { "<leader>iB", "<cmd>XcodebuildBuildForTesting<cr>", { desc = "Build For Testing" } },
-  { "<leader>ir", "<cmd>XcodebuildBuildRun<cr>", { desc = "Build & Run Project" } },
-  { "<leader>it", "<cmd>XcodebuildTest<cr>", { desc = "Run Tests" } },
-  { "<leader>it", "<cmd>XcodebuildTestSelected<cr>", { desc = "Run Selected Tests" } },
-  { "<leader>iT", "<cmd>XcodebuildTestClass<cr>", { desc = "Run Current Test Class" } },
-  { "<leader>i.", "<cmd>XcodebuildTestRepeat<cr>", { desc = "Repeat Last Test Run" } },
-  { "<leader>il", "<cmd>XcodebuildToggleLogs<cr>", { desc = "Toggle Xcodebuild Logs" } },
-  { "<leader>ic", "<cmd>XcodebuildToggleCodeCoverage<cr>", { desc = "Toggle Code Coverage" } },
-  { "<leader>iC", "<cmd>XcodebuildShowCodeCoverageReport<cr>", { desc = "Show Code Coverage Report" } },
-  { "<leader>ie", "<cmd>XcodebuildTestExplorerToggle<cr>", { desc = "Toggle Test Explorer" } },
-  { "<leader>is", "<cmd>XcodebuildFailingSnapshots<cr>", { desc = "Show Failing Snapshots" } },
-  { "<leader>id", "<cmd>XcodebuildSelectDevice<cr>", { desc = "Select Device" } },
-  { "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", { desc = "Select Test Plan" } },
-  { "<leader>iq", "<cmd>Telescope quickfix<cr>", { desc = "Show QuickFix List" } },
-  { "<leader>ix", "<cmd>XcodebuildQuickfixLine<cr>", { desc = "Quickfix Line" } },
-  { "<leader>iS", "<cmd>XcodebuildSetup<cr>", { desc = "Initial Setup" } },
+  { "<leader>ib", "<cmd>XcodebuildBuild<cr>", desc = "Build Project" },
+  { "<leader>iB", "<cmd>XcodebuildBuildForTesting<cr>", desc = "Build For Testing" },
+  { "<leader>ir", "<cmd>XcodebuildBuildRun<cr>", desc = "Build & Run Project" },
+  { "<leader>it", "<cmd>XcodebuildTest<cr>", desc = "Run Tests" },
+  { "<leader>it", "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
+  { "<leader>iT", "<cmd>XcodebuildTestClass<cr>", desc = "Run Current Test Class" },
+  { "<leader>i.", "<cmd>XcodebuildTestRepeat<cr>", desc = "Repeat Last Test Run" },
+  { "<leader>il", "<cmd>XcodebuildToggleLogs<cr>", desc = "Toggle Xcodebuild Logs" },
+  { "<leader>ic", "<cmd>XcodebuildToggleCodeCoverage<cr>", desc = "Toggle Code Coverage" },
+  { "<leader>iC", "<cmd>XcodebuildShowCodeCoverageReport<cr>", desc = "Show Code Coverage Report" },
+  { "<leader>ie", "<cmd>XcodebuildTestExplorerToggle<cr>", desc = "Toggle Test Explorer" },
+  { "<leader>is", "<cmd>XcodebuildFailingSnapshots<cr>", desc = "Show Failing Snapshots" },
+  { "<leader>id", "<cmd>XcodebuildSelectDevice<cr>", desc = "Select Device" },
+  { "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", desc = "Select Test Plan" },
+  { "<leader>iq", "<cmd>Telescope quickfix<cr>", desc = "Show QuickFix List" },
+  { "<leader>ix", "<cmd>XcodebuildQuickfixLine<cr>", desc = "Quickfix Line" },
+  { "<leader>iS", "<cmd>XcodebuildSetup<cr>", desc = "Initial Setup" },
 })
 
 vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Show Code Actions" })
@@ -129,37 +129,40 @@ vim.keymap.set("n", "<leader><space>", function()
   Snacks.picker.smart({ multi = { "files" } })
 end, { desc = "Find Files (Root Dir)" })
 
-vim.keymap.set("n", "<leader>Pb", ":Piocmdf run<CR>", { desc = "PlatformIO: Build" })
-vim.keymap.set("n", "<leader>Pu", ":Piocmdf run -t upload<CR>", { desc = "PlatformIO: Upload" })
-vim.keymap.set("n", "<leader>Pc", ":Piocmdf run -t clean<CR>", { desc = "PlatformIO: Clean" })
-vim.keymap.set("n", "<leader>Pf", ":Piocmdf run -t fullclean<CR>", { desc = "PlatformIO: Full Clean" })
-vim.keymap.set("n", "<leader>Ps", ":Piocmdh run -t monitor<CR>", { desc = "PlatformIO: Serial Monitor" })
-vim.keymap.set("n", "<leader>Pd", ":Piocmdf device list<CR>", { desc = "PlatformIO: Device List" })
-vim.keymap.set("n", "<leader>PB", ":Piocmdf run -t buildfs<CR>", { desc = "PlatformIO: Build File System" })
-vim.keymap.set("n", "<leader>PU", ":Piocmdf run -t uploadfs<CR>", { desc = "PlatformIO: Upload File System" })
-vim.keymap.set("n", "<leader>PE", ":Piocmdf run -t erase<CR>", { desc = "PlatformIO: Erase Flash" })
-vim.keymap.set("n", "<leader>PL", ":Piocmdf pkg list<CR>", { desc = "PlatformIO: List Packages" })
-vim.keymap.set("n", "<leader>PO", ":Piocmdf pkg outdated<CR>", { desc = "PlatformIO: Outdated Packages" })
-vim.keymap.set("n", "<leader>PP", ":Piocmdf pkg update<CR>", { desc = "PlatformIO: Update Packages" })
-vim.keymap.set("n", "<leader>Pt", ":Piocmdf test<CR>", { desc = "PlatformIO: Test" })
-vim.keymap.set("n", "<leader>PC", ":Piocmdf check<CR>", { desc = "PlatformIO: Check" })
-vim.keymap.set("n", "<leader>PD", ":Piocmdf debug<CR>", { desc = "PlatformIO: Debug" })
-vim.keymap.set("n", "<leader>PvB", ":Piocmdf run -v<CR>", { desc = "PlatformIO: Verbose Build" })
-vim.keymap.set("n", "<leader>PvU", ":Piocmdf run -v -t upload<CR>", { desc = "PlatformIO: Verbose Upload" })
-vim.keymap.set("n", "<leader>PvT", ":Piocmdf test -v<CR>", { desc = "PlatformIO: Verbose Test" })
-vim.keymap.set("n", "<leader>PvC", ":Piocmdf check -v<CR>", { desc = "PlatformIO: Verbose Check" })
-vim.keymap.set("n", "<leader>PvD", ":Piocmdf debug -v<CR>", { desc = "PlatformIO: Verbose Debug" })
-vim.keymap.set("n", "<leader>PUg", ":Piocmdf upgrade<CR>", { desc = "PlatformIO: Upgrade Core" })
+wk.add({
+  { "<leader>P", group = "Platformio" },
+  { "<leader>Pb", ":Piocmdf run<CR>", { desc = "PlatformIO: Build" } },
+  { "<leader>Pu", ":Piocmdf run -t upload<CR>", desc = "PlatformIO: Upload" },
+  { "<leader>Pc", ":Piocmdf run -t clean<CR>", desc = "PlatformIO: Clean" },
+  { "<leader>Pf", ":Piocmdf run -t fullclean<CR>", desc = "PlatformIO: Full Clean" },
+  { "<leader>Ps", ":Piocmdh run -t monitor<CR>", desc = "PlatformIO: Serial Monitor" },
+  { "<leader>Pd", ":Piocmdf device list<CR>", desc = "PlatformIO: Device List" },
+  { "<leader>PB", ":Piocmdf run -t buildfs<CR>", desc = "PlatformIO: Build File System" },
+  { "<leader>PU", ":Piocmdf run -t uploadfs<CR>", desc = "PlatformIO: Upload File System" },
+  { "<leader>PE", ":Piocmdf run -t erase<CR>", desc = "PlatformIO: Erase Flash" },
+  { "<leader>PL", ":Piocmdf pkg list<CR>", desc = "PlatformIO: List Packages" },
+  { "<leader>PO", ":Piocmdf pkg outdated<CR>", desc = "PlatformIO: Outdated Packages" },
+  { "<leader>PP", ":Piocmdf pkg update<CR>", desc = "PlatformIO: Update Packages" },
+  { "<leader>Pt", ":Piocmdf test<CR>", desc = "PlatformIO: Test" },
+  { "<leader>PC", ":Piocmdf check<CR>", desc = "PlatformIO: Check" },
+  { "<leader>PD", ":Piocmdf debug<CR>", desc = "PlatformIO: Debug" },
+  { "<leader>PUg", ":Piocmdf upgrade<CR>", desc = "PlatformIO: Upgrade Core" },
+})
+
+wk.add({
+  { "<leader>Pv", group = "Verbose" },
+  { "<leader>PvB", ":Piocmdf run -v<CR>", desc = "PlatformIO: Verbose Build" },
+  { "<leader>PvU", ":Piocmdf run -v -t upload<CR>", desc = "PlatformIO: Verbose Upload" },
+  { "<leader>PvT", ":Piocmdf test -v<CR>", desc = "PlatformIO: Verbose Test" },
+  { "<leader>PvC", ":Piocmdf check -v<CR>", desc = "PlatformIO: Verbose Check" },
+  { "<leader>PvD", ":Piocmdf debug -v<CR>", desc = "PlatformIO: Verbose Debug" },
+})
 
 vim.keymap.set("n", "<c-h>", ":TmuxNavigateLeft<cr>", { desc = "" })
 vim.keymap.set("n", "<c-k>", ":TmuxNavigateDown<cr>", { desc = "" })
 vim.keymap.set("n", "<c-k>", ":TmuxNavigateUp<cr>", { desc = "" })
 vim.keymap.set("n", "<c-l>", ":TmuxNavigateRight<cr>", { desc = "" })
 
--- vim.keymap.set("n", "<leader>Of", function()
---   vim.fn.jobstart({ "open", vim.fn.expand("%:p:h") })
--- end, { desc = "Open containing folder in Finder" })
---
 wk.add({
   { "<leader>O", group = "Open in" },
   {
