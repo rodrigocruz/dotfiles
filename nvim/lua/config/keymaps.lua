@@ -1,5 +1,6 @@
--- require("config.keymaps.obsidian")
 require("config.keymaps.neorg")
+
+local wk = require("which-key")
 
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
@@ -15,7 +16,6 @@ vim.keymap.set(
 )
 vim.keymap.set("n", "<leader>xX", ":Trouble diagnostics toggle focus=true<cr>", { desc = "Split Window Below" })
 vim.keymap.set("v", "<leader>si", ":BrowserSearch<cr>", { desc = "Search selected word in Web" })
--- vim.keymap.set("n", "<leader>gn", ":Neogit<cr>", { desc = "Open Neogit" })
 
 vim.keymap.set("n", "<leader>cvgm", function()
   require("laravel-ide-helper").generate_models(vim.fn.expand("%"))
@@ -42,32 +42,30 @@ vim.keymap.set("n", "<leader>vM", function()
 end, { desc = "Diff against origin/main" })
 --
 
--- vim.keymap.set("n", "<leader>aa", ":AvanteChat<cr>", { desc = "Ask AI" })
-
 vim.keymap.set("n", "<leader>I", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
-vim.keymap.set("n", "<leader>if", "<cmd>XcodebuildProjectManager<cr>", { desc = "Show Project Manager Actions" })
 
-vim.keymap.set("n", "<leader>ib", "<cmd>XcodebuildBuild<cr>", { desc = "Build Project" })
-vim.keymap.set("n", "<leader>iB", "<cmd>XcodebuildBuildForTesting<cr>", { desc = "Build For Testing" })
-vim.keymap.set("n", "<leader>ir", "<cmd>XcodebuildBuildRun<cr>", { desc = "Build & Run Project" })
+wk.add({
+  { "<leader>i", group = "iOS/Xcode" },
+  { "<leader>if", "<cmd>XcodebuildProjectManager<cr>", desc = "Show Project Manager Actions" },
+  { "<leader>ib", "<cmd>XcodebuildBuild<cr>", { desc = "Build Project" } },
+  { "<leader>iB", "<cmd>XcodebuildBuildForTesting<cr>", { desc = "Build For Testing" } },
+  { "<leader>ir", "<cmd>XcodebuildBuildRun<cr>", { desc = "Build & Run Project" } },
+  { "<leader>it", "<cmd>XcodebuildTest<cr>", { desc = "Run Tests" } },
+  { "<leader>it", "<cmd>XcodebuildTestSelected<cr>", { desc = "Run Selected Tests" } },
+  { "<leader>iT", "<cmd>XcodebuildTestClass<cr>", { desc = "Run Current Test Class" } },
+  { "<leader>i.", "<cmd>XcodebuildTestRepeat<cr>", { desc = "Repeat Last Test Run" } },
+  { "<leader>il", "<cmd>XcodebuildToggleLogs<cr>", { desc = "Toggle Xcodebuild Logs" } },
+  { "<leader>ic", "<cmd>XcodebuildToggleCodeCoverage<cr>", { desc = "Toggle Code Coverage" } },
+  { "<leader>iC", "<cmd>XcodebuildShowCodeCoverageReport<cr>", { desc = "Show Code Coverage Report" } },
+  { "<leader>ie", "<cmd>XcodebuildTestExplorerToggle<cr>", { desc = "Toggle Test Explorer" } },
+  { "<leader>is", "<cmd>XcodebuildFailingSnapshots<cr>", { desc = "Show Failing Snapshots" } },
+  { "<leader>id", "<cmd>XcodebuildSelectDevice<cr>", { desc = "Select Device" } },
+  { "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", { desc = "Select Test Plan" } },
+  { "<leader>iq", "<cmd>Telescope quickfix<cr>", { desc = "Show QuickFix List" } },
+  { "<leader>ix", "<cmd>XcodebuildQuickfixLine<cr>", { desc = "Quickfix Line" } },
+  { "<leader>iS", "<cmd>XcodebuildSetup<cr>", { desc = "Initial Setup" } },
+})
 
-vim.keymap.set("n", "<leader>it", "<cmd>XcodebuildTest<cr>", { desc = "Run Tests" })
-vim.keymap.set("v", "<leader>it", "<cmd>XcodebuildTestSelected<cr>", { desc = "Run Selected Tests" })
-vim.keymap.set("n", "<leader>iT", "<cmd>XcodebuildTestClass<cr>", { desc = "Run Current Test Class" })
-vim.keymap.set("n", "<leader>i.", "<cmd>XcodebuildTestRepeat<cr>", { desc = "Repeat Last Test Run" })
-
-vim.keymap.set("n", "<leader>il", "<cmd>XcodebuildToggleLogs<cr>", { desc = "Toggle Xcodebuild Logs" })
-vim.keymap.set("n", "<leader>ic", "<cmd>XcodebuildToggleCodeCoverage<cr>", { desc = "Toggle Code Coverage" })
-vim.keymap.set("n", "<leader>iC", "<cmd>XcodebuildShowCodeCoverageReport<cr>", { desc = "Show Code Coverage Report" })
-vim.keymap.set("n", "<leader>ie", "<cmd>XcodebuildTestExplorerToggle<cr>", { desc = "Toggle Test Explorer" })
-vim.keymap.set("n", "<leader>is", "<cmd>XcodebuildFailingSnapshots<cr>", { desc = "Show Failing Snapshots" })
-
-vim.keymap.set("n", "<leader>id", "<cmd>XcodebuildSelectDevice<cr>", { desc = "Select Device" })
-vim.keymap.set("n", "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", { desc = "Select Test Plan" })
-vim.keymap.set("n", "<leader>iq", "<cmd>Telescope quickfix<cr>", { desc = "Show QuickFix List" })
-
-vim.keymap.set("n", "<leader>ix", "<cmd>XcodebuildQuickfixLine<cr>", { desc = "Quickfix Line" })
-vim.keymap.set("n", "<leader>iS", "<cmd>XcodebuildSetup<cr>", { desc = "Initial Setup" })
 vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Show Code Actions" })
 
 vim.keymap.set("n", "<leader>ci", "<cmd>CccPick<cr>", { desc = "Pick Color" })
@@ -131,12 +129,12 @@ vim.keymap.set("n", "<leader><space>", function()
   Snacks.picker.smart({ multi = { "files" } })
 end, { desc = "Find Files (Root Dir)" })
 
-vim.keymap.set("n", "<leader>Ac", ":ArduinoVerify<CR>", { desc = "Arduino: Verify/Compile" })
-vim.keymap.set("n", "<leader>Au", ":ArduinoUpload<CR>", { desc = "Arduino: Upload" })
-vim.keymap.set("n", "<leader>As", ":ArduinoSerial<CR>", { desc = "Arduino: Serial Monitor" })
-vim.keymap.set("n", "<leader>Ab", ":ArduinoChooseBoard<CR>", { desc = "Arduino: Choose Board" })
-vim.keymap.set("n", "<leader>Ap", ":ArduinoChoosePort<CR>", { desc = "Arduino: Choose Port" })
-vim.keymap.set("n", "<leader>Ad", ":ArduinoUploadAndSerial<CR>", { desc = "Arduino: Upload & Serial" })
+-- vim.keymap.set("n", "<leader>Ac", ":ArduinoVerify<CR>", { desc = "Arduino: Verify/Compile" })
+-- vim.keymap.set("n", "<leader>Au", ":ArduinoUpload<CR>", { desc = "Arduino: Upload" })
+-- vim.keymap.set("n", "<leader>As", ":ArduinoSerial<CR>", { desc = "Arduino: Serial Monitor" })
+-- vim.keymap.set("n", "<leader>Ab", ":ArduinoChooseBoard<CR>", { desc = "Arduino: Choose Board" })
+-- vim.keymap.set("n", "<leader>Ap", ":ArduinoChoosePort<CR>", { desc = "Arduino: Choose Port" })
+-- vim.keymap.set("n", "<leader>Ad", ":ArduinoUploadAndSerial<CR>", { desc = "Arduino: Upload & Serial" })
 
 vim.keymap.set("n", "<leader>Pb", ":Piocmdf run<CR>", { desc = "PlatformIO: Build" })
 vim.keymap.set("n", "<leader>Pu", ":Piocmdf run -t upload<CR>", { desc = "PlatformIO: Upload" })
