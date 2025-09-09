@@ -129,13 +129,6 @@ vim.keymap.set("n", "<leader><space>", function()
   Snacks.picker.smart({ multi = { "files" } })
 end, { desc = "Find Files (Root Dir)" })
 
--- vim.keymap.set("n", "<leader>Ac", ":ArduinoVerify<CR>", { desc = "Arduino: Verify/Compile" })
--- vim.keymap.set("n", "<leader>Au", ":ArduinoUpload<CR>", { desc = "Arduino: Upload" })
--- vim.keymap.set("n", "<leader>As", ":ArduinoSerial<CR>", { desc = "Arduino: Serial Monitor" })
--- vim.keymap.set("n", "<leader>Ab", ":ArduinoChooseBoard<CR>", { desc = "Arduino: Choose Board" })
--- vim.keymap.set("n", "<leader>Ap", ":ArduinoChoosePort<CR>", { desc = "Arduino: Choose Port" })
--- vim.keymap.set("n", "<leader>Ad", ":ArduinoUploadAndSerial<CR>", { desc = "Arduino: Upload & Serial" })
-
 vim.keymap.set("n", "<leader>Pb", ":Piocmdf run<CR>", { desc = "PlatformIO: Build" })
 vim.keymap.set("n", "<leader>Pu", ":Piocmdf run -t upload<CR>", { desc = "PlatformIO: Upload" })
 vim.keymap.set("n", "<leader>Pc", ":Piocmdf run -t clean<CR>", { desc = "PlatformIO: Clean" })
@@ -163,6 +156,17 @@ vim.keymap.set("n", "<c-k>", ":TmuxNavigateDown<cr>", { desc = "" })
 vim.keymap.set("n", "<c-k>", ":TmuxNavigateUp<cr>", { desc = "" })
 vim.keymap.set("n", "<c-l>", ":TmuxNavigateRight<cr>", { desc = "" })
 
-vim.keymap.set("n", "<leader>Of", function()
-  vim.fn.jobstart({ "open", vim.fn.expand("%:p:h") })
-end, { desc = "Open containing folder in Finder" })
+-- vim.keymap.set("n", "<leader>Of", function()
+--   vim.fn.jobstart({ "open", vim.fn.expand("%:p:h") })
+-- end, { desc = "Open containing folder in Finder" })
+--
+wk.add({
+  { "<leader>O", group = "Open in" },
+  {
+    "<leader>Of",
+    function()
+      vim.fn.jobstart({ "open", vim.fn.expand("%:p:h") })
+    end,
+    desc = "Open containing folder in Finder",
+  },
+})
