@@ -25,22 +25,29 @@ vim.keymap.set("n", "<leader>cvgM", function()
   require("laravel-ide-helper").generate_models()
 end, { desc = "Generate Model Info for all models" })
 
-vim.keymap.set("n", "<leader>vo", ":DiffviewOpen<cr>", { desc = "Open Diffview" })
-vim.keymap.set("n", "<leader>vc", ":DiffviewClose<cr>", { desc = "Close Diffview" })
-vim.keymap.set("n", "<leader>vf", ":DiffviewFileHistory --follow %<cr>", { desc = "File History" })
-vim.keymap.set("n", "<leader>vh", ":DiffviewFileHistory<cr>", { desc = "Repo history" })
-vim.keymap.set("v", "<leader>vl", "<Esc><Cmd>'<,'>DiffviewFileHistory --follow<CR>", { desc = "Range history" })
-vim.keymap.set("n", "<leader>vl", "<Cmd>.DiffviewFileHistory --follow<CR>", { desc = "Line history" })
--- Diff against local master branch
-vim.keymap.set("n", "<leader>vm", function()
-  vim.cmd("DiffviewOpen main")
-end, { desc = "Diff against main" })
-
--- Diff against remote master branch
-vim.keymap.set("n", "<leader>vM", function()
-  vim.cmd("DiffviewOpen HEAD..origin/main")
-end, { desc = "Diff against origin/main" })
---
+wk.add({
+  { "<leader>v", group = "DiffView" },
+  { "<leader>vo", ":DiffviewOpen<cr>", desc = "Open Diffview" },
+  { "<leader>vc", ":DiffviewClose<cr>", desc = "Close Diffview" },
+  { "<leader>vf", ":DiffviewFileHistory --follow %<cr>", desc = "File History" },
+  { "<leader>vh", ":DiffviewFileHistory<cr>", desc = "Repo history" },
+  { "<leader>vl", "<Esc><Cmd>'<,'>DiffviewFileHistory --follow<CR>", desc = "Range history" },
+  { "<leader>vl", "<Cmd>.DiffviewFileHistory --follow<CR>", desc = "Line history" },
+  {
+    "<leader>vm",
+    function()
+      vim.cmd("DiffviewOpen main")
+    end,
+    desc = "Diff against main",
+  },
+  {
+    "<leader>vM",
+    function()
+      vim.cmd("DiffviewOpen HEAD..origin/main")
+    end,
+    desc = "Diff against origin/main",
+  },
+})
 
 vim.keymap.set("n", "<leader>I", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
 
