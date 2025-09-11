@@ -208,3 +208,19 @@ end
 wk.add({
   { "zh", center_horizontally, desc = "Center cursor horizontally" },
 })
+
+-- put cursor at the left edge of the screen
+local function center_left()
+  -- save current view
+  local view = vim.fn.winsaveview()
+  -- virtcol('.') is 1-based, leftcol is 0-based
+  view.leftcol = vim.fn.virtcol(".") - 1
+  if view.leftcol < 0 then
+    view.leftcol = 0
+  end
+  vim.fn.winrestview(view)
+end
+
+wk.add({
+  { "zl", center_left, desc = "Center cursor left" },
+})
