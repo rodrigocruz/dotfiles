@@ -224,3 +224,6 @@ end
 wk.add({
   { "zl", center_left, desc = "Center cursor left" },
 })
+
+vim.keymap.del("n", "L")
+vim.keymap.del("n", "H")
