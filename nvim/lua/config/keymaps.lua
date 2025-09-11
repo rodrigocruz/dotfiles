@@ -206,5 +206,5 @@ local function center_horizontally()
 end
 
 wk.add({
-  { "<leader>zh", center_horizontally, desc = "Center cursor horizontally" },
+  { "zh", center_horizontally, desc = "Center cursor horizontally" },
 })
