@@ -180,3 +180,31 @@ wk.add({
     desc = "Open containing folder in Finder",
   },
 })
+
+-- function to center cursor horizontally
+local function center_horizontally()
+  -- window width (columns)
+  local winw = vim.api.nvim_win_get_width(0)
+  if winw == nil or winw <= 0 then
+    return
+  end
+
+  -- cursor virtual column (1-based)
+  local vc = vim.fn.virtcol(".")
+
+  -- compute leftcol so cursor lands about in the middle
+  -- winsaveview().leftcol is 0-based, virtcol is 1-based -> subtract 1
+  local leftcol = vc - math.floor(winw / 2) - 1
+  if leftcol < 0 then
+    leftcol = 0
+  end
+
+  -- save view, set leftcol, restore view (this makes the scroll happen)
+  local view = vim.fn.winsaveview()
+  view.leftcol = leftcol
+  vim.fn.winrestview(view)
+end
+
+wk.add({
+  { "<leader>zh", center_horizontally, desc = "Center cursor horizontally" },
+})
