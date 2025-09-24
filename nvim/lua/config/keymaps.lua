@@ -1,4 +1,5 @@
-require("config.keymaps.neorg")
+-- require("config.keymaps.neorg")
+require("config.keymaps.obsidian")
 
 local wk = require("which-key")
 

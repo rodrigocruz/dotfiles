@@ -15,11 +15,25 @@ return {
   opts = {
     workspaces = {
       {
-        name = "projects",
+        name = "Projects",
         path = "~/Library/CloudStorage/ProtonDrive-mail@rodrigocruz.pt-folder/obsidian/Projects/",
       },
+      {
+        name = "Electronics",
+        path = "~/Library/CloudStorage/ProtonDrive-mail@rodrigocruz.pt-folder/obsidian/electronics/",
+      },
+      {
+        name = "Ios Projects",
+        path = "~/Library/CloudStorage/ProtonDrive-mail@rodrigocruz.pt-folder/obsidian/ios projects/",
+      },
+      {
+        name = "Guitar",
+        path = "~/Library/CloudStorage/ProtonDrive-mail@rodrigocruz.pt-folder/obsidian/guitar/",
+      },
+      {
+        name = "Programming",
+        path = "~/Library/CloudStorage/ProtonDrive-mail@rodrigocruz.pt-folder/obsidian/Programming/",
+      },
     },
-
-    -- see below for full list of options 👇
   },
 }
