@@ -228,3 +228,8 @@ wk.add({
 
 vim.keymap.del("n", "L")
 vim.keymap.del("n", "H")
+
+wk.add({ "<A-h>", require("smart-splits").resize_left, desc = "Resize left" })
+wk.add({ "<A-l>", require("smart-splits").resize_right, desc = "Resize right" })
+wk.add({ "<A-k>", require("smart-splits").resize_up, desc = "Resize up" })
+wk.add({ "<A-j>", require("smart-splits").resize_down, desc = "Resize down" })
