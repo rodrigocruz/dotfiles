@@ -1,4 +1,4 @@
 return {
   "benlubas/neorg-interim-ls",
-  enabled = false,
+  enabled = true,
 }
