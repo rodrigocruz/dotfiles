@@ -1,21 +1,23 @@
+-- tools / binaries
 return {
   "mason-org/mason.nvim",
   opts = {
     ensure_installed = {
-      "bash-language-server",
+      -- tools & formatters
       "blade-formatter",
-      "emmet-language-server",
       "eslint_d",
-      "html-lsp",
-      "intelephense",
-      "php-debug-adapter",
       "phpstan",
       "prettierd",
-      "pyright",
       "stylua",
-      "tailwindcss-language-server",
-      "twiggy-language-server",
       "pint",
+
+      -- language servers (also OK here, but mainly installed via mason-lspconfig)
+      "bash-language-server",
+      "emmet-language-server",
+      "html-lsp",
+      "intelephense",
+      "pyright",
+      "tailwindcss-language-server",
     },
   },
 }
