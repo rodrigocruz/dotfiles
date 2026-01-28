@@ -233,3 +233,25 @@ wk.add({ "<A-h>", require("smart-splits").resize_left, desc = "Resize left" })
 wk.add({ "<A-l>", require("smart-splits").resize_right, desc = "Resize right" })
 wk.add({ "<A-k>", require("smart-splits").resize_up, desc = "Resize up" })
 wk.add({ "<A-j>", require("smart-splits").resize_down, desc = "Resize down" })
+
+wk.add({
+  {
+    "<leader>ia",
+    function()
+      if vim.env.TMUX then
+        vim.fn.system([[tmux new-window -n "skip-emulator" "skip android emulator launch"]])
+      else
+        vim.notify("Not inside tmux", vim.log.levels.WARN)
+      end
+    end,
+    desc = "Skip: Android emulator launch (tmux window)",
+  },
+})
+
+vim.keymap.set("n", "<leader>ls", function()
+  vim.system({ "ls", "-la" }, { text = true }, function(obj)
+    vim.schedule(function()
+      print(obj.stdout)
+    end)
+  end)
+end, { desc = "Run ls -la" })
