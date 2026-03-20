@@ -20,7 +20,7 @@ return {
         svelte = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
-        -- markdown = { "prettier" },
+        markdown = { "prettier" },
         graphql = { "prettier" },
         python = { "isort", "black" },
         php = { "pint", "php_cs_fixer" },

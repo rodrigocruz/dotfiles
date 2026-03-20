@@ -50,6 +50,16 @@ return {
           "vue",
         },
       }
+      opts.servers.kotlin_language_server = {
+        cmd = { "kotlin-language-server" },
+        on_new_config = function(new_config, _)
+          local jdk17 = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
+          new_config.cmd_env = {
+            JAVA_HOME = jdk17,
+            PATH = jdk17 .. "/bin:" .. vim.env.PATH,
+          }
+        end,
+      }
 
       return opts
     end,

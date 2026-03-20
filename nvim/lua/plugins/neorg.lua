@@ -3,8 +3,21 @@ return {
   -- enabled = false,
   -- lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
   -- version = "*", -- Pin Neorg to the latest stable release
-  version = false,
+  -- version = false,
   config = true,
+  dependencies = {
+    {
+      "nvim-treesitter/nvim-treesitter",
+      opts = {
+        ensure_installed = {
+          "lua",
+          "vim",
+          "bash",
+          -- DO NOT put "norg" here
+        },
+      },
+    },
+  },
   opts = {
     load = {
       ["core.defaults"] = {},
@@ -20,9 +33,9 @@ return {
           },
         },
       },
-      ["core.completion"] = {
-        config = { engine = { module_name = "external.lsp-completion" } },
-      },
+      -- ["core.completion"] = {
+      --   config = { engine = { module_name = "external.lsp-completion" } },
+      -- },
       ["core.keybinds"] = {
         config = {
           -- default_keybinds = false,
@@ -37,21 +50,21 @@ return {
           index = "index.norg",
         },
       },
-      ["external.interim-ls"] = {
-        config = {
-          -- default config shown
-          completion_provider = {
-            -- Enable or disable the completion provider
-            enable = true,
-
-            -- Show file contents as documentation when you complete a file name
-            documentation = true,
-
-            -- Try to complete categories provided by Neorg Query. Requires `benlubas/neorg-query`
-            categories = false,
-          },
-        },
-      },
+      -- ["external.interim-ls"] = {
+      --   config = {
+      --     -- default config shown
+      --     completion_provider = {
+      --       -- Enable or disable the completion provider
+      --       enable = true,
+      --
+      --       -- Show file contents as documentation when you complete a file name
+      --       documentation = true,
+      --
+      --       -- Try to complete categories provided by Neorg Query. Requires `benlubas/neorg-query`
+      --       categories = false,
+      --     },
+      --   },
+      -- },
     },
   },
 }

@@ -1,6 +1,5 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  branch = "main",
   build = ":TSUpdate",
   config = function()
     local install = require("nvim-treesitter.install")
@@ -18,6 +17,7 @@ return {
         "javascript",
         "typescript",
         "json",
+        "swift",
       },
       highlight = { enable = true },
       indent = { enable = true },

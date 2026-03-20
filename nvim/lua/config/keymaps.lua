@@ -1,5 +1,7 @@
 -- require("config.keymaps.neorg")
-require("config.keymaps.obsidian")
+-- require("config.keymaps.obsidian")
+require("config.keymaps.gh")
+require("config.keymaps.telekasten")
 
 local wk = require("which-key")
 
