@@ -63,32 +63,32 @@ vim.api.nvim_create_autocmd("User", {
   end,
 })
 
-vim.api.nvim_create_augroup("NeorgKeybinds", { clear = true })
-
-vim.api.nvim_create_autocmd("FileType", {
-  group = "NeorgKeybinds",
-  pattern = "norg",
-  callback = function()
-    require("config.keymaps.neorg-only")
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "norg", "neorg" },
-  callback = function()
-    if pcall(vim.treesitter.start) then
-      vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-    end
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "norg", "neorg" },
-  callback = function()
-    if pcall(vim.treesitter.start) then
-      vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-    end
-  end,
-})
+-- vim.api.nvim_create_augroup("NeorgKeybinds", { clear = true })
+--
+-- vim.api.nvim_create_autocmd("FileType", {
+--   group = "NeorgKeybinds",
+--   pattern = "norg",
+--   callback = function()
+--     require("config.keymaps.neorg-only")
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "norg", "neorg" },
+--   callback = function()
+--     if pcall(vim.treesitter.start) then
+--       vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+--       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+--     end
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "norg", "neorg" },
+--   callback = function()
+--     if pcall(vim.treesitter.start) then
+--       vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+--       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+--     end
+--   end,
+-- })
