@@ -77,28 +77,28 @@ return {
         rhs = function()
           require("checkmate").toggle("important")
         end,
-        desc = "Set important",
+        desc = "Set todo item as important",
         modes = { "n" },
       },
       ["<localleader>h"] = {
         rhs = function()
           require("checkmate").toggle("on_hold")
         end,
-        desc = "Set on-hold",
+        desc = "Set todo item as on-hold",
         modes = { "n" },
       },
       ["<localleader>x"] = {
         rhs = function()
           require("checkmate").toggle("cancelled")
         end,
-        desc = "Set cancelled",
+        desc = "Set todo item as cancelled",
         modes = { "n" },
       },
       ["<localleader>p"] = {
         rhs = function()
           require("checkmate").toggle("in_progress")
         end,
-        desc = "Set working",
+        desc = "Set todo item as working",
         modes = { "n" },
       },
     },
