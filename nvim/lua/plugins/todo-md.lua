@@ -77,28 +77,28 @@ return {
         rhs = function()
           require("checkmate").toggle("important")
         end,
-        desc = "",
+        desc = "Set important",
         modes = { "n" },
       },
       ["<localleader>h"] = {
         rhs = function()
           require("checkmate").toggle("on_hold")
         end,
-        desc = "",
+        desc = "Set on-hold",
         modes = { "n" },
       },
       ["<localleader>x"] = {
         rhs = function()
           require("checkmate").toggle("cancelled")
         end,
-        desc = "",
+        desc = "Set cancelled",
         modes = { "n" },
       },
       ["<localleader>p"] = {
         rhs = function()
           require("checkmate").toggle("in_progress")
         end,
-        desc = "",
+        desc = "Set working",
         modes = { "n" },
       },
     },
