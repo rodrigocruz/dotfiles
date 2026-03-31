@@ -257,3 +257,24 @@ vim.keymap.set("n", "<leader>ls", function()
     end)
   end)
 end, { desc = "Run ls -la" })
+
+-- lua/custom/snacks_keymaps.lua
+local snacks = require("snacks.picker")
+
+-- Methods / Functions only
+vim.keymap.set("n", "<leader>sm", function()
+  snacks.lsp_symbols({
+    filter = {
+      default = { "Method", "Function" },
+    },
+  })
+end, { desc = "Snacks: Methods / Functions only" })
+
+-- Variables / Fields / Properties / Constants only
+vim.keymap.set("n", "<leader>sv", function()
+  snacks.lsp_symbols({
+    filter = {
+      default = { "Variable", "Field", "Property", "Constant" },
+    },
+  })
+end, { desc = "Snacks: Variables / Fields / Properties / Constants" })
