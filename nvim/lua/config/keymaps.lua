@@ -250,14 +250,6 @@ wk.add({
   },
 })
 
-vim.keymap.set("n", "<leader>ls", function()
-  vim.system({ "ls", "-la" }, { text = true }, function(obj)
-    vim.schedule(function()
-      print(obj.stdout)
-    end)
-  end)
-end, { desc = "Run ls -la" })
-
 -- lua/custom/snacks_keymaps.lua
 local snacks = require("snacks.picker")
 
