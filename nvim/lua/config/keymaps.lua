@@ -1,6 +1,9 @@
 -- require("config.keymaps.neorg")
 -- require("config.keymaps.obsidian")
+require("config.keymaps.diffview")
 require("config.keymaps.gh")
+require("config.keymaps.platformio")
+require("config.keymaps.xcode")
 -- require("config.keymaps.telekasten")
 
 local wk = require("which-key")
@@ -27,56 +30,6 @@ end, { desc = "Generate Model Info for current model" })
 vim.keymap.set("n", "<leader>cvgM", function()
   require("laravel-ide-helper").generate_models()
 end, { desc = "Generate Model Info for all models" })
-
-wk.add({
-  { "<leader>v", group = "DiffView" },
-  { "<leader>vo", ":DiffviewOpen<cr>", desc = "Open Diffview" },
-  { "<leader>vc", ":DiffviewClose<cr>", desc = "Close Diffview" },
-  { "<leader>vf", ":DiffviewFileHistory --follow %<cr>", desc = "File History" },
-  { "<leader>vh", ":DiffviewFileHistory<cr>", desc = "Repo history" },
-  { "<leader>vl", "<Cmd>.DiffviewFileHistory --follow<CR>", desc = "Line history", mode = "n" },
-  { "<leader>vl", "<Esc><Cmd>'<,'>DiffviewFileHistory --follow<CR>", desc = "Range history", mode = "v" },
-  {
-    "<leader>vm",
-    function()
-      vim.cmd("DiffviewOpen main")
-    end,
-    desc = "Diff against main",
-  },
-  {
-    "<leader>vM",
-    function()
-      vim.cmd("DiffviewOpen HEAD..origin/main")
-    end,
-    desc = "Diff against origin/main",
-  },
-})
-
-vim.keymap.set("n", "<leader>I", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
-
-wk.add({
-  { "<leader>i", group = "iOS/Xcode" },
-  { "<leader>if", "<cmd>XcodebuildProjectManager<cr>", desc = "Show Project Manager Actions" },
-  { "<leader>ib", "<cmd>XcodebuildBuild<cr>", desc = "Build Project" },
-  { "<leader>iB", "<cmd>XcodebuildBuildForTesting<cr>", desc = "Build For Testing" },
-  { "<leader>ir", "<cmd>XcodebuildBuildRun<cr>", desc = "Build & Run Project" },
-  { "<leader>it", "<cmd>XcodebuildTest<cr>", desc = "Run Tests" },
-  { "<leader>is", "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
-  { "<leader>iT", "<cmd>XcodebuildTestClass<cr>", desc = "Run Current Test Class" },
-  { "<leader>i.", "<cmd>XcodebuildTestRepeat<cr>", desc = "Repeat Last Test Run" },
-  { "<leader>il", "<cmd>XcodebuildToggleLogs<cr>", desc = "Toggle Xcodebuild Logs" },
-  { "<leader>ic", "<cmd>XcodebuildToggleCodeCoverage<cr>", desc = "Toggle Code Coverage" },
-  { "<leader>iC", "<cmd>XcodebuildShowCodeCoverageReport<cr>", desc = "Show Code Coverage Report" },
-  { "<leader>ie", "<cmd>XcodebuildTestExplorerToggle<cr>", desc = "Toggle Test Explorer" },
-  { "<leader>iF", "<cmd>XcodebuildFailingSnapshots<cr>", desc = "Show Failing Snapshots" },
-  { "<leader>id", "<cmd>XcodebuildSelectDevice<cr>", desc = "Select Device" },
-  { "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", desc = "Select Test Plan" },
-  { "<leader>iq", "<cmd>Telescope quickfix<cr>", desc = "Show QuickFix List" },
-  { "<leader>ix", "<cmd>XcodebuildQuickfixLine<cr>", desc = "Quickfix Line" },
-  { "<leader>iS", "<cmd>XcodebuildSetup<cr>", desc = "Initial Setup" },
-})
-
-vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Show Code Actions" })
 
 vim.keymap.set("n", "<leader>ci", "<cmd>CccPick<cr>", { desc = "Pick Color" })
 
@@ -131,35 +84,6 @@ end, { silent = true, noremap = true, desc = "Show and expand LuaSnip snippets" 
 vim.keymap.set("n", "<leader><space>", function()
   Snacks.picker.smart({ multi = { "files" } })
 end, { desc = "Find Files (Root Dir)" })
-
-wk.add({
-  { "<leader>P", group = "Platformio" },
-  { "<leader>Pb", ":Piocmdf run<CR>", { desc = "PlatformIO: Build" } },
-  { "<leader>Pu", ":Piocmdf run -t upload<CR>", desc = "PlatformIO: Upload" },
-  { "<leader>Pc", ":Piocmdf run -t clean<CR>", desc = "PlatformIO: Clean" },
-  { "<leader>Pf", ":Piocmdf run -t fullclean<CR>", desc = "PlatformIO: Full Clean" },
-  { "<leader>Ps", ":Piocmdh run -t monitor<CR>", desc = "PlatformIO: Serial Monitor" },
-  { "<leader>Pd", ":Piocmdf device list<CR>", desc = "PlatformIO: Device List" },
-  { "<leader>PB", ":Piocmdf run -t buildfs<CR>", desc = "PlatformIO: Build File System" },
-  { "<leader>PU", ":Piocmdf run -t uploadfs<CR>", desc = "PlatformIO: Upload File System" },
-  { "<leader>PE", ":Piocmdf run -t erase<CR>", desc = "PlatformIO: Erase Flash" },
-  { "<leader>PL", ":Piocmdf pkg list<CR>", desc = "PlatformIO: List Packages" },
-  { "<leader>PO", ":Piocmdf pkg outdated<CR>", desc = "PlatformIO: Outdated Packages" },
-  { "<leader>PP", ":Piocmdf pkg update<CR>", desc = "PlatformIO: Update Packages" },
-  { "<leader>Pt", ":Piocmdf test<CR>", desc = "PlatformIO: Test" },
-  { "<leader>PC", ":Piocmdf check<CR>", desc = "PlatformIO: Check" },
-  { "<leader>PD", ":Piocmdf debug<CR>", desc = "PlatformIO: Debug" },
-  { "<leader>PUg", ":Piocmdf upgrade<CR>", desc = "PlatformIO: Upgrade Core" },
-})
-
-wk.add({
-  { "<leader>Pv", group = "Verbose" },
-  { "<leader>PvB", ":Piocmdf run -v<CR>", desc = "PlatformIO: Verbose Build" },
-  { "<leader>PvU", ":Piocmdf run -v -t upload<CR>", desc = "PlatformIO: Verbose Upload" },
-  { "<leader>PvT", ":Piocmdf test -v<CR>", desc = "PlatformIO: Verbose Test" },
-  { "<leader>PvC", ":Piocmdf check -v<CR>", desc = "PlatformIO: Verbose Check" },
-  { "<leader>PvD", ":Piocmdf debug -v<CR>", desc = "PlatformIO: Verbose Debug" },
-})
 
 vim.keymap.set("n", "<c-h>", ":TmuxNavigateLeft<cr>", { desc = "" })
 vim.keymap.set("n", "<c-j>", ":TmuxNavigateDown<cr>", { desc = "" })
@@ -221,22 +145,8 @@ wk.add({
   { "zl", center_left, desc = "Center cursor left" },
 })
 
-vim.keymap.del("n", "L")
-vim.keymap.del("n", "H")
-
-wk.add({
-  {
-    "<leader>ia",
-    function()
-      if vim.env.TMUX then
-        vim.fn.system([[tmux new-window -n "skip-emulator" "skip android emulator launch"]])
-      else
-        vim.notify("Not inside tmux", vim.log.levels.WARN)
-      end
-    end,
-    desc = "Skip: Android emulator launch (tmux window)",
-  },
-})
+pcall(vim.keymap.del, "n", "L")
+pcall(vim.keymap.del, "n", "H")
 
 -- lua/custom/snacks_keymaps.lua
 local snacks = require("snacks.picker")
