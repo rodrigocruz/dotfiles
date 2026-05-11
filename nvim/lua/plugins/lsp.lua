@@ -11,9 +11,9 @@ return {
       -- your own configuration
       opts.inlay_hints = { enabled = false }
       opts.servers.intelephense = {
+        filetypes = { "php", "blade" },
         settings = {
           format = { braces = "k&r" },
-          filetypes = { "php", "blade" },
           files = {
             associations = { "*.php", "*.blade.php" },
             maxSize = 5000000,
