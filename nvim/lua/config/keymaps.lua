@@ -3,6 +3,7 @@
 require("config.keymaps.diffview")
 require("config.keymaps.gh")
 require("config.keymaps.platformio")
+require("config.keymaps.snacks")
 require("config.keymaps.xcode")
 -- require("config.keymaps.telekasten")
 
@@ -81,10 +82,6 @@ vim.keymap.set("i", "<C-s>", function()
   })
 end, { silent = true, noremap = true, desc = "Show and expand LuaSnip snippets" })
 
-vim.keymap.set("n", "<leader><space>", function()
-  Snacks.picker.smart({ multi = { "files" } })
-end, { desc = "Find Files (Root Dir)" })
-
 vim.keymap.set("n", "<c-h>", ":TmuxNavigateLeft<cr>", { desc = "" })
 vim.keymap.set("n", "<c-j>", ":TmuxNavigateDown<cr>", { desc = "" })
 vim.keymap.set("n", "<c-k>", ":TmuxNavigateUp<cr>", { desc = "" })
@@ -147,24 +144,3 @@ wk.add({
 
 pcall(vim.keymap.del, "n", "L")
 pcall(vim.keymap.del, "n", "H")
-
--- lua/custom/snacks_keymaps.lua
-local snacks = require("snacks.picker")
-
--- Methods / Functions only
-vim.keymap.set("n", "<leader>sm", function()
-  snacks.lsp_symbols({
-    filter = {
-      default = { "Method", "Function" },
-    },
-  })
-end, { desc = "Snacks: Methods / Functions only" })
-
--- Variables / Fields / Properties / Constants only
-vim.keymap.set("n", "<leader>sv", function()
-  snacks.lsp_symbols({
-    filter = {
-      default = { "Variable", "Field", "Property", "Constant" },
-    },
-  })
-end, { desc = "Snacks: Variables / Fields / Properties / Constants" })
