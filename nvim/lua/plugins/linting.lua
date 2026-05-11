@@ -17,13 +17,20 @@ return {
         parser = function(output)
           local diagnostics = {}
           for line in output:gmatch("[^\r\n]+") do
-            -- markdownlint output: file:line MDxxx message
-            local _, lineno, code, msg = line:match("^.+:(%d+)%s+(MD%d+)%s+(.+)$")
+            -- markdownlint-cli2 output: file:line:col MDxxx/rule message
+            local lineno, col, code, msg = line:match("^.-:(%d+):(%d+)%s+(MD%d+[%w%-/]*)%s+(.+)$")
+            if not lineno then
+              lineno, code, msg = line:match("^.-:(%d+)%s+(MD%d+[%w%-/]*)%s+(.+)$")
+              col = 1
+            end
+
             if lineno and msg then
               table.insert(diagnostics, {
                 lnum = tonumber(lineno) - 1,
-                col = 0,
+                col = math.max(tonumber(col) - 1, 0),
                 message = code .. ": " .. msg,
+                source = "markdownlint",
+                code = code,
                 severity = vim.diagnostic.severity.WARN,
               })
             end
