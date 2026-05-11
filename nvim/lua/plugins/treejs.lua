@@ -1,6 +1,21 @@
 return {
   "Wansmer/treesj",
-  -- keys = { "<space>m", "<space>j", "<space>s" },
+  keys = {
+    {
+      "<leader>j",
+      function()
+        require("treesj").toggle()
+      end,
+      desc = "Toggle line join",
+    },
+    {
+      "<leader>J",
+      function()
+        require("treesj").toggle({ split = { recursive = true } })
+      end,
+      desc = "Toggle line join recursively",
+    },
+  },
   dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you install parsers with `nvim-treesitter`
   config = function()
     require("treesj").setup({

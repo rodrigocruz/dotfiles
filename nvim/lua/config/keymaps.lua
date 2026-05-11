@@ -80,13 +80,6 @@ vim.keymap.set("n", "<leader>xa", "<cmd>XcodebuildCodeActions<cr>", { desc = "Sh
 
 vim.keymap.set("n", "<leader>ci", "<cmd>CccPick<cr>", { desc = "Pick Color" })
 
--- For default preset
-vim.keymap.set("n", "<leader>j", require("treesj").toggle, { desc = "Toggle line join" })
--- For extending default preset with `recursive = true`
-vim.keymap.set("n", "<leader>J", function()
-  require("treesj").toggle({ split = { recursive = true } })
-end, { desc = "Toggle line join recursively" })
-
 -- vim.keymap.set("n", "<leader>ud", require("dbee").toggle, { desc = "Toggle DBEE" })
 vim.keymap.set("n", "<leader>;", "<cmd>CommaOrSemiColon<cr>", { desc = "Toggle Comma or Semicolon" })
 vim.keymap.set("n", "<Leader>xk", function()
@@ -230,11 +223,6 @@ wk.add({
 
 vim.keymap.del("n", "L")
 vim.keymap.del("n", "H")
-
-wk.add({ "<A-h>", require("smart-splits").resize_left, desc = "Resize left" })
-wk.add({ "<A-l>", require("smart-splits").resize_right, desc = "Resize right" })
-wk.add({ "<A-k>", require("smart-splits").resize_up, desc = "Resize up" })
-wk.add({ "<A-j>", require("smart-splits").resize_down, desc = "Resize down" })
 
 wk.add({
   {
