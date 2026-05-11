@@ -4,6 +4,14 @@
 vim.g.lazyvim_php_lsp = "intelephense"
 vim.g.maplocalleader = ","
 
+vim.filetype.add({
+  pattern = {
+    [".*%.blade%.php"] = "blade",
+  },
+})
+
+pcall(vim.treesitter.language.register, "blade", "blade")
+
 local opt = vim.opt
 
 opt.number = false

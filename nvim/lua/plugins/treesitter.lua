@@ -1,15 +1,12 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  config = function()
-    local install = require("nvim-treesitter.install")
-    install.compilers = { "gcc-14" }
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      local install = require("nvim-treesitter.install")
+      install.compilers = { "gcc-14" }
 
-    -- Register blade as a custom parser
-    vim.treesitter.language.register("blade", "blade")
-
-    require("nvim-treesitter").setup({
-      ensure_installed = {
+      opts.ensure_installed = opts.ensure_installed or {}
+      for _, parser in ipairs({
         "lua",
         "php",
         "html",
@@ -18,16 +15,12 @@ return {
         "typescript",
         "json",
         "swift",
-      },
-      highlight = { enable = true },
-      indent = { enable = true },
-    })
-
-    -- Filetype detection
-    vim.filetype.add({
-      pattern = {
-        [".*%.blade%.php"] = "blade",
-      },
-    })
-  end,
+        "blade",
+      }) do
+        if not vim.tbl_contains(opts.ensure_installed, parser) then
+          table.insert(opts.ensure_installed, parser)
+        end
+      end
+    end,
+  },
 }
