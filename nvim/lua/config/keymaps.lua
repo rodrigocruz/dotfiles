@@ -15,9 +15,9 @@ vim.keymap.set(
   "n",
   "<leader>xx",
   ":Trouble diagnostics toggle focus=true filter.buf=0<cr>",
-  { desc = "Split Window Below" }
+  { desc = "Buffer Diagnostics" }
 )
-vim.keymap.set("n", "<leader>xX", ":Trouble diagnostics toggle focus=true<cr>", { desc = "Split Window Below" })
+vim.keymap.set("n", "<leader>xX", ":Trouble diagnostics toggle focus=true<cr>", { desc = "Workspace Diagnostics" })
 vim.keymap.set("v", "<leader>si", ":BrowserSearch<cr>", { desc = "Search selected word in Web" })
 
 vim.keymap.set("n", "<leader>cvgm", function()
@@ -34,8 +34,8 @@ wk.add({
   { "<leader>vc", ":DiffviewClose<cr>", desc = "Close Diffview" },
   { "<leader>vf", ":DiffviewFileHistory --follow %<cr>", desc = "File History" },
   { "<leader>vh", ":DiffviewFileHistory<cr>", desc = "Repo history" },
-  { "<leader>vl", "<Esc><Cmd>'<,'>DiffviewFileHistory --follow<CR>", desc = "Range history" },
-  { "<leader>vl", "<Cmd>.DiffviewFileHistory --follow<CR>", desc = "Line history" },
+  { "<leader>vl", "<Cmd>.DiffviewFileHistory --follow<CR>", desc = "Line history", mode = "n" },
+  { "<leader>vl", "<Esc><Cmd>'<,'>DiffviewFileHistory --follow<CR>", desc = "Range history", mode = "v" },
   {
     "<leader>vm",
     function()
@@ -61,14 +61,14 @@ wk.add({
   { "<leader>iB", "<cmd>XcodebuildBuildForTesting<cr>", desc = "Build For Testing" },
   { "<leader>ir", "<cmd>XcodebuildBuildRun<cr>", desc = "Build & Run Project" },
   { "<leader>it", "<cmd>XcodebuildTest<cr>", desc = "Run Tests" },
-  { "<leader>it", "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
+  { "<leader>is", "<cmd>XcodebuildTestSelected<cr>", desc = "Run Selected Tests" },
   { "<leader>iT", "<cmd>XcodebuildTestClass<cr>", desc = "Run Current Test Class" },
   { "<leader>i.", "<cmd>XcodebuildTestRepeat<cr>", desc = "Repeat Last Test Run" },
   { "<leader>il", "<cmd>XcodebuildToggleLogs<cr>", desc = "Toggle Xcodebuild Logs" },
   { "<leader>ic", "<cmd>XcodebuildToggleCodeCoverage<cr>", desc = "Toggle Code Coverage" },
   { "<leader>iC", "<cmd>XcodebuildShowCodeCoverageReport<cr>", desc = "Show Code Coverage Report" },
   { "<leader>ie", "<cmd>XcodebuildTestExplorerToggle<cr>", desc = "Toggle Test Explorer" },
-  { "<leader>is", "<cmd>XcodebuildFailingSnapshots<cr>", desc = "Show Failing Snapshots" },
+  { "<leader>iF", "<cmd>XcodebuildFailingSnapshots<cr>", desc = "Show Failing Snapshots" },
   { "<leader>id", "<cmd>XcodebuildSelectDevice<cr>", desc = "Select Device" },
   { "<leader>ip", "<cmd>XcodebuildSelectTestPlan<cr>", desc = "Select Test Plan" },
   { "<leader>iq", "<cmd>Telescope quickfix<cr>", desc = "Show QuickFix List" },
@@ -169,7 +169,7 @@ wk.add({
 })
 
 vim.keymap.set("n", "<c-h>", ":TmuxNavigateLeft<cr>", { desc = "" })
-vim.keymap.set("n", "<c-k>", ":TmuxNavigateDown<cr>", { desc = "" })
+vim.keymap.set("n", "<c-j>", ":TmuxNavigateDown<cr>", { desc = "" })
 vim.keymap.set("n", "<c-k>", ":TmuxNavigateUp<cr>", { desc = "" })
 vim.keymap.set("n", "<c-l>", ":TmuxNavigateRight<cr>", { desc = "" })
 
